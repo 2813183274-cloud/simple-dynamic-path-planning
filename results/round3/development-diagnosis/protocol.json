@@ -1,0 +1,74 @@
+{
+  "purpose": "exploratory development diagnosis, not final performance or causal proof",
+  "models": {
+    "C-seed1": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round1-C-seed1\\models\\best\\best_model.zip",
+      "sha256": "a492552dce1c39aaf89631fc3dfb8d0fadace07c4655f885c64a4790120ad8d7"
+    },
+    "C-seed2": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round2-C-seed2\\models\\best\\best_model.zip",
+      "sha256": "2dbc2f7ab162b2433cb00787f24ee4ba0581f31b55afae9bb8594c82170d5045"
+    },
+    "C-seed3": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round2-C-seed3\\models\\best\\best_model.zip",
+      "sha256": "ea7711235333889467e664567c22e40433eb186a3020844639468fce330ac410"
+    },
+    "D-seed1": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round1-D-seed1\\models\\best\\best_model.zip",
+      "sha256": "328a204212a7780cd9a5c6a724e6a4ac79d44fb39f54d39ecfe3fa2162a9c1ca"
+    },
+    "D-seed2": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round2-D-seed2\\models\\best\\best_model.zip",
+      "sha256": "d5bfac19d969e4d7c11a56aab941266d3c3f852abf792aa4e3dbba39c51cd41e"
+    },
+    "D-seed3": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round2-D-seed3\\models\\best\\best_model.zip",
+      "sha256": "a910cae8eb19c5d79a13c1f769dd73d1cb71d9fd7b7a0d559cc77a79ccb14a31"
+    }
+  },
+  "datasets": {
+    "validation_D": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\configs\\round1\\validation_D.json",
+      "hash": "2affddf628c8c527fcbc8e731fd3dde10b77b383338ab16bdd88c59d581e44ee",
+      "split": "validation"
+    },
+    "common_encounters": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\configs\\round1\\common_encounters.json",
+      "hash": "ba71b3a50330896b4fb65c5504922190936f4e39a790e4e14f329d23012b4511",
+      "split": "diagnostic"
+    }
+  },
+  "core_sources": {
+    "experiment_utils.py": "6da1707d290aa6110e6100ee363af728c64f1341705a7599a5a986766f11760c",
+    "envs/__init__.py": "296e3bc1307a752a43eef5fc30d6a778c99942a466d4ac6a63f311c1882a3555",
+    "envs/dynamic_path_env.py": "9f7c021128662d44cf7f1570b217f5bdd7ac7e6b0619753e09ea549e88181f0f",
+    "envs/scenario_dataset.py": "f370f2517d3db192613933b202ced6182c6c9ec18a72a94c87729f334ea109eb",
+    "envs/encounters.py": "67fc0cc04a97594fe025c3abbe7f4bbb7a2bba5ac25bb2068fe622bc7c734ee1",
+    "envs/round_one_dataset.py": "9b043eff7db92d653af997a6a2efb2dad67a6fb4d608ca4ac425479ad422d148",
+    "scripts/train.py": "4a66cdc56190b45c895e1c5e81e4db697b4c75351985a4ccb609e795eb17faad",
+    "scripts/evaluate.py": "d8807de85f4971c6bc95f327486cae27ba4b851139b58ce4752613a7a75c3e8c",
+    "scripts/evaluate_counterfactual.py": "9e0eabdbe9f20e09d8b584db77a6444f3f6be0adbd919449810e035b45c230ff"
+  },
+  "script_sha256": "e6c419863f915eeea4f0a50b9eb16888431abd623e8dbd4a17eab23ed73cc97f",
+  "dwa_config": {
+    "horizon": 3.0,
+    "clearance_weight": 1.0,
+    "heading_weight": 0.5,
+    "speed_weight": 0.1,
+    "margin": 0.5,
+    "v_samples": 7,
+    "w_samples": 21,
+    "dt": 0.2,
+    "v_max": 3.0,
+    "w_max": 0.7853981633974483,
+    "acceleration": 1.5,
+    "angular_acceleration": 0.7853981633974483
+  },
+  "thresholds": {
+    "full_speed": 2.99,
+    "action_clip": 1.0,
+    "turn_proxy_rad_s": 0.1,
+    "warmup_seconds": 2.0
+  },
+  "policy": "No parameter updates, no new baseline tuning, no final-test data read"
+}
