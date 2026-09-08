@@ -1,0 +1,189 @@
+{
+  "protocol_version": "round3-predictive-reward-v1",
+  "date": "2026-09-09",
+  "status": "design_fixed_implementation_pending",
+  "direction": "predictive risk reward",
+  "training_started": false,
+  "final_datasets_generated": false,
+  "hypothesis": "Predictive risk penalty improves ID success versus an equal-scale instantaneous penalty",
+  "environment": {
+    "stage": "D",
+    "observation_schema": "body-fixedscale-center16-v2",
+    "observation_dim": 16,
+    "base_reward_unchanged": true,
+    "dt": 0.2,
+    "max_steps": 600
+  },
+  "risk": {
+    "state_timing": "post_step_observation",
+    "terminal_and_truncated_extra_reward": 0,
+    "horizon_seconds": 4,
+    "clearance_buffer_m": 2,
+    "weight": 2,
+    "relative_speed_squared_epsilon": 1e-12,
+    "inflated_radii_m": [
+      5,
+      5,
+      4
+    ],
+    "relative_velocity_scale": 4.8,
+    "static_relative_velocity": "[-actual_v, 0]",
+    "dynamic_relative_velocity": "observation[12:14] * 4.8",
+    "tau_formula": "0 if dot(u,u)<=1e-12 else clip(-dot(r,u)/dot(u,u),0,H)",
+    "clearance_formula": "norm(r + tau*u) - inflated_radius",
+    "risk_formula": "max_j clip((2 - clearance_j)/2, 0, 1)",
+    "motion_assumption": "constant current heading and actual speed, constant target velocity; no future truth",
+    "sweep_or_grid_search": false
+  },
+  "arms": [
+    {
+      "name": "base",
+      "horizon_seconds": 0,
+      "weight": 0
+    },
+    {
+      "name": "instant",
+      "horizon_seconds": 0,
+      "weight": 2
+    },
+    {
+      "name": "predictive",
+      "horizon_seconds": 4,
+      "weight": 2
+    }
+  ],
+  "training": {
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "from_scratch": true,
+    "reuse_old_best_as_primary": false,
+    "device": "cpu",
+    "requested_steps_per_run": 200000,
+    "expected_actual_steps_per_run": 200704,
+    "run_count": 9,
+    "expected_actual_steps_total": 1806336,
+    "run_id_pattern": "round3-{base,instant,predictive}-seed{1,2,3}",
+    "ppo": {
+      "learning_rate": 0.0001,
+      "n_steps": 2048,
+      "batch_size": 64,
+      "n_epochs": 10,
+      "gamma": 0.99,
+      "gae_lambda": 0.95,
+      "clip_range": 0.2,
+      "ent_coef": 0.01,
+      "policy_network": [
+        64,
+        64
+      ],
+      "value_network": [
+        64,
+        64
+      ],
+      "activation": "Tanh"
+    }
+  },
+  "validation": {
+    "path": "configs/round1/validation_D.json",
+    "dataset_hash": "2affddf628c8c527fcbc8e731fd3dde10b77b383338ab16bdd88c59d581e44ee",
+    "count": 60,
+    "eval_every_steps": 10000,
+    "evaluate_after_last_update": true,
+    "selection_order": [
+      "success_rate desc",
+      "collision_rate asc",
+      "successful_path_efficiency desc (0 if no successes)",
+      "mean_base_reward desc"
+    ],
+    "exact_tie": "retain earlier candidate",
+    "shaped_reward_for_selection": false
+  },
+  "dwa": {
+    "source": "results/round2/validation_tuning/selection.json",
+    "source_sha256": "7f8a8dd9507da80d9e72ee50154ab808925d29f1deffaa85f937133df7815cec",
+    "config": {
+      "horizon": 3,
+      "clearance_weight": 1,
+      "heading_weight": 0.5,
+      "speed_weight": 0.1,
+      "margin": 0.5,
+      "v_samples": 7,
+      "w_samples": 21,
+      "dt": 0.2,
+      "v_max": 3,
+      "w_max": 0.7853981633974483,
+      "acceleration": 1.5,
+      "angular_acceleration": 0.7853981633974483
+    },
+    "retune": false
+  },
+  "development_datasets": [
+    "configs/round1/common_encounters.json",
+    "configs/round1/typical_cases.json"
+  ],
+  "final_tests": {
+    "generate_only_after_model_freeze": true,
+    "geometry_deduplication_against_all_available_prior_datasets": true,
+    "require_witness_replay": true,
+    "same_distribution": {
+      "seed": 4901,
+      "count": 240,
+      "stage": "D",
+      "per_type_count": 60
+    },
+    "challenge": {
+      "seed": 4902,
+      "count": 120,
+      "stage": "D",
+      "per_type_count": 30,
+      "parameters": "same as round1 challenge protocol"
+    },
+    "models_and_baseline": 10,
+    "expected_episodes": 3600
+  },
+  "statistics": {
+    "primary": "predictive minus instant: same_distribution success",
+    "secondary": [
+      "predictive minus base",
+      "instant minus base",
+      "predictive minus DWA",
+      "challenge and by-type comparisons"
+    ],
+    "unit": "training seed and paired within-type scene",
+    "seeds_paired": true,
+    "bootstrap_repetitions": 10000,
+    "bootstrap_seed": 5821,
+    "confidence": 0.95,
+    "interval": "two-sided paired hierarchical percentile bootstrap",
+    "report_seed_sample_sd": true,
+    "report_seed_t_interval": true,
+    "no_multiplicity_adjusted_claim": true
+  },
+  "mechanism_metrics": {
+    "full_speed_threshold": 2.99,
+    "warmup_seconds": 2,
+    "risk_threshold": 0.5,
+    "single_step_braking_threshold": 0.1,
+    "no_response": "report separately as censored, do not drop"
+  },
+  "reference_core_sources": {
+    "experiment_utils.py": "6da1707d290aa6110e6100ee363af728c64f1341705a7599a5a986766f11760c",
+    "envs/__init__.py": "296e3bc1307a752a43eef5fc30d6a778c99942a466d4ac6a63f311c1882a3555",
+    "envs/dynamic_path_env.py": "9f7c021128662d44cf7f1570b217f5bdd7ac7e6b0619753e09ea549e88181f0f",
+    "envs/scenario_dataset.py": "f370f2517d3db192613933b202ced6182c6c9ec18a72a94c87729f334ea109eb",
+    "envs/encounters.py": "67fc0cc04a97594fe025c3abbe7f4bbb7a2bba5ac25bb2068fe622bc7c734ee1",
+    "envs/round_one_dataset.py": "9b043eff7db92d653af997a6a2efb2dad67a6fb4d608ca4ac425479ad422d148",
+    "scripts/train.py": "4a66cdc56190b45c895e1c5e81e4db697b4c75351985a4ccb609e795eb17faad",
+    "scripts/evaluate.py": "d8807de85f4971c6bc95f327486cae27ba4b851139b58ce4752613a7a75c3e8c",
+    "scripts/evaluate_counterfactual.py": "9e0eabdbe9f20e09d8b584db77a6444f3f6be0adbd919449810e035b45c230ff"
+  },
+  "future_freezes": [
+    "implementation/config/dependency hashes before formal training",
+    "all nine selected model identities and DWA before new final-scene generation",
+    "new scene hashes before final evaluation"
+  ],
+  "revision_policy": "Do not overwrite v1; any revision must state timing and preserve old results"
+}
