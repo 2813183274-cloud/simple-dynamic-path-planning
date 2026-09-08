@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "checks": [
+    "analytical approach/recede/zero-speed/boundary, finite bounds, pure observation function",
+    "190 fixed-action transitions: original state/reward/termination and RNG unchanged in all arms",
+    "success/collision/timeout keep terminal reward unchanged in all arms",
+    "body-frame rotation and world translation invariance",
+    "common base-return ranking, exact tie retains old model, final callback always evaluates updated policy, source tamper rejected",
+    "untrained PPO and existing DWA development replays; identical common returns; startup/snapshot/failure cleanup with learning disabled; zero optimizer updates"
+  ],
+  "formal_training_started": false,
+  "optimizer_updates": 0,
+  "final_test_data_read": false,
+  "baseline_core_sources_unchanged": true
+}
