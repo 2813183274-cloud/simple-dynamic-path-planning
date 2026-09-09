@@ -1,119 +1,123 @@
-# Simple Dynamic Path Planning
+# USV RL Path Planning
 
-一个结构精简、符合 Gymnasium API 的二维动态路径规划基线。智能体使用 Unicycle 运动学，在 100 m × 100 m 地图中避开两个固定圆形障碍物和一个上下反弹的动态圆形障碍物，并由 Stable-Baselines3 PPO 学习连续速度控制。
+一个用于硕士课题实验的二维无人艇（USV）动态路径规划项目。环境遵循 Gymnasium API，使用 Stable-Baselines3 PPO 学习连续线速度/角速度控制，并提供固定场景评估、DWA 对照、轨迹图和可追溯的分轮实验记录。
 
-每次 `reset` 默认随机生成训练场景：起点位于左侧 `[5,15]×[35,65]`，目标位于右侧 `[85,95]×[35,65]`；两个静态障碍物分别位于中前段和中后段，动态障碍物从上方或下方竖直穿越。拒绝采样保证至少一个静态障碍物阻断起终点直线路径，并使动态障碍物按名义航速估算会进入航线的 8 m 安全走廊。所有随机数均来自 `self.np_random`，固定 seed 可复现。若需旧版固定地图，可构造 `DynamicPathPlanningEnv(randomize_scenario=False)`。
+当前公开主线是阶段 D：两个固定半径静态圆障碍、一个二维匀速动态圆障碍、按会遇类型和风险分层随机生成训练场景。已完成实验保留原路径与哈希，根目录入口作为稳定门面，不改写历史算法。
 
-## 总体设计与状态转移
+## 快速开始
 
-每个 `step` 依次执行：裁剪二维动作；映射为目标速度 `v_target∈[0,3]` 与 `ω_target∈[-π/4,π/4]`；以默认最大线加速度 `1.5 m/s²` 和最大角加速度 `π/4 rad/s²` 限制实际速度变化；按当前航向更新智能体位置并更新、归一化航向；更新动态障碍物并在考虑其半径的上下边界镜像反弹；累计实际位移；计算碰撞、越界、到达和超时；计算奖励；最后更新 `previous_goal_distance` 并返回观测。
+建议使用 Python 3.10 或 3.11。在项目根目录执行：
 
-在默认 `dt=0.2 s` 下，每步线速度最多变化 `0.3 m/s`，角速度最多变化 `π/20 rad/s`。构造环境时可通过 `linear_acceleration_max` 和 `angular_acceleration_max` 调整这两个正数限制。观测中的当前线速度和角速度是限幅后的实际执行速度，而不是 PPO 的目标速度。
-
-到达、静态碰撞、动态碰撞和越界返回 `terminated=True`。仅达到 600 步且尚未发生终止事件时返回 `truncated=True`。若同一步存在多个事件，优先级为到达、静态障碍物 1、静态障碍物 2、动态障碍物、越界，保证终端奖励只加入一次。
-
-## 固定的 16 维输入
-
-输入始终为以下顺序，距离均除以地图对角线，方位均为目标物绝对方位减智能体航向后归一化的角度：
-
-1. 目标距离、目标相对方位 `sin/cos`（0–2）
-2. 静态障碍物 1 距离、相对方位 `sin/cos`（3–5）
-3. 静态障碍物 2 距离、相对方位 `sin/cos`（6–8）
-4. 动态障碍物距离、相对方位 `sin/cos`（9–11）
-5. 世界坐标系相对速度 `(动态障碍物速度 - 智能体速度)/(3+1)`（12–13）
-6. 当前归一化线速度与角速度（14–15）
-
-静态障碍物不会按距离重排。返回前观测裁剪至 `[-1,1]` 并转换为 `float32`。
-
-## PPO 网络
-
-同一 16 维观测进入策略与价值分支。策略分支为 `64→64`，输出二维连续动作分布的均值，动作标准差由 PPO 学习；价值分支为 `64→64`，输出一个状态价值。二者均使用 Tanh。训练时策略可随机采样，评估严格使用 `deterministic=True`。两个动作分别控制线速度与角速度。
-
-## 目录
-
-```text
-simple_dynamic_path_planning/
-├── envs/
-│   ├── __init__.py
-│   ├── dynamic_path_env.py
-│   └── scenario_dataset.py
-├── scripts/
-│   ├── train.py
-│   ├── evaluate.py
-│   ├── test_environment.py
-│   ├── test_fixed_scenarios.py
-│   ├── generate_test_scenarios.py
-│   └── manual_policy_test.py
-├── configs/
-├── models/
-├── logs/
-├── results/
-├── requirements.txt
-└── README.md
-```
-
-## 安装与运行
-
-建议使用 Python 3.10 或 3.11。在项目根目录执行（Windows 与 Linux 命令相同）：
-
-```bash
-cd simple_dynamic_path_planning
+```powershell
 python -m venv .venv
-# Windows PowerShell: .venv\Scripts\Activate.ps1
-# Linux/macOS: source .venv/bin/activate
+.\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
-python scripts/test_environment.py
-python scripts/manual_policy_test.py
-python scripts/manual_policy_test.py --save results/manual_policy.png
-python scripts/train.py --timesteps 500000 --seed 0
-python scripts/generate_test_scenarios.py --num-scenarios 30 --seed 2026
-python scripts/evaluate.py --scenario-file configs/test_scenarios_30.json
+
+# 检查配置和实际命令，不训练
+python train.py --config configs/main.json --run-id demo --dry-run
+
+# 正式训练：默认阶段 D、seed 1、请求 200000 步
+python train.py --config configs/main.json --run-id demo
+
+# 用根目录兼容模型跑固定 30 场景，保存指标和每 3 场景一张图
+python evaluate.py --config configs/main.json
+
+# 指定认证 run
+python evaluate.py --config configs/main.json --run-dir runs/demo --output-dir results/demo-benchmark
+
+# 强制生成轨迹图，仍复用同一评估逻辑
+python visualize.py --config configs/main.json --run-dir runs/demo --output-dir results/demo-plots
 ```
 
-## 固定的 30 场景测试集
+`train.py` 要求显式指定唯一 `--run-id`，防止覆盖模型。第一次默认评估输出到 `results/benchmark_30/`；再次运行需换目录或添加 `--overwrite`。
 
-训练环境仍在每次 `reset()` 时随机生成场景。公平评估使用一次生成、永久复用的固定测试集；生成器以不读取障碍物的目标直达控制器确定风险和难度，不使用 PPO 结果筛选场景。
+## 任务、运动学与障碍
 
-```bash
-python scripts/generate_test_scenarios.py \
-  --num-scenarios 30 \
-  --seed 2026 \
-  --output configs/test_scenarios_30.json
-
-python scripts/test_fixed_scenarios.py \
-  --scenario-file configs/test_scenarios_30.json
-
-python scripts/evaluate.py \
-  --model models/best/best_model.zip \
-  --scenario-file configs/test_scenarios_30.json
-```
-
-测试集固定包含 5 个低动态风险、5 个静态主导、6 个向上交叉、6 个向下交叉、5 个混合风险和 3 个高风险场景。交叉场景的 easy/medium/hard 各占 2 个。JSON 保存场景哈希、生成配置和基线验证结果；固定测试模式通过 `reset(options={"scenario_index": i})` 精确加载，不添加随机扰动。
-
-评估会保存：
+地图为 100 m × 100 m。USV 需要从左侧起点到达右侧目标，同时避开两个静态障碍和一个动态障碍：
 
 ```text
-results/episode_results.csv
-results/summary_metrics.json
-results/metrics_by_scenario_type.csv
-results/trajectory_sheets/scenarios_000_002_comparison.png
-results/trajectory_sheets/scenarios_003_005_comparison.png
-...（每3个场景一张，直到027-029）
+x(t+1)     = x(t) + v(t+1) cos(theta(t)) dt
+y(t+1)     = y(t) + v(t+1) sin(theta(t)) dt
+theta(t+1) = theta(t) + omega(t+1) dt
 ```
 
-为方便逐场景对照，每张图片包含 3 行测试结果：每行左侧是完整轨迹，右侧是同一场景的最近动态会遇局部图，即每张共 6 个子图。30 个场景总计生成 10 张对照图片。需要快速计算指标而不绘图时可向评估命令添加 `--no-plots`。
+二维动作位于 `[-1, 1]^2`，映射到目标线速度 `[0, 3] m/s` 和目标角速度 `[-π/4, π/4] rad/s`；实际速度还受线/角加速度限制。默认 `dt=0.2 s`，最多 600 步，到达阈值为 3 m。
 
-训练会生成定期检查点、`models/best/best_model.zip` 和 `models/final_model.zip`。评估默认优先加载最佳模型，不存在时加载最终模型，也可通过 `--model path/to/model.zip` 指定。
+阶段 D 每次训练 `reset()` 都会按 head-on、crossing-left、crossing-right、overtaking 及风险/静态布局约束重新采样；固定 seed 可复现随机序列。固定数据集通过 `reset(options={"scenario_index": i})` 精确加载。
 
-## 奖励
+## 16 维观测与 PPO
 
-总奖励仅包含 `10 × 距离进展 - 0.05 + 两个静态安全惩罚 + 动态安全惩罚 + 单次终端奖励`。安全距离是中心距离；碰撞判定使用两物体半径之和。`info` 给出所有奖励分量、当前距离、整回合最小距离、实际路径长度和明确终止原因。
+观测依次包含目标、两个静态障碍和动态障碍的归一化中心距离及相对方位 `sin/cos`（12 维），动态障碍相对速度（2 维），以及 USV 当前线/角速度（2 维）。阶段 D 的相对速度采用船体坐标和固定尺度；legacy 数据/模型保留旧语义，不能默认互换。
 
-## 常见问题
+PPO 的策略和价值网络均为两层 64 单元 Tanh MLP。配置为学习率 `1e-4`、`n_steps=2048`、batch 64、10 epochs、`gamma=0.99`、`GAE λ=0.95`、clip 0.2、entropy 0.01。训练随机采样动作，评估使用确定性动作。
 
-- `ModuleNotFoundError`：确认已激活虚拟环境，并从本目录运行脚本后安装 `requirements.txt`。
-- TensorBoard 或进度条依赖报错：确认 `tensorboard`、`tqdm`、`rich` 已安装。
-- 找不到模型：先运行训练；或给评估脚本传入 `--model`。保存和默认加载路径已保持一致。
-- 图形窗口不显示：在无桌面服务器上使用 `manual_policy_test.py --save results/manual_policy.png`。
-- 训练效果差：先运行环境测试，检查观测顺序、坐标/角度、碰撞和奖励日志；一次只改变一个关键因素并记录前后指标。
-- PPO 提示 rollout 被截断：这是固定 `n_steps=2048` 的正常采样行为，不等同于环境超时。
+## 奖励函数
+
+默认奖励在 [envs/dynamic_path_env.py](envs/dynamic_path_env.py) 的 `_calculate_reward` 中：
+
+```text
+10 × 距目标进展 − 0.05 时间代价
++ 静态中心距离 < 7 m 时的线性安全惩罚
++ 动态中心距离 < 8 m 时、权重 2 的线性安全惩罚
++ 单次终端奖励
+```
+
+成功 `+200`，静态碰撞 `−120`，动态碰撞 `−150`，越界 `−100`。碰撞使用半径之和，安全项使用中心距离。第三轮即时/预测风险项位于 [envs/risk_reward.py](envs/risk_reward.py)，属于已完成消融，不是默认奖励替换。
+
+## 固定 30 场景 benchmark
+
+[configs/test_scenarios_30.json](configs/test_scenarios_30.json) 是用户指定不可修改的固定 30 场景 benchmark，当前 SHA-256 为 `75bca781...fd2c757`。它曾参与历史开发/选模，适合回归和横向复测，但不能声称为未见最终测试。
+
+- `configs/validation_scenarios_30.json`：legacy/default 训练选模。
+- `configs/independent_test_scenarios_30.json`：legacy/default 独立 30 场景测试。
+- `results/round2/`、`results/round3/final_experiment/`：后续论文实验封存的大样本最终数据与结果。
+
+统一入口默认使用指定历史 benchmark，不重新生成场景。根目录兼容模型在其上为 23/30 成功、7 次静态碰撞；结果见 [results/benchmark_30](results/benchmark_30)。该模型的旧训练身份不完整，正式论文比较应使用 `runs/` 中认证模型。
+
+## 指标与可视化
+
+评估保存成功率、总/静态/动态碰撞率、越界率、超时率、平均奖励、步数、航行时间、路径长度、最终目标距离、最小静态/动态表面净空和成功条件路径效率。`nominal_initial_tcpa_dcpa.json` 给出初始名义 TCPA/DCPA：假设 USV 以最大速度直驶目标、动态障碍保持初始匀速；它不是策略实际轨迹的 CPA。
+
+轨迹图包含起终点、静态/动态障碍、USV/动态障碍轨迹及最近动态会遇局部图。30 场景生成 10 张图，每张 3 行 × 2 列。只计算指标时使用 `--no-plots`。
+
+## 项目结构
+
+```text
+├── train.py / evaluate.py / visualize.py   # 配置驱动公开入口
+├── project_config.py                       # 配置、契约核对与旧核心转发
+├── configs/main.json                       # 当前主线配置说明
+├── envs/                                   # 唯一环境、场景与风险扩展
+├── baselines/                              # DWA 对照
+├── utils/metrics.py                        # 公开工作流附加指标
+├── scripts/                                # 核心实现、测试和封存轮次工具
+├── runs/                                   # 认证训练（Git 忽略）
+├── models/                                 # legacy 兼容模型
+├── results/                                # benchmark 与分轮正式结果
+├── docs/                                   # 设计、开发、审计与实验历史
+└── archives/                               # 早期散落产物归档
+```
+
+`scripts/round_*` 是已完成实验的复现入口，路径和内容被 SHA-256 封存；不要复制为新实验模板，也不要随意移动或合并。
+
+## 配置与测试
+
+[configs/main.json](configs/main.json) 展示环境、奖励、PPO、训练和评估参数。环境、奖励和 PPO 段是锁定契约，入口会与真实实现核对，不能只改 JSON 调参。训练预算、seed、设备和路径由入口读取，也可通过明确 CLI 参数覆盖。
+
+```powershell
+python scripts/test_public_workflow.py
+python scripts/test_environment.py
+python scripts/test_fixed_scenarios.py --scenario-file configs/test_scenarios_30.json
+python scripts/test_dataset_splits.py
+```
+
+第一条包含 import/config、base 奖励逐步等价、三个固定场景和一次临时 PPO rollout；SB3 因 `n_steps=2048` 实际采样 2048 步，不保存模型。
+
+## 文档导航
+
+- [项目收口审计](docs/PROJECT_AUDIT.md)：职责、重复、KEEP/MERGE/ARCHIVE/DELETE 和算法风险。
+- [实验日志](docs/EXPERIMENT_LOG.md)：各轮配置、结果与证据入口。
+- [设计文档](docs/DESIGN.md)：总体目标和约束。
+- [开发文档](docs/DEVELOPMENT.md)：详细复现与维护。
+- [进度文档](docs/PROGRESS.md)：已完成轮次与待决策工作。
+
+项目不覆盖真实船舶水动力、风浪流、传感器误差、COLREGs、多船交互或安全部署保证。仿真结果只能说明对应封存场景分布中的表现。
