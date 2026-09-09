@@ -1,0 +1,189 @@
+{
+  "definition": "Initial nominal CPA: USV moves directly toward its goal at fixed configured maximum speed; dynamic obstacle retains its initial constant velocity. Not computed from the evaluated policy trajectory.",
+  "agent_speed": 3.0,
+  "average_tcpa_seconds": 13.610533909573766,
+  "average_dcpa_center_distance": 8.669307367762128,
+  "average_dcpa_clearance": 4.496600375901807,
+  "records": [
+    {
+      "scenario_id": 0,
+      "tcpa_seconds": 14.089916061983697,
+      "dcpa_center_distance": 17.804898283623487,
+      "dcpa_clearance": 13.556894991600736
+    },
+    {
+      "scenario_id": 1,
+      "tcpa_seconds": 16.352657074839897,
+      "dcpa_center_distance": 16.368377784087166,
+      "dcpa_clearance": 12.695473982230432
+    },
+    {
+      "scenario_id": 2,
+      "tcpa_seconds": 13.793534037273243,
+      "dcpa_center_distance": 17.98613614981719,
+      "dcpa_clearance": 13.860993022525417
+    },
+    {
+      "scenario_id": 3,
+      "tcpa_seconds": 16.937446363078884,
+      "dcpa_center_distance": 21.39753815595594,
+      "dcpa_clearance": 16.617495367215597
+    },
+    {
+      "scenario_id": 4,
+      "tcpa_seconds": 15.13497880617886,
+      "dcpa_center_distance": 15.504871936940463,
+      "dcpa_clearance": 11.450181533193298
+    },
+    {
+      "scenario_id": 5,
+      "tcpa_seconds": 15.311866668442343,
+      "dcpa_center_distance": 9.94249399401627,
+      "dcpa_clearance": 6.109432927219133
+    },
+    {
+      "scenario_id": 6,
+      "tcpa_seconds": 13.386648873065536,
+      "dcpa_center_distance": 15.405331483929919,
+      "dcpa_clearance": 10.917030635868628
+    },
+    {
+      "scenario_id": 7,
+      "tcpa_seconds": 10.078276653177442,
+      "dcpa_center_distance": 8.694914892670525,
+      "dcpa_clearance": 5.092106434951893
+    },
+    {
+      "scenario_id": 8,
+      "tcpa_seconds": 13.989427657888726,
+      "dcpa_center_distance": 12.724240584872582,
+      "dcpa_clearance": 8.911456395973294
+    },
+    {
+      "scenario_id": 9,
+      "tcpa_seconds": 11.425178567489809,
+      "dcpa_center_distance": 11.018131883994956,
+      "dcpa_clearance": 7.0310122192375
+    },
+    {
+      "scenario_id": 10,
+      "tcpa_seconds": 10.26906537570429,
+      "dcpa_center_distance": 10.522525852790958,
+      "dcpa_clearance": 5.917334918149141
+    },
+    {
+      "scenario_id": 11,
+      "tcpa_seconds": 11.564790751364006,
+      "dcpa_center_distance": 6.620237704579193,
+      "dcpa_clearance": 1.8855751322428245
+    },
+    {
+      "scenario_id": 12,
+      "tcpa_seconds": 14.091525167734329,
+      "dcpa_center_distance": 7.528914593943464,
+      "dcpa_clearance": 3.1208046302132932
+    },
+    {
+      "scenario_id": 13,
+      "tcpa_seconds": 14.349935130588111,
+      "dcpa_center_distance": 8.26200260557499,
+      "dcpa_clearance": 3.6096923484513797
+    },
+    {
+      "scenario_id": 14,
+      "tcpa_seconds": 12.488205482352074,
+      "dcpa_center_distance": 1.6930016769514098,
+      "dcpa_clearance": -3.072407728388752
+    },
+    {
+      "scenario_id": 15,
+      "tcpa_seconds": 13.009162460666982,
+      "dcpa_center_distance": 2.6258553535294435,
+      "dcpa_clearance": -1.2031803406377026
+    },
+    {
+      "scenario_id": 16,
+      "tcpa_seconds": 14.090570458777949,
+      "dcpa_center_distance": 10.602696748955049,
+      "dcpa_clearance": 6.663048881345629
+    },
+    {
+      "scenario_id": 17,
+      "tcpa_seconds": 14.37717839647712,
+      "dcpa_center_distance": 6.707060172299962,
+      "dcpa_clearance": 2.0837438704224436
+    },
+    {
+      "scenario_id": 18,
+      "tcpa_seconds": 12.298119121751752,
+      "dcpa_center_distance": 8.16381622089656,
+      "dcpa_clearance": 4.483518082350369
+    },
+    {
+      "scenario_id": 19,
+      "tcpa_seconds": 12.478351891859116,
+      "dcpa_center_distance": 7.799354574954561,
+      "dcpa_clearance": 3.810387590439354
+    },
+    {
+      "scenario_id": 20,
+      "tcpa_seconds": 16.2904225760449,
+      "dcpa_center_distance": 3.1307612895634995,
+      "dcpa_clearance": -0.897659265928342
+    },
+    {
+      "scenario_id": 21,
+      "tcpa_seconds": 14.635554244979206,
+      "dcpa_center_distance": 5.955749910476001,
+      "dcpa_clearance": 2.0844474774804036
+    },
+    {
+      "scenario_id": 22,
+      "tcpa_seconds": 11.907188931414487,
+      "dcpa_center_distance": 10.83065381246142,
+      "dcpa_clearance": 6.148233798986636
+    },
+    {
+      "scenario_id": 23,
+      "tcpa_seconds": 13.712483438753337,
+      "dcpa_center_distance": 0.8275389177173572,
+      "dcpa_clearance": -2.7622555731065894
+    },
+    {
+      "scenario_id": 24,
+      "tcpa_seconds": 13.921257355049653,
+      "dcpa_center_distance": 0.5421851570718057,
+      "dcpa_clearance": -3.4393928407464167
+    },
+    {
+      "scenario_id": 25,
+      "tcpa_seconds": 12.50258795980961,
+      "dcpa_center_distance": 6.819952936688259,
+      "dcpa_clearance": 2.4232827228831075
+    },
+    {
+      "scenario_id": 26,
+      "tcpa_seconds": 14.461881957330434,
+      "dcpa_center_distance": 8.677565847090529,
+      "dcpa_clearance": 4.032836155830095
+    },
+    {
+      "scenario_id": 27,
+      "tcpa_seconds": 12.329106400199455,
+      "dcpa_center_distance": 1.4133975117699262,
+      "dcpa_clearance": -2.6524762562999658
+    },
+    {
+      "scenario_id": 28,
+      "tcpa_seconds": 14.33331894791752,
+      "dcpa_center_distance": 2.166291274771867,
+      "dcpa_clearance": -2.247061345310216
+    },
+    {
+      "scenario_id": 29,
+      "tcpa_seconds": 14.705380475020194,
+      "dcpa_center_distance": 2.3427237208691283,
+      "dcpa_clearance": -1.3325384913383993
+    }
+  ]
+}

@@ -5,6 +5,7 @@ import argparse
 from pathlib import Path
 
 from project_config import DEFAULT_CONFIG, load_config, resolve_path, run_script, verify_locked_environment
+from utils.metrics import write_nominal_risk_metrics
 
 
 def evaluation_arguments(args, config: dict, *, plots: bool | None = None) -> list[str]:
@@ -47,7 +48,13 @@ def main() -> int:
     args = build_parser().parse_args()
     config = load_config(args.config)
     verify_locked_environment(config)
-    return run_script("evaluate.py", evaluation_arguments(args, config), dry_run=args.dry_run)
+    delegated = evaluation_arguments(args, config)
+    result = run_script("evaluate.py", delegated, dry_run=args.dry_run)
+    if result == 0 and not args.dry_run:
+        dataset = resolve_path(args.scenario_file or config["evaluation"]["benchmark"], must_exist=True)
+        output = resolve_path(args.output_dir or config["evaluation"]["output_dir"])
+        write_nominal_risk_metrics(dataset, output, config["environment"]["linear_velocity_max"])
+    return result
 
 
 if __name__ == "__main__":
