@@ -1,0 +1,11 @@
+{
+  "timesteps": 180000,
+  "scenario_file": "D:\\PycharmProjects\\simple-dynamic-path-planning\\configs\\test_scenarios_30.json",
+  "num_scenarios": 30,
+  "success_count": 23,
+  "success_rate": 0.7666666666666667,
+  "collision_count": 7,
+  "collision_rate": 0.23333333333333334,
+  "mean_reward": 839.8167171225642,
+  "is_best": true
+}

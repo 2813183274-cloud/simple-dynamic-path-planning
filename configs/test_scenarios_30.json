@@ -79,10 +79,10 @@
       "validation": {
         "baseline_termination_reason": "success",
         "baseline_success": true,
-        "baseline_min_static_center_distance": 13.171310194797789,
-        "baseline_min_static_clearance": 7.728847506786202,
-        "baseline_min_dynamic_center_distance": 15.2324589540398,
-        "baseline_min_dynamic_clearance": 10.984455662017048,
+        "baseline_min_static_center_distance": 13.171310210059469,
+        "baseline_min_static_clearance": 7.728847522047882,
+        "baseline_min_dynamic_center_distance": 15.232460171189702,
+        "baseline_min_dynamic_clearance": 10.984456879166949,
         "baseline_closest_dynamic_step": 82,
         "baseline_steps": 150
       },
@@ -131,10 +131,10 @@
       "validation": {
         "baseline_termination_reason": "success",
         "baseline_success": true,
-        "baseline_min_static_center_distance": 11.013204526859028,
-        "baseline_min_static_clearance": 5.892474697366076,
-        "baseline_min_dynamic_center_distance": 13.701527326234494,
-        "baseline_min_dynamic_clearance": 10.02862352437776,
+        "baseline_min_static_center_distance": 11.013204479279763,
+        "baseline_min_static_clearance": 5.892474649786811,
+        "baseline_min_dynamic_center_distance": 13.701528630919507,
+        "baseline_min_dynamic_clearance": 10.028624829062773,
         "baseline_closest_dynamic_step": 94,
         "baseline_steps": 154
       },
@@ -183,10 +183,10 @@
       "validation": {
         "baseline_termination_reason": "success",
         "baseline_success": true,
-        "baseline_min_static_center_distance": 10.369034804130012,
-        "baseline_min_static_clearance": 4.427489039702201,
-        "baseline_min_dynamic_center_distance": 16.017101987314298,
-        "baseline_min_dynamic_clearance": 11.891958860022523,
+        "baseline_min_static_center_distance": 10.369034872042914,
+        "baseline_min_static_clearance": 4.427489107615103,
+        "baseline_min_dynamic_center_distance": 16.01710295418904,
+        "baseline_min_dynamic_clearance": 11.891959826897263,
         "baseline_closest_dynamic_step": 81,
         "baseline_steps": 150
       },
@@ -235,10 +235,10 @@
       "validation": {
         "baseline_termination_reason": "success",
         "baseline_success": true,
-        "baseline_min_static_center_distance": 11.183438655371855,
-        "baseline_min_static_clearance": 6.550327429763491,
-        "baseline_min_dynamic_center_distance": 19.18254461863977,
-        "baseline_min_dynamic_clearance": 14.402501829899427,
+        "baseline_min_static_center_distance": 11.183438686250112,
+        "baseline_min_static_clearance": 6.550327460641747,
+        "baseline_min_dynamic_center_distance": 19.182545795734363,
+        "baseline_min_dynamic_clearance": 14.402503006994019,
         "baseline_closest_dynamic_step": 98,
         "baseline_steps": 140
       },
@@ -287,10 +287,10 @@
       "validation": {
         "baseline_termination_reason": "success",
         "baseline_success": true,
-        "baseline_min_static_center_distance": 13.560264966167017,
-        "baseline_min_static_clearance": 8.953682600854808,
-        "baseline_min_dynamic_center_distance": 13.533807993347615,
-        "baseline_min_dynamic_clearance": 9.479117589600452,
+        "baseline_min_static_center_distance": 13.560265039931377,
+        "baseline_min_static_clearance": 8.953682674619168,
+        "baseline_min_dynamic_center_distance": 13.53380902535045,
+        "baseline_min_dynamic_clearance": 9.479118621603288,
         "baseline_closest_dynamic_step": 88,
         "baseline_steps": 147
       },
@@ -339,10 +339,10 @@
       "validation": {
         "baseline_termination_reason": "success",
         "baseline_success": true,
-        "baseline_min_static_center_distance": 5.066309488829972,
-        "baseline_min_static_clearance": 0.35636901669369747,
-        "baseline_min_dynamic_center_distance": 12.358018386612724,
-        "baseline_min_dynamic_clearance": 8.524957319815584,
+        "baseline_min_static_center_distance": 5.066309480470461,
+        "baseline_min_static_clearance": 0.35636900833418705,
+        "baseline_min_dynamic_center_distance": 12.358017138648975,
+        "baseline_min_dynamic_clearance": 8.524956071851836,
         "baseline_closest_dynamic_step": 86,
         "baseline_steps": 152
       },
@@ -391,10 +391,10 @@
       "validation": {
         "baseline_termination_reason": "success",
         "baseline_success": true,
-        "baseline_min_static_center_distance": 4.840905687551393,
-        "baseline_min_static_clearance": 0.16418772772552348,
-        "baseline_min_dynamic_center_distance": 13.133246530757626,
-        "baseline_min_dynamic_clearance": 8.644945682696335,
+        "baseline_min_static_center_distance": 4.840905739879212,
+        "baseline_min_static_clearance": 0.1641877800533429,
+        "baseline_min_dynamic_center_distance": 13.133247666274439,
+        "baseline_min_dynamic_clearance": 8.644946818213148,
         "baseline_closest_dynamic_step": 77,
         "baseline_steps": 151
       },
@@ -443,10 +443,10 @@
       "validation": {
         "baseline_termination_reason": "success",
         "baseline_success": true,
-        "baseline_min_static_center_distance": 8.681042212917767,
-        "baseline_min_static_clearance": 3.1920101731437196,
-        "baseline_min_dynamic_center_distance": 10.384363124161542,
-        "baseline_min_dynamic_clearance": 6.7815546664429105,
+        "baseline_min_static_center_distance": 8.681042211455242,
+        "baseline_min_static_clearance": 3.1920101716811953,
+        "baseline_min_dynamic_center_distance": 10.384362363669197,
+        "baseline_min_dynamic_clearance": 6.781553905950566,
         "baseline_closest_dynamic_step": 58,
         "baseline_steps": 133
       },
@@ -495,10 +495,10 @@
       "validation": {
         "baseline_termination_reason": "success",
         "baseline_success": true,
-        "baseline_min_static_center_distance": 8.375670934859574,
-        "baseline_min_static_clearance": 3.4031526376073464,
-        "baseline_min_dynamic_center_distance": 14.862684567943939,
-        "baseline_min_dynamic_clearance": 11.04990037904465,
+        "baseline_min_static_center_distance": 8.375670949008901,
+        "baseline_min_static_clearance": 3.4031526517566735,
+        "baseline_min_dynamic_center_distance": 14.8626835897571,
+        "baseline_min_dynamic_clearance": 11.049899400857813,
         "baseline_closest_dynamic_step": 80,
         "baseline_steps": 159
       },
@@ -547,10 +547,10 @@
       "validation": {
         "baseline_termination_reason": "success",
         "baseline_success": true,
-        "baseline_min_static_center_distance": 8.757304117037526,
-        "baseline_min_static_clearance": 3.5853814990989825,
-        "baseline_min_dynamic_center_distance": 13.203447743180563,
-        "baseline_min_dynamic_clearance": 9.216328078423107,
+        "baseline_min_static_center_distance": 8.757304059230329,
+        "baseline_min_static_clearance": 3.5853814412917853,
+        "baseline_min_dynamic_center_distance": 13.203446855824751,
+        "baseline_min_dynamic_clearance": 9.216327191067295,
         "baseline_closest_dynamic_step": 65,
         "baseline_steps": 135
       },
@@ -599,10 +599,10 @@
       "validation": {
         "baseline_termination_reason": "success",
         "baseline_success": true,
-        "baseline_min_static_center_distance": 14.734667725281431,
-        "baseline_min_static_clearance": 9.56755140104131,
-        "baseline_min_dynamic_center_distance": 8.675788677986409,
-        "baseline_min_dynamic_clearance": 4.070597743344592,
+        "baseline_min_static_center_distance": 14.73466771302911,
+        "baseline_min_static_clearance": 9.567551388788988,
+        "baseline_min_dynamic_center_distance": 8.67578944799187,
+        "baseline_min_dynamic_clearance": 4.070598513350053,
         "baseline_closest_dynamic_step": 61,
         "baseline_steps": 137
       },
@@ -651,10 +651,10 @@
       "validation": {
         "baseline_termination_reason": "success",
         "baseline_success": true,
-        "baseline_min_static_center_distance": 13.089362770638205,
-        "baseline_min_static_clearance": 7.382206381636159,
-        "baseline_min_dynamic_center_distance": 8.814705492361183,
-        "baseline_min_dynamic_clearance": 4.080042920024814,
+        "baseline_min_static_center_distance": 13.089362815686847,
+        "baseline_min_static_clearance": 7.382206426684801,
+        "baseline_min_dynamic_center_distance": 8.814704605069023,
+        "baseline_min_dynamic_clearance": 4.0800420327326545,
         "baseline_closest_dynamic_step": 66,
         "baseline_steps": 154
       },
@@ -703,10 +703,10 @@
       "validation": {
         "baseline_termination_reason": "success",
         "baseline_success": true,
-        "baseline_min_static_center_distance": 14.749341556299564,
-        "baseline_min_static_clearance": 9.479854262798423,
-        "baseline_min_dynamic_center_distance": 5.620190280465912,
-        "baseline_min_dynamic_clearance": 1.2120803167357415,
+        "baseline_min_static_center_distance": 14.74934162886023,
+        "baseline_min_static_clearance": 9.479854250710044,
+        "baseline_min_dynamic_center_distance": 5.620191255743161,
+        "baseline_min_dynamic_clearance": 1.2120812920129906,
         "baseline_closest_dynamic_step": 82,
         "baseline_steps": 158
       },
@@ -755,10 +755,10 @@
       "validation": {
         "baseline_termination_reason": "success",
         "baseline_success": true,
-        "baseline_min_static_center_distance": 17.2547658646889,
-        "baseline_min_static_clearance": 11.708346821288902,
-        "baseline_min_dynamic_center_distance": 5.981933846739172,
-        "baseline_min_dynamic_clearance": 1.3296235896155615,
+        "baseline_min_static_center_distance": 17.254765931539843,
+        "baseline_min_static_clearance": 11.708346888139847,
+        "baseline_min_dynamic_center_distance": 5.981934852502673,
+        "baseline_min_dynamic_clearance": 1.3296245953790624,
         "baseline_closest_dynamic_step": 82,
         "baseline_steps": 158
       },
@@ -807,10 +807,10 @@
       "validation": {
         "baseline_termination_reason": "dynamic_collision",
         "baseline_success": false,
-        "baseline_min_static_center_distance": 17.974337588867424,
-        "baseline_min_static_clearance": 12.520334255532857,
-        "baseline_min_dynamic_center_distance": 4.243316377856782,
-        "baseline_min_dynamic_clearance": -0.5220930274833795,
+        "baseline_min_static_center_distance": 17.974337598556257,
+        "baseline_min_static_clearance": 12.52033426522169,
+        "baseline_min_dynamic_center_distance": 4.243314107446182,
+        "baseline_min_dynamic_clearance": -0.5220952978939795,
         "baseline_closest_dynamic_step": 65,
         "baseline_steps": 65
       },
@@ -859,10 +859,10 @@
       "validation": {
         "baseline_termination_reason": "dynamic_collision",
         "baseline_success": false,
-        "baseline_min_static_center_distance": 20.172826627015716,
-        "baseline_min_static_clearance": 15.512611336530414,
-        "baseline_min_dynamic_center_distance": 3.3532448727720454,
-        "baseline_min_dynamic_clearance": -0.47579082139510076,
+        "baseline_min_static_center_distance": 20.172825844928003,
+        "baseline_min_static_clearance": 15.5126105544427,
+        "baseline_min_dynamic_center_distance": 3.3532425599358224,
+        "baseline_min_dynamic_clearance": -0.47579313423132374,
         "baseline_closest_dynamic_step": 69,
         "baseline_steps": 69
       },
@@ -911,10 +911,10 @@
       "validation": {
         "baseline_termination_reason": "success",
         "baseline_success": true,
-        "baseline_min_static_center_distance": 13.964258167634917,
-        "baseline_min_static_clearance": 8.087001398355765,
-        "baseline_min_dynamic_center_distance": 8.452720372422274,
-        "baseline_min_dynamic_clearance": 4.513072504812854,
+        "baseline_min_static_center_distance": 13.964258124257384,
+        "baseline_min_static_clearance": 8.087001354978232,
+        "baseline_min_dynamic_center_distance": 8.452721317687079,
+        "baseline_min_dynamic_clearance": 4.513073450077659,
         "baseline_closest_dynamic_step": 82,
         "baseline_steps": 152
       },
@@ -963,10 +963,10 @@
       "validation": {
         "baseline_termination_reason": "success",
         "baseline_success": true,
-        "baseline_min_static_center_distance": 12.256542737929962,
-        "baseline_min_static_clearance": 7.371707824105499,
-        "baseline_min_dynamic_center_distance": 8.898940782788953,
-        "baseline_min_dynamic_clearance": 4.275624480911435,
+        "baseline_min_static_center_distance": 12.256542777082046,
+        "baseline_min_static_clearance": 7.371707863257583,
+        "baseline_min_dynamic_center_distance": 8.898939765197786,
+        "baseline_min_dynamic_clearance": 4.275623463320268,
         "baseline_closest_dynamic_step": 82,
         "baseline_steps": 155
       },
@@ -1015,10 +1015,10 @@
       "validation": {
         "baseline_termination_reason": "success",
         "baseline_success": true,
-        "baseline_min_static_center_distance": 12.770716055311855,
-        "baseline_min_static_clearance": 6.85370064542926,
-        "baseline_min_dynamic_center_distance": 5.872507285842566,
-        "baseline_min_dynamic_clearance": 2.192209147296375,
+        "baseline_min_static_center_distance": 12.770716020151719,
+        "baseline_min_static_clearance": 6.853700610269124,
+        "baseline_min_dynamic_center_distance": 5.872508372250189,
+        "baseline_min_dynamic_clearance": 2.1922102337039977,
         "baseline_closest_dynamic_step": 72,
         "baseline_steps": 152
       },
@@ -1067,10 +1067,10 @@
       "validation": {
         "baseline_termination_reason": "success",
         "baseline_success": true,
-        "baseline_min_static_center_distance": 9.986044180600773,
-        "baseline_min_static_clearance": 4.476101241205028,
-        "baseline_min_dynamic_center_distance": 5.405609515757313,
-        "baseline_min_dynamic_clearance": 1.4166425312421058,
+        "baseline_min_static_center_distance": 9.986044212358228,
+        "baseline_min_static_clearance": 4.476101272962484,
+        "baseline_min_dynamic_center_distance": 5.405610684431331,
+        "baseline_min_dynamic_clearance": 1.4166436999161238,
         "baseline_closest_dynamic_step": 72,
         "baseline_steps": 154
       },
@@ -1119,10 +1119,10 @@
       "validation": {
         "baseline_termination_reason": "dynamic_collision",
         "baseline_success": false,
-        "baseline_min_static_center_distance": 18.606597546654502,
-        "baseline_min_static_clearance": 13.6268448835685,
-        "baseline_min_dynamic_center_distance": 3.8852372612887702,
-        "baseline_min_dynamic_clearance": -0.1431832942030713,
+        "baseline_min_static_center_distance": 18.60659751935286,
+        "baseline_min_static_clearance": 13.626844856266858,
+        "baseline_min_dynamic_center_distance": 3.885234397013417,
+        "baseline_min_dynamic_clearance": -0.14318615847842464,
         "baseline_closest_dynamic_step": 86,
         "baseline_steps": 86
       },
@@ -1171,10 +1171,10 @@
       "validation": {
         "baseline_termination_reason": "dynamic_collision",
         "baseline_success": false,
-        "baseline_min_static_center_distance": 13.071082901340027,
-        "baseline_min_static_clearance": 8.208449537108185,
-        "baseline_min_dynamic_center_distance": 3.7633586579172076,
-        "baseline_min_dynamic_clearance": -0.10794377507839004,
+        "baseline_min_static_center_distance": 13.07108292170396,
+        "baseline_min_static_clearance": 8.208449557472118,
+        "baseline_min_dynamic_center_distance": 3.763358417296606,
+        "baseline_min_dynamic_clearance": -0.1079440156989917,
         "baseline_closest_dynamic_step": 81,
         "baseline_steps": 81
       },
@@ -1223,10 +1223,10 @@
       "validation": {
         "baseline_termination_reason": "success",
         "baseline_success": true,
-        "baseline_min_static_center_distance": 6.9858652845163025,
-        "baseline_min_static_clearance": 1.9383176713718155,
-        "baseline_min_dynamic_center_distance": 9.00373211060386,
-        "baseline_min_dynamic_clearance": 4.321312097129075,
+        "baseline_min_static_center_distance": 6.985865129450983,
+        "baseline_min_static_clearance": 1.9383175163064958,
+        "baseline_min_dynamic_center_distance": 9.003732893502216,
+        "baseline_min_dynamic_clearance": 4.321312880027431,
         "baseline_closest_dynamic_step": 70,
         "baseline_steps": 139
       },
@@ -1275,10 +1275,10 @@
       "validation": {
         "baseline_termination_reason": "dynamic_collision",
         "baseline_success": false,
-        "baseline_min_static_center_distance": 5.722926942753264,
-        "baseline_min_static_clearance": 1.043936633732507,
-        "baseline_min_dynamic_center_distance": 3.4291056033090137,
-        "baseline_min_dynamic_clearance": -0.16068888751493304,
+        "baseline_min_static_center_distance": 5.722927043484743,
+        "baseline_min_static_clearance": 1.043936734463986,
+        "baseline_min_dynamic_center_distance": 3.429103526219936,
+        "baseline_min_dynamic_clearance": -0.16069096460401067,
         "baseline_closest_dynamic_step": 75,
         "baseline_steps": 75
       },
@@ -1327,10 +1327,10 @@
       "validation": {
         "baseline_termination_reason": "dynamic_collision",
         "baseline_success": false,
-        "baseline_min_static_center_distance": 8.0909880110217,
-        "baseline_min_static_clearance": 2.121776326479509,
-        "baseline_min_dynamic_center_distance": 3.945080994439832,
-        "baseline_min_dynamic_clearance": -0.036497003378390236,
+        "baseline_min_static_center_distance": 8.090986516450933,
+        "baseline_min_static_clearance": 2.1217748319087413,
+        "baseline_min_dynamic_center_distance": 3.9450784571806294,
+        "baseline_min_dynamic_clearance": -0.036499540637592975,
         "baseline_closest_dynamic_step": 76,
         "baseline_steps": 76
       },
@@ -1379,10 +1379,10 @@
       "validation": {
         "baseline_termination_reason": "dynamic_collision",
         "baseline_success": false,
-        "baseline_min_static_center_distance": 8.593364250568555,
-        "baseline_min_static_clearance": 3.130380575392466,
-        "baseline_min_dynamic_center_distance": 4.331606717356154,
-        "baseline_min_dynamic_clearance": -0.06506349644899778,
+        "baseline_min_static_center_distance": 8.593364274904738,
+        "baseline_min_static_clearance": 3.1303805997286487,
+        "baseline_min_dynamic_center_distance": 4.331607429622195,
+        "baseline_min_dynamic_clearance": -0.06506278418295697,
         "baseline_closest_dynamic_step": 71,
         "baseline_steps": 71
       },
@@ -1431,10 +1431,10 @@
       "validation": {
         "baseline_termination_reason": "success",
         "baseline_success": true,
-        "baseline_min_static_center_distance": 7.02513108726466,
-        "baseline_min_static_clearance": 1.9084057807160377,
-        "baseline_min_dynamic_center_distance": 6.854858298951112,
-        "baseline_min_dynamic_clearance": 2.2101286076906788,
+        "baseline_min_static_center_distance": 7.025131012953338,
+        "baseline_min_static_clearance": 1.9084057064047153,
+        "baseline_min_dynamic_center_distance": 6.854859251197738,
+        "baseline_min_dynamic_clearance": 2.210129559937305,
         "baseline_closest_dynamic_step": 84,
         "baseline_steps": 152
       },
@@ -1483,10 +1483,10 @@
       "validation": {
         "baseline_termination_reason": "dynamic_collision",
         "baseline_success": false,
-        "baseline_min_static_center_distance": 12.869377329620058,
-        "baseline_min_static_clearance": 7.448173856057346,
-        "baseline_min_dynamic_center_distance": 3.7879640716286143,
-        "baseline_min_dynamic_clearance": -0.2779096964412777,
+        "baseline_min_static_center_distance": 12.86937730070404,
+        "baseline_min_static_clearance": 7.448173827141328,
+        "baseline_min_dynamic_center_distance": 3.7879617246024866,
+        "baseline_min_dynamic_clearance": -0.2779120434674054,
         "baseline_closest_dynamic_step": 65,
         "baseline_steps": 65
       },
@@ -1535,10 +1535,10 @@
       "validation": {
         "baseline_termination_reason": "dynamic_collision",
         "baseline_success": false,
-        "baseline_min_static_center_distance": 18.037548531468534,
-        "baseline_min_static_clearance": 12.853732152834269,
-        "baseline_min_dynamic_center_distance": 4.15442337472796,
-        "baseline_min_dynamic_clearance": -0.25892924535412254,
+        "baseline_min_static_center_distance": 18.03754853803627,
+        "baseline_min_static_clearance": 12.853732159402004,
+        "baseline_min_dynamic_center_distance": 4.154420758303475,
+        "baseline_min_dynamic_clearance": -0.2589318617786076,
         "baseline_closest_dynamic_step": 75,
         "baseline_steps": 75
       },
@@ -1587,10 +1587,10 @@
       "validation": {
         "baseline_termination_reason": "dynamic_collision",
         "baseline_success": false,
-        "baseline_min_static_center_distance": 14.648804480019123,
-        "baseline_min_static_clearance": 9.044674455181049,
-        "baseline_min_dynamic_center_distance": 3.132949156656574,
-        "baseline_min_dynamic_clearance": -0.5423130555509537,
+        "baseline_min_static_center_distance": 14.648804474393305,
+        "baseline_min_static_clearance": 9.044674449555231,
+        "baseline_min_dynamic_center_distance": 3.132946352652084,
+        "baseline_min_dynamic_clearance": -0.5423158595554436,
         "baseline_closest_dynamic_step": 79,
         "baseline_steps": 79
       },

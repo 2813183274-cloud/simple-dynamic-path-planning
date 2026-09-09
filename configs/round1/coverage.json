@@ -1,0 +1,30 @@
+{
+  "samples": 1000,
+  "stats": {
+    "attempts": 2478,
+    "accepted": 1000,
+    "type:overtaking": 246,
+    "risk:conflict": 568,
+    "layout:two_sides": 187,
+    "target_static_sweep": 593,
+    "type:crossing_left": 246,
+    "layout:clear": 306,
+    "layout:mixed": 282,
+    "risk:time_separated": 277,
+    "layout:blocking": 225,
+    "type:crossing_right": 263,
+    "type:head_on": 245,
+    "risk:receding": 155,
+    "overlap": 695,
+    "endpoint": 159,
+    "outside": 24,
+    "no_witness": 7
+  },
+  "rejection_rate": 0.5964487489911219,
+  "target_speed_minmax": [
+    0.6000081832226406,
+    1.4993877127189268
+  ],
+  "unique_geometry_count": 1000,
+  "witness_min_clearance": 0.5136194464976951
+}

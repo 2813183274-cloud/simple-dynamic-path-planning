@@ -17,21 +17,33 @@ from envs.scenario_dataset import (  # noqa: E402
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate the fixed 30-scenario evaluation set")
+    parser = argparse.ArgumentParser(description="Generate a versioned fixed 30-scenario dataset")
     parser.add_argument("--num-scenarios", type=int, default=30)
     parser.add_argument("--seed", type=int, default=2026)
-    parser.add_argument("--output", type=Path, default=ROOT / "configs" / "test_scenarios_30.json")
+    parser.add_argument(
+        "--output", type=Path, default=ROOT / "configs" / "validation_scenarios_30.json"
+    )
     parser.add_argument("--max-attempts", type=int, default=2000)
+    parser.add_argument(
+        "--split", choices=("validation", "test", "diagnostic", "unspecified"),
+        default="validation",
+    )
+    parser.add_argument("--dataset-name", default=None)
     args = parser.parse_args()
     if args.num_scenarios != 30:
         parser.error("This benchmark has fixed quotas and requires --num-scenarios 30")
-    dataset = generate_dataset(args.seed, args.max_attempts)
+    dataset = generate_dataset(
+        args.seed,
+        args.max_attempts,
+        dataset_split=args.split,
+        dataset_name=args.dataset_name,
+    )
     save_dataset(dataset, args.output)
     reloaded = load_dataset(args.output)
     if reloaded != dataset:
         raise RuntimeError("JSON reload verification failed")
     summary = dataset_summary(dataset)
-    print("Generated fixed test set successfully.\n")
+    print(f"Generated fixed {args.split} dataset successfully.\n")
     for scenario_type, expected in TYPE_QUOTAS.items():
         item = summary[scenario_type]
         print(f"{scenario_type}: {item['count']} (expected {expected}), "

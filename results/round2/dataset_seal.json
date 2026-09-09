@@ -1,0 +1,10 @@
+{
+  "same_distribution": {
+    "dataset_hash": "1e7c00c916df9fed6f5ba10fddaae3790e782f9defa9c6d288ad7625e5694b55",
+    "file_sha256": "9f63e915dc50e16a9785f138488668cab2732214ced6ccccae36f55beea4bd6c"
+  },
+  "challenge": {
+    "dataset_hash": "c629eb6f77f67897859d58870ffb8b1aa207a601fe0d39a99388efd43a439d8d",
+    "file_sha256": "72cf39b608e44065f8a7483ff3c21f92da9bd03e19c31af82406590ec646c14f"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "method": "DWA",
+  "dataset_hash": "1e7c00c916df9fed6f5ba10fddaae3790e782f9defa9c6d288ad7625e5694b55",
+  "model": null,
+  "dwa_config": {
+    "horizon": 3.0,
+    "clearance_weight": 1.0,
+    "heading_weight": 0.5,
+    "speed_weight": 0.1,
+    "margin": 0.5,
+    "v_samples": 7,
+    "w_samples": 21,
+    "dt": 0.2,
+    "v_max": 3.0,
+    "w_max": 0.7853981633974483,
+    "acceleration": 1.5,
+    "angular_acceleration": 0.7853981633974483
+  },
+  "completed_at": "2026-09-07T02:41:28+00:00",
+  "protocol_sha256": "db7222f6bda0af9f7413bb4070f32217e72d8126e042859ac968cfb443e01b72",
+  "artifacts": {
+    "by_risk.json": "684eacfeb9872a39eac9b14f098b5c2210d1496c0e6b4e5a38a1ec6f248e1cca",
+    "by_type.csv": "7b09e820ac415986cf63d01be5094eb22c39aaf61ee18c76954fdab24cb5ac85",
+    "episodes.csv": "64f9e7d4d9cbc625db51116ceadcc41f14f85d2ca01c6cb21a96114f6809adda",
+    "summary.json": "593eb7f583d314a11c4e33d24b7f7266846c5a2439ba59a9cfae5c75e3b6b752",
+    "trajectories.npz": "035334cdbbedf62dc890dac62138f78bc0092e0f4a5a6eca694bf4303e252705"
+  }
+}

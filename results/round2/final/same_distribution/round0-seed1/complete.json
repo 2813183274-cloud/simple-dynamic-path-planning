@@ -1,0 +1,24 @@
+{
+  "method": "round0-seed1",
+  "dataset_hash": "1e7c00c916df9fed6f5ba10fddaae3790e782f9defa9c6d288ad7625e5694b55",
+  "model": {
+    "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round0-baseline-seed1\\models\\best\\best_model.zip",
+    "sha256": "c87ab82495e490f1179a12afcec74023b73c6da6a47a420433330ce5ae34e9bf",
+    "run": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round0-baseline-seed1",
+    "stage": "legacy",
+    "seed": 1,
+    "best_timesteps": 170000,
+    "training_steps": 200704
+  },
+  "dwa_config": null,
+  "completed_at": "2026-09-07T02:41:04+00:00",
+  "protocol_sha256": "db7222f6bda0af9f7413bb4070f32217e72d8126e042859ac968cfb443e01b72",
+  "artifacts": {
+    "by_risk.json": "d1eaacf722ea1046c562b72240a83efa7e9d060545190c354302814c2423bd42",
+    "by_type.csv": "a2e7442ba1151bffcfa10066299c05dcbdc83a731bd095bda9b2a384927aa3f3",
+    "episodes.csv": "82aa419e3f74d7c5a7a316d6ed1a4d6f5fe1b6002c86ee96bb8b5d31384ebdfb",
+    "first_failures.png": "58e6aeebb201fbbefa5954ba41cc5c23d6acd335b8b9cc655e402911d8e986d5",
+    "summary.json": "c6fae391f21b9d4cc3ed26937c7210cbc95e8f953556e20fea0dc92795897582",
+    "trajectories.npz": "d26628769a9c3bb1d719b3936a3931bb25992b19e820386e306ee50a55adbf8b"
+  }
+}

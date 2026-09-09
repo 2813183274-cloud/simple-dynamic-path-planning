@@ -1,0 +1,47 @@
+[
+  {
+    "variant": "baseline",
+    "n": 12,
+    "valid_geometry_n": 12,
+    "success_count": 12,
+    "valid_action_response_count": 0,
+    "mean_matched_time_path_rms": 0.0,
+    "mean_min_dynamic_clearance": 13.210671065675802
+  },
+  {
+    "variant": "freeze_dynamic",
+    "n": 12,
+    "valid_geometry_n": 12,
+    "success_count": 10,
+    "valid_action_response_count": 12,
+    "mean_matched_time_path_rms": 0.6131665863461768,
+    "mean_min_dynamic_clearance": 14.909763198105423
+  },
+  {
+    "variant": "mirror_y",
+    "n": 12,
+    "valid_geometry_n": 12,
+    "success_count": 11,
+    "valid_action_response_count": 12,
+    "mean_matched_time_path_rms": 10.508985009459133,
+    "mean_min_dynamic_clearance": 14.285677497520993
+  },
+  {
+    "variant": "reverse_dynamic",
+    "n": 12,
+    "valid_geometry_n": 10,
+    "success_count": 10,
+    "valid_action_response_count": 10,
+    "mean_matched_time_path_rms": 0.933909539167859,
+    "mean_min_dynamic_clearance": 22.26330569252454
+  },
+  {
+    "variant": "slow_dynamic",
+    "n": 12,
+    "valid_geometry_n": 12,
+    "success_count": 11,
+    "valid_action_response_count": 12,
+    "mean_matched_time_path_rms": 0.43722200480333545,
+    "mean_min_dynamic_clearance": 13.607165072037894
+  }
+]

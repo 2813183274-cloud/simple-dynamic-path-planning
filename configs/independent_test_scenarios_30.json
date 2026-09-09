@@ -1,0 +1,1601 @@
+{
+  "schema_version": 2,
+  "dataset_name": "independent_test_set_30_v2",
+  "dataset_split": "test",
+  "dataset_seed": 2027,
+  "num_scenarios": 30,
+  "generation_config": {
+    "max_attempts_per_scenario": 2000,
+    "type_quotas": {
+      "low_dynamic_risk": 5,
+      "static_dominant": 5,
+      "crossing_up": 6,
+      "crossing_down": 6,
+      "mixed_risk": 5,
+      "high_risk": 3
+    },
+    "environment": {
+      "map_size": [
+        100.0,
+        100.0
+      ],
+      "dt": 0.2,
+      "v_max": 3.0,
+      "omega_max": 0.7853981633974483,
+      "linear_acceleration_max": 1.5,
+      "angular_acceleration_max": 0.7853981633974483,
+      "agent_radius": 1.0,
+      "max_steps": 600
+    },
+    "baseline": {
+      "k_omega": 1.5,
+      "speed_fractions": [
+        0.9,
+        0.6,
+        0.3
+      ]
+    }
+  },
+  "scenarios": [
+    {
+      "scenario_id": 0,
+      "scenario_type": "low_dynamic_risk",
+      "difficulty": "easy",
+      "start_position": [
+        11.56416212813258,
+        38.846378596413665
+      ],
+      "start_heading": 0.02867858533345391,
+      "goal_position": [
+        92.81912121563671,
+        36.67972233545871
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            32.613874190810165,
+            28.0
+          ],
+          "radius": 3.713030297410228
+        },
+        {
+          "position": [
+            63.11978963719002,
+            52.777480146455495
+          ],
+          "radius": 4.80742884729552
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          56.9954679285586,
+          71.83373592180028
+        ],
+        "velocity": [
+          0.0,
+          -1.1443162376322684
+        ],
+        "radius": 3.5254868697456048
+      },
+      "validation": {
+        "baseline_termination_reason": "success",
+        "baseline_success": true,
+        "baseline_min_static_center_distance": 10.31183467646514,
+        "baseline_min_static_clearance": 5.598804379054911,
+        "baseline_min_dynamic_center_distance": 13.017978821189812,
+        "baseline_min_dynamic_clearance": 8.492491951444208,
+        "baseline_closest_dynamic_step": 97,
+        "baseline_steps": 149
+      },
+      "scenario_hash": "bfa17ba060440110a06c7e3d3fc5f4b05146f8179b76884eaa0945bf40987c39"
+    },
+    {
+      "scenario_id": 1,
+      "scenario_type": "low_dynamic_risk",
+      "difficulty": "easy",
+      "start_position": [
+        14.434536119485626,
+        53.13689365528448
+      ],
+      "start_heading": -0.032979172550907876,
+      "goal_position": [
+        88.3330863635183,
+        37.05286996993695
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            30.94496850753176,
+            34.947364574196286
+          ],
+          "radius": 4.970145731560056
+        },
+        {
+          "position": [
+            65.07557282231663,
+            28.0
+          ],
+          "radius": 3.8976194452759696
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          48.14095551050635,
+          74.26945102591348
+        ],
+        "velocity": [
+          0.0,
+          -1.0452518336487593
+        ],
+        "radius": 3.4482275957030595
+      },
+      "validation": {
+        "baseline_termination_reason": "success",
+        "baseline_success": true,
+        "baseline_min_static_center_distance": 13.832230875040123,
+        "baseline_min_static_clearance": 8.395056375704796,
+        "baseline_min_dynamic_center_distance": 13.990309920013921,
+        "baseline_min_dynamic_clearance": 9.542082324310861,
+        "baseline_closest_dynamic_step": 72,
+        "baseline_steps": 139
+      },
+      "scenario_hash": "a0a1cd7b86663b820b3c7c11c6ceb208a8954ed27a17f720226e902567956b5f"
+    },
+    {
+      "scenario_id": 2,
+      "scenario_type": "low_dynamic_risk",
+      "difficulty": "medium",
+      "start_position": [
+        5.538336993321017,
+        35.90796792623579
+      ],
+      "start_heading": -0.053156670674778805,
+      "goal_position": [
+        88.91563873347219,
+        41.06725472391308
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            31.65933706076256,
+            28.0
+          ],
+          "radius": 4.994446717155556
+        },
+        {
+          "position": [
+            58.45685920559469,
+            28.0
+          ],
+          "radius": 3.7381150790613566
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          48.03133884829882,
+          72.05432047320161
+        ],
+        "velocity": [
+          0.0,
+          -0.9239531400072166
+        ],
+        "radius": 3.545503450163945
+      },
+      "validation": {
+        "baseline_termination_reason": "success",
+        "baseline_success": true,
+        "baseline_min_static_center_distance": 9.453567301641206,
+        "baseline_min_static_clearance": 3.4591205844856496,
+        "baseline_min_dynamic_center_distance": 16.910310515193913,
+        "baseline_min_dynamic_clearance": 12.364807065029968,
+        "baseline_closest_dynamic_step": 95,
+        "baseline_steps": 154
+      },
+      "scenario_hash": "5e6f06bcdff7977715f6bc46f50de33b165f6739d0bcbfc3ca23d8a407d895e2"
+    },
+    {
+      "scenario_id": 3,
+      "scenario_type": "low_dynamic_risk",
+      "difficulty": "easy",
+      "start_position": [
+        10.50295283869634,
+        45.285196435216136
+      ],
+      "start_heading": -0.20289806158655743,
+      "goal_position": [
+        88.98741715877273,
+        36.08283186186916
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            38.047562530855416,
+            28.0
+          ],
+          "radius": 4.180607944314786
+        },
+        {
+          "position": [
+            64.78183168776586,
+            55.60136907182306
+          ],
+          "radius": 4.288113985343047
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          54.33630116610889,
+          36.125741024980485
+        ],
+        "velocity": [
+          0.0,
+          1.2569665078217365
+        ],
+        "radius": 3.8423837283379285
+      },
+      "validation": {
+        "baseline_termination_reason": "success",
+        "baseline_success": true,
+        "baseline_min_static_center_distance": 13.925492438208174,
+        "baseline_min_static_clearance": 8.744884493893387,
+        "baseline_min_dynamic_center_distance": 15.157356726406169,
+        "baseline_min_dynamic_clearance": 10.31497299806824,
+        "baseline_closest_dynamic_step": 71,
+        "baseline_steps": 145
+      },
+      "scenario_hash": "ab0898a80ec94e6a06c58504b27f547e9b69e3bc114887fde844189971259186"
+    },
+    {
+      "scenario_id": 4,
+      "scenario_type": "low_dynamic_risk",
+      "difficulty": "easy",
+      "start_position": [
+        14.32276404494339,
+        37.992861426376194
+      ],
+      "start_heading": 0.11738152786915945,
+      "goal_position": [
+        91.1974939064799,
+        36.97307720102806
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            28.174811030590504,
+            52.47608364796929
+          ],
+          "radius": 3.6338857010031846
+        },
+        {
+          "position": [
+            69.85670247426604,
+            55.107968301621156
+          ],
+          "radius": 4.858156188826296
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          49.72025221947863,
+          70.66895424838864
+        ],
+        "velocity": [
+          0.0,
+          -1.1752985692087257
+        ],
+        "radius": 3.0434391846441793
+      },
+      "validation": {
+        "baseline_termination_reason": "success",
+        "baseline_success": true,
+        "baseline_min_static_center_distance": 14.589628509873489,
+        "baseline_min_static_clearance": 9.955742808870305,
+        "baseline_min_dynamic_center_distance": 15.434893326074286,
+        "baseline_min_dynamic_clearance": 11.391454141430106,
+        "baseline_closest_dynamic_step": 81,
+        "baseline_steps": 141
+      },
+      "scenario_hash": "7823deace4eac7503d1222091780f77b66fbaee1d86533804d9ef12fcaec48b8"
+    },
+    {
+      "scenario_id": 5,
+      "scenario_type": "static_dominant",
+      "difficulty": "medium",
+      "start_position": [
+        13.0314345210266,
+        56.14183178940232
+      ],
+      "start_heading": -0.21101254381423784,
+      "goal_position": [
+        85.33342393348846,
+        36.4605914449025
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            37.77634061792933,
+            56.99764812581952
+          ],
+          "radius": 4.825986049200697
+        },
+        {
+          "position": [
+            64.78805354730903,
+            28.0
+          ],
+          "radius": 4.002413485173289
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          48.38570862793342,
+          74.3531481731236
+        ],
+        "velocity": [
+          0.0,
+          -0.877574137764037
+        ],
+        "radius": 3.1596557566841352
+      },
+      "validation": {
+        "baseline_termination_reason": "success",
+        "baseline_success": true,
+        "baseline_min_static_center_distance": 7.301025326406192,
+        "baseline_min_static_clearance": 1.4750392772054948,
+        "baseline_min_dynamic_center_distance": 15.175580908298544,
+        "baseline_min_dynamic_clearance": 11.01592515161441,
+        "baseline_closest_dynamic_step": 74,
+        "baseline_steps": 138
+      },
+      "scenario_hash": "570ebecc4ce7be36d6b170514d73da2d4ceabadf2d6a544b0705c51bf857712c"
+    },
+    {
+      "scenario_id": 6,
+      "scenario_type": "static_dominant",
+      "difficulty": "hard",
+      "start_position": [
+        11.239594582624653,
+        49.049157031132786
+      ],
+      "start_heading": 0.19613749953544612,
+      "goal_position": [
+        87.88286510596912,
+        62.020505372780136
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            29.51700734653797,
+            58.03234816217469
+          ],
+          "radius": 4.407652816462534
+        },
+        {
+          "position": [
+            72.30034920777788,
+            72.0
+          ],
+          "radius": 4.325252269099586
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          44.972000341002406,
+          25.158983952534822
+        ],
+        "velocity": [
+          0.0,
+          0.8856697434767158
+        ],
+        "radius": 3.456865565265961
+      },
+      "validation": {
+        "baseline_termination_reason": "success",
+        "baseline_success": true,
+        "baseline_min_static_center_distance": 5.793667821884968,
+        "baseline_min_static_clearance": 0.3860150054224345,
+        "baseline_min_dynamic_center_distance": 17.44711916832259,
+        "baseline_min_dynamic_clearance": 12.99025360305663,
+        "baseline_closest_dynamic_step": 73,
+        "baseline_steps": 143
+      },
+      "scenario_hash": "15fe46ff60755467001d52aabc3f132d295e25276180b37e865cc5ffbd6e7ce9"
+    },
+    {
+      "scenario_id": 7,
+      "scenario_type": "static_dominant",
+      "difficulty": "medium",
+      "start_position": [
+        8.870699120902993,
+        53.365907359300394
+      ],
+      "start_heading": -0.13522931684155282,
+      "goal_position": [
+        88.10803288679229,
+        54.462821690964056
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            38.22341419626409,
+            36.90448838661467
+          ],
+          "radius": 3.729280437931661
+        },
+        {
+          "position": [
+            59.8064016494841,
+            46.82998712009551
+          ],
+          "radius": 4.6663434143072315
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          52.567366097998104,
+          25.469095781900165
+        ],
+        "velocity": [
+          0.0,
+          1.0172682834871198
+        ],
+        "radius": 3.2982020700728896
+      },
+      "validation": {
+        "baseline_termination_reason": "success",
+        "baseline_success": true,
+        "baseline_min_static_center_distance": 7.201227820667713,
+        "baseline_min_static_clearance": 1.5348844063604812,
+        "baseline_min_dynamic_center_distance": 10.510055402103188,
+        "baseline_min_dynamic_clearance": 6.211853332030298,
+        "baseline_closest_dynamic_step": 92,
+        "baseline_steps": 146
+      },
+      "scenario_hash": "b819fc9aa3a7c9892ca5d4da01d02bded3d18e534ae0e3d21bb09ce2b1c444e4"
+    },
+    {
+      "scenario_id": 8,
+      "scenario_type": "static_dominant",
+      "difficulty": "hard",
+      "start_position": [
+        14.273143665201097,
+        64.37277965076252
+      ],
+      "start_heading": 0.14719347588879428,
+      "goal_position": [
+        91.65660092043233,
+        63.23216497463625
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            33.7034084131328,
+            70.14775618058444
+          ],
+          "radius": 4.246512941472531
+        },
+        {
+          "position": [
+            65.70662068177893,
+            47.882930792777806
+          ],
+          "radius": 4.347304866669052
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          54.13586849668432,
+          62.08343840810926
+        ],
+        "velocity": [
+          0.0,
+          -0.9472050753727591
+        ],
+        "radius": 2.96582069045787
+      },
+      "validation": {
+        "baseline_termination_reason": "success",
+        "baseline_success": true,
+        "baseline_min_static_center_distance": 5.970015481269072,
+        "baseline_min_static_clearance": 0.7235025397965407,
+        "baseline_min_dynamic_center_distance": 15.654431316978203,
+        "baseline_min_dynamic_clearance": 11.688610626520333,
+        "baseline_closest_dynamic_step": 69,
+        "baseline_steps": 142
+      },
+      "scenario_hash": "053f6d86c7ad4b6836124ed07e21a3359c67164908284db2fcc4972606302146"
+    },
+    {
+      "scenario_id": 9,
+      "scenario_type": "static_dominant",
+      "difficulty": "medium",
+      "start_position": [
+        12.083163073789796,
+        58.68803701294321
+      ],
+      "start_heading": 0.011085247862027803,
+      "goal_position": [
+        90.77374287357155,
+        62.704205229615745
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            41.849726551457906,
+            40.61979831604396
+          ],
+          "radius": 3.721852661287387
+        },
+        {
+          "position": [
+            70.00910258466125,
+            70.07361579184929
+          ],
+          "radius": 4.583892016309907
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          44.92321711401178,
+          27.868429248026043
+        ],
+        "velocity": [
+          0.0,
+          0.9467010366079237
+        ],
+        "radius": 3.620666983822949
+      },
+      "validation": {
+        "baseline_termination_reason": "success",
+        "baseline_success": true,
+        "baseline_min_static_center_distance": 8.425837080587305,
+        "baseline_min_static_clearance": 2.8419450642773985,
+        "baseline_min_dynamic_center_distance": 19.343565045574362,
+        "baseline_min_dynamic_clearance": 14.722898061751414,
+        "baseline_closest_dynamic_step": 75,
+        "baseline_steps": 145
+      },
+      "scenario_hash": "0ea483bfe8fc241bc95196bf4515a08c81abdd2dbb435645f906034913e6c18b"
+    },
+    {
+      "scenario_id": 10,
+      "scenario_type": "crossing_up",
+      "difficulty": "easy",
+      "start_position": [
+        7.27014132267318,
+        59.45803608764606
+      ],
+      "start_heading": -0.2716013902117784,
+      "goal_position": [
+        92.5002506893929,
+        42.533800633687356
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            33.13247841583571,
+            38.25957323787587
+          ],
+          "radius": 4.387818853661089
+        },
+        {
+          "position": [
+            66.88649774083768,
+            63.67958987487291
+          ],
+          "radius": 3.9656747788394067
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          44.67367815019981,
+          25.20962041838537
+        ],
+        "velocity": [
+          0.0,
+          1.0983485550982284
+        ],
+        "radius": 3.6472555232183246
+      },
+      "validation": {
+        "baseline_termination_reason": "success",
+        "baseline_success": true,
+        "baseline_min_static_center_distance": 15.723785488828463,
+        "baseline_min_static_clearance": 10.335966635167374,
+        "baseline_min_dynamic_center_distance": 8.869938599831345,
+        "baseline_min_dynamic_clearance": 4.22268307661302,
+        "baseline_closest_dynamic_step": 83,
+        "baseline_steps": 160
+      },
+      "scenario_hash": "04d33a3a3ed519a91cfe53c92d3ed300392e2923caddab2aebc1309369d230e8"
+    },
+    {
+      "scenario_id": 11,
+      "scenario_type": "crossing_up",
+      "difficulty": "easy",
+      "start_position": [
+        12.975049795134195,
+        46.48262421941792
+      ],
+      "start_heading": 0.30841122631559914,
+      "goal_position": [
+        85.03176553878392,
+        64.25956514908472
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            31.876591151752923,
+            67.50327781169403
+          ],
+          "radius": 4.191077536802251
+        },
+        {
+          "position": [
+            63.11573332378868,
+            72.0
+          ],
+          "radius": 3.572568718726875
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          46.57914764918178,
+          28.861516095974228
+        ],
+        "velocity": [
+          0.0,
+          1.0497435188388884
+        ],
+        "radius": 3.568104689954914
+      },
+      "validation": {
+        "baseline_termination_reason": "success",
+        "baseline_success": true,
+        "baseline_min_static_center_distance": 12.755369487910775,
+        "baseline_min_static_clearance": 8.182800769183899,
+        "baseline_min_dynamic_center_distance": 11.50311521612274,
+        "baseline_min_dynamic_clearance": 6.935010526167826,
+        "baseline_closest_dynamic_step": 71,
+        "baseline_steps": 136
+      },
+      "scenario_hash": "bba30381a8963335d1032c68c5a0a2089404077a49924d5d9dd3cc86b1c1cdd4"
+    },
+    {
+      "scenario_id": 12,
+      "scenario_type": "crossing_up",
+      "difficulty": "medium",
+      "start_position": [
+        13.270306767863284,
+        44.04559822950067
+      ],
+      "start_heading": 0.24150209297342995,
+      "goal_position": [
+        92.39464064681714,
+        60.08634724354404
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            30.375624208997458,
+            60.49275108123801
+          ],
+          "radius": 4.137235511934441
+        },
+        {
+          "position": [
+            73.03685430542389,
+            72.0
+          ],
+          "radius": 4.572000801007054
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          44.272999994481935,
+          33.91382515757202
+        ],
+        "velocity": [
+          0.0,
+          0.8095069610989212
+        ],
+        "radius": 3.0572802891038746
+      },
+      "validation": {
+        "baseline_termination_reason": "success",
+        "baseline_success": true,
+        "baseline_min_static_center_distance": 12.70007758414815,
+        "baseline_min_static_clearance": 7.5628420722137095,
+        "baseline_min_dynamic_center_distance": 6.268390725199412,
+        "baseline_min_dynamic_clearance": 2.211110436095537,
+        "baseline_closest_dynamic_step": 64,
+        "baseline_steps": 148
+      },
+      "scenario_hash": "e4cc307d988b3c189216d62dd911efc5a41ab02829c78e62aa8fcb23fd5a8a58"
+    },
+    {
+      "scenario_id": 13,
+      "scenario_type": "crossing_up",
+      "difficulty": "medium",
+      "start_position": [
+        6.2824817194471425,
+        59.99783195082122
+      ],
+      "start_heading": 0.15230014460199381,
+      "goal_position": [
+        91.47657864962724,
+        58.982761462019575
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            42.2444607408005,
+            72.0
+          ],
+          "radius": 4.074643558037593
+        },
+        {
+          "position": [
+            59.97548854974766,
+            42.023439565622375
+          ],
+          "radius": 4.139477630062102
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          53.84531421848324,
+          29.79653489032208
+        ],
+        "velocity": [
+          0.0,
+          1.2350589048461726
+        ],
+        "radius": 3.6562906434943954
+      },
+      "validation": {
+        "baseline_termination_reason": "success",
+        "baseline_success": true,
+        "baseline_min_static_center_distance": 12.359089830671302,
+        "baseline_min_static_clearance": 7.2844462726337085,
+        "baseline_min_dynamic_center_distance": 6.280316596273694,
+        "baseline_min_dynamic_clearance": 1.624025952779299,
+        "baseline_closest_dynamic_step": 97,
+        "baseline_steps": 157
+      },
+      "scenario_hash": "2a0317c384b4f9f9a5e9c1601492760a2369bdd19831b40a0840c6c9ff5c7097"
+    },
+    {
+      "scenario_id": 14,
+      "scenario_type": "crossing_up",
+      "difficulty": "hard",
+      "start_position": [
+        10.64169056340957,
+        44.73920035839535
+      ],
+      "start_heading": 0.339753441176299,
+      "goal_position": [
+        88.99566499498526,
+        59.916337431092856
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            40.37962159788785,
+            65.60371028313962
+          ],
+          "radius": 4.327792880459779
+        },
+        {
+          "position": [
+            58.6790442880761,
+            69.71366026446566
+          ],
+          "radius": 4.375952518314539
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          48.0749884882392,
+          35.939052959093246
+        ],
+        "velocity": [
+          0.0,
+          1.1285151177412451
+        ],
+        "radius": 3.4561291284912428
+      },
+      "validation": {
+        "baseline_termination_reason": "dynamic_collision",
+        "baseline_success": false,
+        "baseline_min_static_center_distance": 14.76605507293916,
+        "baseline_min_static_clearance": 9.438262192479382,
+        "baseline_min_dynamic_center_distance": 4.0543899118896105,
+        "baseline_min_dynamic_clearance": -0.40173921660163225,
+        "baseline_closest_dynamic_step": 67,
+        "baseline_steps": 67
+      },
+      "scenario_hash": "50e17d160d4d9dc7c16a3436fc340fbb290e6be9f6e4c656e4d9f31072e59a09"
+    },
+    {
+      "scenario_id": 15,
+      "scenario_type": "crossing_up",
+      "difficulty": "hard",
+      "start_position": [
+        9.141821308224863,
+        43.47351216232558
+      ],
+      "start_heading": -0.059087330576529595,
+      "goal_position": [
+        92.0729251784496,
+        50.179669747729655
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            30.444410000840552,
+            57.34766404840829
+          ],
+          "radius": 3.8977366230325434
+        },
+        {
+          "position": [
+            71.25552600608884,
+            64.74457326414935
+          ],
+          "radius": 3.5426814432500873
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          50.84710438820146,
+          29.296618333936735
+        ],
+        "velocity": [
+          0.0,
+          1.0885095543791423
+        ],
+        "radius": 3.7575164152528027
+      },
+      "validation": {
+        "baseline_termination_reason": "dynamic_collision",
+        "baseline_success": false,
+        "baseline_min_static_center_distance": 12.188337141853292,
+        "baseline_min_static_clearance": 7.290600518820749,
+        "baseline_min_dynamic_center_distance": 4.72789527519628,
+        "baseline_min_dynamic_clearance": -0.0296211400565225,
+        "baseline_closest_dynamic_step": 73,
+        "baseline_steps": 73
+      },
+      "scenario_hash": "3d97688386fb9e772e34d65d51dba4b16ba0e7a9a4f1db35e7add3fd781fe69e"
+    },
+    {
+      "scenario_id": 16,
+      "scenario_type": "crossing_down",
+      "difficulty": "easy",
+      "start_position": [
+        7.725809911545415,
+        45.57351007086518
+      ],
+      "start_heading": -0.08870269052386925,
+      "goal_position": [
+        88.86867205022548,
+        51.02529018909027
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            35.558791075561615,
+            67.09624555227191
+          ],
+          "radius": 4.305393363757562
+        },
+        {
+          "position": [
+            70.57527368909206,
+            36.85202169950011
+          ],
+          "radius": 4.152838068217283
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          55.73155889024178,
+          73.94470436464684
+        ],
+        "velocity": [
+          0.0,
+          -0.8396972827439777
+        ],
+        "radius": 3.3569650056188682
+      },
+      "validation": {
+        "baseline_termination_reason": "success",
+        "baseline_success": true,
+        "baseline_min_static_center_distance": 12.887610761758369,
+        "baseline_min_static_clearance": 7.734772693541085,
+        "baseline_min_dynamic_center_distance": 8.933761353391205,
+        "baseline_min_dynamic_clearance": 4.576796347772337,
+        "baseline_closest_dynamic_step": 99,
+        "baseline_steps": 150
+      },
+      "scenario_hash": "b220d939537678db76b6cfc047002944f8bf7f7b7422caa755d755d9b7322f21"
+    },
+    {
+      "scenario_id": 17,
+      "scenario_type": "crossing_down",
+      "difficulty": "easy",
+      "start_position": [
+        13.00185132874698,
+        44.34897639564973
+      ],
+      "start_heading": 0.08133325204262887,
+      "goal_position": [
+        86.90903624853782,
+        38.806832860950635
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            42.16872980199532,
+            56.6245579148587
+          ],
+          "radius": 4.88742976108509
+        },
+        {
+          "position": [
+            71.97506466782518,
+            52.27095130220271
+          ],
+          "radius": 4.95410560668041
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          56.164569111152574,
+          73.57921115494294
+        ],
+        "velocity": [
+          0.0,
+          -1.2386740401794067
+        ],
+        "radius": 3.634847036884395
+      },
+      "validation": {
+        "baseline_termination_reason": "success",
+        "baseline_success": true,
+        "baseline_min_static_center_distance": 12.28516336598799,
+        "baseline_min_static_clearance": 6.331057759307581,
+        "baseline_min_dynamic_center_distance": 10.804469922953492,
+        "baseline_min_dynamic_clearance": 6.169622886069098,
+        "baseline_closest_dynamic_step": 91,
+        "baseline_steps": 136
+      },
+      "scenario_hash": "bd5535a522f6429ed053c9e1abe4d61aa08135edd0e649e0ec6ac97bda208c70"
+    },
+    {
+      "scenario_id": 18,
+      "scenario_type": "crossing_down",
+      "difficulty": "medium",
+      "start_position": [
+        11.123051753624132,
+        40.927924075017465
+      ],
+      "start_heading": 0.10653706938817109,
+      "goal_position": [
+        85.90980234319,
+        52.422076623500814
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            31.27460585635878,
+            60.567824758837546
+          ],
+          "radius": 4.129861997861139
+        },
+        {
+          "position": [
+            69.72943944530012,
+            66.94666377497616
+          ],
+          "radius": 3.5887945946571502
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          48.326179734703516,
+          69.30127137605108
+        ],
+        "velocity": [
+          0.0,
+          -1.0727343036092734
+        ],
+        "radius": 3.03681729060518
+      },
+      "validation": {
+        "baseline_termination_reason": "success",
+        "baseline_success": true,
+        "baseline_min_static_center_distance": 16.37364389818817,
+        "baseline_min_static_clearance": 11.243781900327033,
+        "baseline_min_dynamic_center_distance": 5.995219109819184,
+        "baseline_min_dynamic_clearance": 1.9584018192140036,
+        "baseline_closest_dynamic_step": 79,
+        "baseline_steps": 139
+      },
+      "scenario_hash": "d515501bf085928d3d9f1f00dbef21d72296a426ef82e87e87df15f2990261f7"
+    },
+    {
+      "scenario_id": 19,
+      "scenario_type": "crossing_down",
+      "difficulty": "medium",
+      "start_position": [
+        7.5680452412330865,
+        60.24027540147587
+      ],
+      "start_heading": -0.2812773937952495,
+      "goal_position": [
+        93.3446697256235,
+        43.9643747253112
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            44.8215626898978,
+            72.0
+          ],
+          "radius": 3.5313716064513097
+        },
+        {
+          "position": [
+            61.130629345717175,
+            33.51406632960968
+          ],
+          "radius": 3.7400220633413825
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          56.513242430120826,
+          61.59782463969047
+        ],
+        "velocity": [
+          0.0,
+          -0.9552627239516722
+        ],
+        "radius": 3.2638101318124564
+      },
+      "validation": {
+        "baseline_termination_reason": "success",
+        "baseline_success": true,
+        "baseline_min_static_center_distance": 16.25247223526953,
+        "baseline_min_static_clearance": 11.512450171928148,
+        "baseline_min_dynamic_center_distance": 7.610262973186257,
+        "baseline_min_dynamic_clearance": 3.346452841373801,
+        "baseline_closest_dynamic_step": 94,
+        "baseline_steps": 161
+      },
+      "scenario_hash": "4b7aa06fbb81fa192ae700be53a6fa014c47843be22d7ebbdcb99ad1484e2f18"
+    },
+    {
+      "scenario_id": 20,
+      "scenario_type": "crossing_down",
+      "difficulty": "hard",
+      "start_position": [
+        6.585201955715835,
+        52.57635182598041
+      ],
+      "start_heading": 0.10131387416538029,
+      "goal_position": [
+        90.49294020534084,
+        54.60682910550019
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            42.016377652784556,
+            35.67584014321369
+          ],
+          "radius": 3.7944290582976534
+        },
+        {
+          "position": [
+            73.46959736704983,
+            34.67498144675333
+          ],
+          "radius": 3.744593239924148
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          55.12983950763129,
+          72.44098171536344
+        ],
+        "velocity": [
+          0.0,
+          -1.0112337806464935
+        ],
+        "radius": 2.970291188420445
+      },
+      "validation": {
+        "baseline_termination_reason": "dynamic_collision",
+        "baseline_success": false,
+        "baseline_min_static_center_distance": 17.782602640185708,
+        "baseline_min_static_clearance": 12.988173581888054,
+        "baseline_min_dynamic_center_distance": 3.91515923143275,
+        "baseline_min_dynamic_clearance": -0.05513195698769513,
+        "baseline_closest_dynamic_step": 87,
+        "baseline_steps": 87
+      },
+      "scenario_hash": "e247bfab53682c047f3144785f70072c26d829650bcd0ff7ab4bbeafd212a250"
+    },
+    {
+      "scenario_id": 21,
+      "scenario_type": "crossing_down",
+      "difficulty": "hard",
+      "start_position": [
+        5.749038390367945,
+        38.8735622024185
+      ],
+      "start_heading": 0.33401909057898527,
+      "goal_position": [
+        86.12592947500237,
+        58.18662825220835
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            32.5144352960901,
+            28.0
+          ],
+          "radius": 4.5547199970445735
+        },
+        {
+          "position": [
+            66.80762159494161,
+            34.68374728362968
+          ],
+          "radius": 4.750113710483269
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          54.58024850304851,
+          74.59084412139947
+        ],
+        "velocity": [
+          0.0,
+          -1.2474070606021752
+        ],
+        "radius": 2.7004453447237555
+      },
+      "validation": {
+        "baseline_termination_reason": "dynamic_collision",
+        "baseline_success": false,
+        "baseline_min_static_center_distance": 16.87442088228027,
+        "baseline_min_static_clearance": 11.319700885235696,
+        "baseline_min_dynamic_center_distance": 3.1007070079124945,
+        "baseline_min_dynamic_clearance": -0.599738336811261,
+        "baseline_closest_dynamic_step": 92,
+        "baseline_steps": 92
+      },
+      "scenario_hash": "c8d2e72e53cd67bf54aebf48e014c8aff14f6eba2315836f4249931e029aa742"
+    },
+    {
+      "scenario_id": 22,
+      "scenario_type": "mixed_risk",
+      "difficulty": "easy",
+      "start_position": [
+        7.671061615166211,
+        41.81855047146981
+      ],
+      "start_heading": -0.0726486240654296,
+      "goal_position": [
+        90.38098606938587,
+        39.21021319036718
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            35.24721504968549,
+            54.59574117357213
+          ],
+          "radius": 4.700055850148681
+        },
+        {
+          "position": [
+            73.57556648518324,
+            45.970202905727945
+          ],
+          "radius": 4.046745917464075
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          45.472178990291106,
+          65.15494907298137
+        ],
+        "velocity": [
+          0.0,
+          -0.8946383479716281
+        ],
+        "radius": 3.867730862784363
+      },
+      "validation": {
+        "baseline_termination_reason": "success",
+        "baseline_success": true,
+        "baseline_min_static_center_distance": 6.234015768670958,
+        "baseline_min_static_clearance": 1.1872698512068833,
+        "baseline_min_dynamic_center_distance": 10.819098148821084,
+        "baseline_min_dynamic_clearance": 5.951367286036721,
+        "baseline_closest_dynamic_step": 80,
+        "baseline_steps": 152
+      },
+      "scenario_hash": "6436a277282a1eaa5cd9cf0b6f0041c5fc874ea241767d72594e66715a83b3ed"
+    },
+    {
+      "scenario_id": 23,
+      "scenario_type": "mixed_risk",
+      "difficulty": "hard",
+      "start_position": [
+        8.658087767521568,
+        41.23142567903233
+      ],
+      "start_heading": -0.06320641698252727,
+      "goal_position": [
+        93.2960851874004,
+        41.27285386805374
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            36.05057196590568,
+            48.163774481280136
+          ],
+          "radius": 4.452351648000724
+        },
+        {
+          "position": [
+            74.3549664650245,
+            28.0
+          ],
+          "radius": 4.215711821675552
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          47.51117144821093,
+          60.91868275988149
+        ],
+        "velocity": [
+          0.0,
+          -1.2635363410630711
+        ],
+        "radius": 3.194039202751065
+      },
+      "validation": {
+        "baseline_termination_reason": "dynamic_collision",
+        "baseline_success": false,
+        "baseline_min_static_center_distance": 6.948840040014592,
+        "baseline_min_static_clearance": 1.4964883920138679,
+        "baseline_min_dynamic_center_distance": 3.787562014554032,
+        "baseline_min_dynamic_clearance": -0.4064771881970328,
+        "baseline_closest_dynamic_step": 70,
+        "baseline_steps": 70
+      },
+      "scenario_hash": "17b60447da1ee83eff56d7082d90c5f015135d9a55e1b0ac279fd9ae4f4ad113"
+    },
+    {
+      "scenario_id": 24,
+      "scenario_type": "mixed_risk",
+      "difficulty": "medium",
+      "start_position": [
+        5.133146215025243,
+        56.35083670038762
+      ],
+      "start_heading": -0.13159282807186345,
+      "goal_position": [
+        90.8766828013969,
+        61.20683784705278
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            32.0986763048322,
+            42.885248989827765
+          ],
+          "radius": 3.5899298273652516
+        },
+        {
+          "position": [
+            63.89456452176994,
+            51.128108677629285
+          ],
+          "radius": 4.541125615150289
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          54.15953930429623,
+          71.5511442879453
+        ],
+        "velocity": [
+          0.0,
+          -0.9529091141984081
+        ],
+        "radius": 2.999820538713947
+      },
+      "validation": {
+        "baseline_termination_reason": "success",
+        "baseline_success": true,
+        "baseline_min_static_center_distance": 8.490393515689206,
+        "baseline_min_static_clearance": 2.949267900538917,
+        "baseline_min_dynamic_center_distance": 5.187281799781523,
+        "baseline_min_dynamic_clearance": 1.1874612610675763,
+        "baseline_closest_dynamic_step": 91,
+        "baseline_steps": 158
+      },
+      "scenario_hash": "2337c1430ee0c7de25215a1f0986034f692ea33a2d5530077bed073ec79ec890"
+    },
+    {
+      "scenario_id": 25,
+      "scenario_type": "mixed_risk",
+      "difficulty": "hard",
+      "start_position": [
+        12.682459694369534,
+        40.74928437518186
+      ],
+      "start_heading": 0.48048686833875465,
+      "goal_position": [
+        89.84559130001173,
+        63.728376800375045
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            35.59940505965864,
+            38.35423230773134
+          ],
+          "radius": 4.675095743580883
+        },
+        {
+          "position": [
+            70.68915373195628,
+            70.92232163540146
+          ],
+          "radius": 4.195001003653924
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          49.956921642021285,
+          72.66212699552158
+        ],
+        "velocity": [
+          0.0,
+          -1.1769911499943742
+        ],
+        "radius": 2.782508334039225
+      },
+      "validation": {
+        "baseline_termination_reason": "dynamic_collision",
+        "baseline_success": false,
+        "baseline_min_static_center_distance": 8.948789066939325,
+        "baseline_min_static_clearance": 3.273693323358442,
+        "baseline_min_dynamic_center_distance": 3.2896940086028112,
+        "baseline_min_dynamic_clearance": -0.4928143254364139,
+        "baseline_closest_dynamic_step": 75,
+        "baseline_steps": 75
+      },
+      "scenario_hash": "ac1dbfc2cd72ba3c137afaccaac6f42cc35ddd65ecb469b1f9de85ad7b5961bf"
+    },
+    {
+      "scenario_id": 26,
+      "scenario_type": "mixed_risk",
+      "difficulty": "hard",
+      "start_position": [
+        11.833444866994018,
+        52.03007428523071
+      ],
+      "start_heading": 0.10114836003081473,
+      "goal_position": [
+        94.0908247307589,
+        41.03481077366224
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            30.450075538382393,
+            57.979957337258256
+          ],
+          "radius": 4.433235212634291
+        },
+        {
+          "position": [
+            65.40761960870316,
+            63.88368606940527
+          ],
+          "radius": 3.7106939553384257
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          47.77445723246244,
+          66.07172486184733
+        ],
+        "velocity": [
+          0.0,
+          -1.150161410839659
+        ],
+        "radius": 3.582970204963985
+      },
+      "validation": {
+        "baseline_termination_reason": "dynamic_collision",
+        "baseline_success": false,
+        "baseline_min_static_center_distance": 8.217840767592449,
+        "baseline_min_static_clearance": 2.7846055549581576,
+        "baseline_min_dynamic_center_distance": 4.206506136957483,
+        "baseline_min_dynamic_clearance": -0.3764640680065021,
+        "baseline_closest_dynamic_step": 66,
+        "baseline_steps": 66
+      },
+      "scenario_hash": "c4b1b1f5f34169313a5c772c0cdaa9081a7b91d4b08a6e1284cb7d6f2a5aad58"
+    },
+    {
+      "scenario_id": 27,
+      "scenario_type": "high_risk",
+      "difficulty": "hard",
+      "start_position": [
+        5.967144152597746,
+        48.8049539411841
+      ],
+      "start_heading": 0.003004977523022756,
+      "goal_position": [
+        90.065196904536,
+        45.201999470881574
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            31.92107638057458,
+            30.57332343754662
+          ],
+          "radius": 3.842111584751754
+        },
+        {
+          "position": [
+            67.34352631365131,
+            31.654902005776307
+          ],
+          "radius": 4.209485696776851
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          45.06659915412891,
+          63.93831550141756
+        ],
+        "velocity": [
+          0.0,
+          -1.1152261758935946
+        ],
+        "radius": 3.1727439872502243
+      },
+      "validation": {
+        "baseline_termination_reason": "dynamic_collision",
+        "baseline_success": false,
+        "baseline_min_static_center_distance": 17.12663109845858,
+        "baseline_min_static_clearance": 12.284519513706828,
+        "baseline_min_dynamic_center_distance": 3.6398619990461465,
+        "baseline_min_dynamic_clearance": -0.5328819882040778,
+        "baseline_closest_dynamic_step": 70,
+        "baseline_steps": 70
+      },
+      "scenario_hash": "2fbc1401a15352c5d441775a23829a966e3857248ae08d112a1d170cfd86dc00"
+    },
+    {
+      "scenario_id": 28,
+      "scenario_type": "high_risk",
+      "difficulty": "hard",
+      "start_position": [
+        13.14843237497748,
+        60.70595099133759
+      ],
+      "start_heading": -0.3720779778549659,
+      "goal_position": [
+        89.75545254877852,
+        40.9511715195874
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            31.0391202221988,
+            36.649425492326145
+          ],
+          "radius": 4.129982597286444
+        },
+        {
+          "position": [
+            60.77984289646638,
+            62.550262245727126
+          ],
+          "radius": 4.847754166213344
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          48.983034219142326,
+          64.32002881368416
+        ],
+        "velocity": [
+          0.0,
+          -0.9044996415754774
+        ],
+        "radius": 2.7946471856606547
+      },
+      "validation": {
+        "baseline_termination_reason": "dynamic_collision",
+        "baseline_success": false,
+        "baseline_min_static_center_distance": 18.35460850218282,
+        "baseline_min_static_clearance": 12.506854335969477,
+        "baseline_min_dynamic_center_distance": 3.42982115817374,
+        "baseline_min_dynamic_clearance": -0.36482602748691484,
+        "baseline_closest_dynamic_step": 66,
+        "baseline_steps": 66
+      },
+      "scenario_hash": "a93a96e36047eab32972fb7b3ea5d6629d4be44dd04da6d56a03830272621f55"
+    },
+    {
+      "scenario_id": 29,
+      "scenario_type": "high_risk",
+      "difficulty": "hard",
+      "start_position": [
+        9.418430969780996,
+        56.87674444593058
+      ],
+      "start_heading": -0.06499457149768917,
+      "goal_position": [
+        87.84550541010032,
+        49.70632503201195
+      ],
+      "static_obstacles": [
+        {
+          "position": [
+            28.85458317735897,
+            72.0
+          ],
+          "radius": 4.3631281619281035
+        },
+        {
+          "position": [
+            59.72948784418227,
+            33.81470825580175
+          ],
+          "radius": 4.48081301412617
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          49.33170144890732,
+          68.32354508890958
+        ],
+        "velocity": [
+          0.0,
+          -0.9996257509849185
+        ],
+        "radius": 3.2898868610032546
+      },
+      "validation": {
+        "baseline_termination_reason": "dynamic_collision",
+        "baseline_success": false,
+        "baseline_min_static_center_distance": 16.81738247317002,
+        "baseline_min_static_clearance": 11.454254311241918,
+        "baseline_min_dynamic_center_distance": 3.919710773959397,
+        "baseline_min_dynamic_clearance": -0.37017608704385774,
+        "baseline_closest_dynamic_step": 71,
+        "baseline_steps": 71
+      },
+      "scenario_hash": "64b3fb96ed6dcf649e64d8a13554c475ab505d7f209d079b28b531b5725fa40e"
+    }
+  ]
+}

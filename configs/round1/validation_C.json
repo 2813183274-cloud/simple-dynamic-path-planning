@@ -1,0 +1,4468 @@
+{
+  "schema_version": 3,
+  "dataset_name": "round1-C-validation-3101",
+  "dataset_split": "validation",
+  "dataset_seed": 3101,
+  "num_scenarios": 60,
+  "environment_stage": "C",
+  "observation_schema": "body-fixedscale-center16-v2",
+  "generation_config": {
+    "version": "encounters-v1",
+    "static_radius": 4.0,
+    "dynamic_radius": 3.0,
+    "velocity_scale": 4.8,
+    "target_max_speed": 1.8,
+    "types": [
+      "head_on",
+      "crossing_left",
+      "crossing_right",
+      "overtaking"
+    ],
+    "type_probabilities": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "risks": [
+      "conflict",
+      "time_separated",
+      "receding"
+    ],
+    "risk_probabilities": [
+      0.6,
+      0.25,
+      0.15
+    ],
+    "layouts": [
+      "clear",
+      "blocking",
+      "mixed",
+      "two_sides"
+    ],
+    "layout_probabilities": [
+      0.3,
+      0.2,
+      0.3,
+      0.2
+    ],
+    "layout_risk_rule": "D blocking: time_separated/receding 0.625/0.375; mixed: conflict; others: risk_probabilities",
+    "target_speed_range": [
+      0.6,
+      1.5
+    ],
+    "meeting_time_range": [
+      12.0,
+      26.0
+    ],
+    "crossing_angle_degrees": [
+      55.0,
+      125.0
+    ],
+    "nominal_speed": 2.0,
+    "nominal_acceleration": 1.5,
+    "time_horizon": 120.0,
+    "max_attempts": 1500,
+    "exit_behavior": "continue_straight_outside_map",
+    "feasibility": "executed waypoint-controller witness, dt=0.2, same speed/acceleration limits"
+  },
+  "challenge": false,
+  "sampling_report": {
+    "attempts": 165,
+    "target_static_sweep": 52,
+    "accepted": 60,
+    "type:crossing_right": 23,
+    "risk:conflict": 35,
+    "layout:blocking": 60,
+    "type:crossing_left": 18,
+    "risk:time_separated": 15,
+    "type:overtaking": 12,
+    "risk:receding": 10,
+    "type:head_on": 7,
+    "outside": 1,
+    "overlap": 44,
+    "endpoint": 8
+  },
+  "scenarios": [
+    {
+      "scenario_id": 0,
+      "scenario_type": "crossing_right",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        11.022840980266977,
+        58.233428493833735
+      ],
+      "goal_position": [
+        90.29400091998338,
+        47.190331229153514
+      ],
+      "start_heading": -0.1384170621986322,
+      "static_obstacles": [
+        {
+          "position": [
+            38.51897888346122,
+            54.296509146033685
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            66.49350556066592,
+            72.25055691426707
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          57.43905349120112,
+          23.715854484777303
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.10416277825494318,
+          1.2397330589898863
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.24480775015322356,
+        "nominal_closest_time": 22.8,
+        "tcpa_constant_speed": 22.438620556703942,
+        "dcpa_constant_speed": 0.6276873302047462,
+        "target_speed": 1.2441012587109657,
+        "relative_heading_degrees": 102.73344337278039,
+        "witness": {
+          "offset": 16,
+          "steps": 241,
+          "minimum_clearance": 0.7734465305168836,
+          "waypoints": [
+            [
+              25.115676545764,
+              72.42469290979972
+            ],
+            [
+              80.6163810389952,
+              64.69300740850113
+            ],
+            [
+              90.29400091998338,
+              47.190331229153514
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "a697e0f252ee30583cd8c957716b84e2d5d4fae4b422704c87421e7b26f9a86c"
+    },
+    {
+      "scenario_id": 1,
+      "scenario_type": "crossing_left",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        9.616503956054753,
+        54.11959467829335
+      ],
+      "goal_position": [
+        92.48540608598135,
+        51.75165365480748
+      ],
+      "start_heading": -0.028566769922206425,
+      "static_obstacles": [
+        {
+          "position": [
+            36.32445261184261,
+            54.949814041415124
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            65.02077123694187,
+            70.78350542572849
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          46.28343327231138,
+          78.45966407962531
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.053486405087567995,
+          -1.3014590543179272
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.16137928456796446,
+        "nominal_closest_time": 19.6,
+        "tcpa_constant_speed": 19.052854277639454,
+        "dcpa_constant_speed": 0.7501549028365899,
+        "target_speed": 1.302557663059607,
+        "relative_heading_degrees": -86.00986926993532,
+        "witness": {
+          "offset": -16,
+          "steps": 248,
+          "minimum_clearance": 3.745541815725697,
+          "waypoints": [
+            [
+              21.154601771556624,
+              37.78336810053339
+            ],
+            [
+              80.0332959596723,
+              36.10093631015289
+            ],
+            [
+              92.48540608598135,
+              51.75165365480748
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "bc0e9f4892a9b4f4e92188197eae38189e6c09821fc7bd75ea1e5a8969475e40"
+    },
+    {
+      "scenario_id": 2,
+      "scenario_type": "crossing_right",
+      "risk_level": "time_separated",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        9.723602022248405,
+        51.16013170723882
+      ],
+      "goal_position": [
+        91.82567486153029,
+        43.236684504286515
+      ],
+      "start_heading": -0.09620932500523076,
+      "static_obstacles": [
+        {
+          "position": [
+            37.85849277529953,
+            49.20990800077104
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            67.2555135862719,
+            29.445041104606776
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          53.13592228467199,
+          45.46947973375484
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.18038205913964217,
+          0.7575256020767421
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 12.59928862051286,
+        "nominal_closest_time": 18.2,
+        "tcpa_constant_speed": 17.7464860676822,
+        "dcpa_constant_speed": 12.183315362088248,
+        "target_speed": 0.7787058013532376,
+        "relative_heading_degrees": 108.90623315126722,
+        "witness": {
+          "offset": 25,
+          "steps": 287,
+          "minimum_clearance": 1.2437986750120986,
+          "waypoints": [
+            [
+              24.069631717848168,
+              74.8917863476757
+            ],
+            [
+              82.28269371630448,
+              69.2738024489029
+            ],
+            [
+              91.82567486153029,
+              43.236684504286515
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "6b0308d99855a9a56178b8567773cf632bf0bdb7eb5e73793a0e060a7579bcfc"
+    },
+    {
+      "scenario_id": 3,
+      "scenario_type": "crossing_left",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        9.686998207873671,
+        48.553861928535476
+      ],
+      "goal_position": [
+        92.6510810086747,
+        54.94030127109993
+      ],
+      "start_heading": 0.07682685263014725,
+      "static_obstacles": [
+        {
+          "position": [
+            38.70579781840712,
+            49.80059618789484
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            62.421055120193635,
+            72.04656404348793
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          37.6901772858525,
+          70.21183869701017
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.6074442806397977,
+          -0.875185406072291
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.08035195906316989,
+        "nominal_closest_time": 21.200000000000003,
+        "tcpa_constant_speed": 20.49976029338581,
+        "dcpa_constant_speed": 0.709870252838342,
+        "target_speed": 1.0653347122308192,
+        "relative_heading_degrees": -59.638307540706954,
+        "witness": {
+          "offset": -16,
+          "steps": 248,
+          "minimum_clearance": 4.4235786719942,
+          "waypoints": [
+            [
+              22.87962220353065,
+              33.52207320898465
+            ],
+            [
+              81.91449855668985,
+              38.066481393795
+            ],
+            [
+              92.6510810086747,
+              54.94030127109993
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "09eba1c7a9614724c7536383d4c488f9900e1019ad13f2d404efb6a4781e016a"
+    },
+    {
+      "scenario_id": 4,
+      "scenario_type": "crossing_right",
+      "risk_level": "time_separated",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        7.51031664016743,
+        56.38812547485394
+      ],
+      "goal_position": [
+        91.70991278127273,
+        48.47739242652645
+      ],
+      "start_heading": -0.09367716571152317,
+      "static_obstacles": [
+        {
+          "position": [
+            34.21921658413953,
+            53.750245016947076
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            68.25116060047553,
+            66.7118329167951
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          49.96230778847177,
+          53.63441738977713
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.5363445792055884,
+          1.277159851250708
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 19.455464285185236,
+        "nominal_closest_time": 13.4,
+        "tcpa_constant_speed": 13.04786484413667,
+        "dcpa_constant_speed": 18.897099043528364,
+        "target_speed": 1.3852085739302766,
+        "relative_heading_degrees": 118.14732626690365,
+        "witness": {
+          "offset": -16,
+          "steps": 252,
+          "minimum_clearance": 6.570053570289463,
+          "waypoints": [
+            [
+              17.96105919998225,
+              39.335794843867596
+            ],
+            [
+              78.265883292274,
+              33.67002699242805
+            ],
+            [
+              91.70991278127273,
+              48.47739242652645
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "33900ad9f9012bf4a4ed0f242cb36740e892b3c0698a8d9daa02b4f10bed8253"
+    },
+    {
+      "scenario_id": 5,
+      "scenario_type": "overtaking",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        9.60364511125736,
+        56.612093761051156
+      ],
+      "goal_position": [
+        89.30386339335426,
+        51.10036898766654
+      ],
+      "start_heading": -0.0690457741573761,
+      "static_obstacles": [
+        {
+          "position": [
+            24.939120460374433,
+            54.56768268989424
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            69.38718038006314,
+            72.6866816192646
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          38.258043127822006,
+          54.59426776799495
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.6575401549338427,
+          -0.043857183838072335
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.020249338514003946,
+        "nominal_closest_time": 22.400000000000002,
+        "tcpa_constant_speed": 21.42081933309023,
+        "dcpa_constant_speed": 0.0016024038769606808,
+        "target_speed": 0.6590011440996353,
+        "relative_heading_degrees": 0.14011979922010953,
+        "witness": {
+          "offset": -16,
+          "steps": 240,
+          "minimum_clearance": 6.222637486475094,
+          "waypoints": [
+            [
+              20.471197732421185,
+              39.82232604299635
+            ],
+            [
+              76.2286011179475,
+              35.96638351029392
+            ],
+            [
+              89.30386339335426,
+              51.10036898766654
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "a5a02f71fb12c59a4cbcf60aa0e9d390a31ae247f18efe134cca5c83dcbb4491"
+    },
+    {
+      "scenario_id": 6,
+      "scenario_type": "crossing_right",
+      "risk_level": "receding",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        11.219553374626098,
+        54.87999022466731
+      ],
+      "goal_position": [
+        92.51197378449217,
+        55.926419965553926
+      ],
+      "start_heading": 0.01287170370721283,
+      "static_obstacles": [
+        {
+          "position": [
+            36.502993486141534,
+            55.90918043714285
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            67.28061944470586,
+            76.69470836881473
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          8.4221330726108,
+          83.4593103708615
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.14541763604025218,
+          1.03096322884126
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 28.715903265695623,
+        "nominal_closest_time": 0.0,
+        "tcpa_constant_speed": -6.187836286205965,
+        "dcpa_constant_speed": 28.715903265695623,
+        "target_speed": 1.0411683188103313,
+        "relative_heading_degrees": 97.29112651350482,
+        "witness": {
+          "offset": -16,
+          "steps": 244,
+          "minimum_clearance": 8.153133129099928,
+          "waypoints": [
+            [
+              23.42450087625936,
+              39.03577183175262
+            ],
+            [
+              80.71890942775138,
+              39.77328921396989
+            ],
+            [
+              92.51197378449217,
+              55.926419965553926
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "dbbce7cdbdfa5214412d6356e92ba13e13dce29da2d92af59368b70cbf037307"
+    },
+    {
+      "scenario_id": 7,
+      "scenario_type": "crossing_right",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        7.474161905317379,
+        52.82739045607381
+      ],
+      "goal_position": [
+        92.38385566703026,
+        47.8378696923984
+      ],
+      "start_heading": -0.05869517822163613,
+      "static_obstacles": [
+        {
+          "position": [
+            31.98809860535494,
+            51.58513157503241
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            66.9450221000743,
+            67.49144468686666
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          62.83481012339803,
+          20.974441452525312
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.3520765009985538,
+          1.2055265046543318
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.16666815859550993,
+        "nominal_closest_time": 24.200000000000003,
+        "tcpa_constant_speed": 23.693690522603013,
+        "dcpa_constant_speed": 0.5850610397011612,
+        "target_speed": 1.2558869439481706,
+        "relative_heading_degrees": 109.64353890268553,
+        "witness": {
+          "offset": -16,
+          "steps": 253,
+          "minimum_clearance": 6.534058581267775,
+          "waypoints": [
+            [
+              18.514913383409347,
+              36.15100575197772
+            ],
+            [
+              79.46593676496377,
+              32.5693605562832
+            ],
+            [
+              92.38385566703026,
+              47.8378696923984
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "749001f4afcf8f42387b3a2ffe6ad6fcbe7e6e7ec7fd750cb3ab16351d8fc7ea"
+    },
+    {
+      "scenario_id": 8,
+      "scenario_type": "head_on",
+      "risk_level": "receding",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        10.615237042415266,
+        47.85796061809799
+      ],
+      "goal_position": [
+        92.05759142297836,
+        53.628487352821445
+      ],
+      "start_heading": 0.07073591077860865,
+      "static_obstacles": [
+        {
+          "position": [
+            41.11687765255451,
+            33.64014335365361
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            70.81912737745355,
+            53.061032122324875
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          9.401790469635792,
+          25.710301234018672
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -1.201112312909425,
+          -0.16428279814472438
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 22.18087619500607,
+        "nominal_closest_time": 0.0,
+        "tcpa_constant_speed": -1.0328764775495562,
+        "dcpa_constant_speed": 22.18087619500607,
+        "target_speed": 1.2122951892954492,
+        "relative_heading_degrees": -176.264534299749,
+        "witness": {
+          "offset": 16,
+          "steps": 245,
+          "minimum_clearance": 8.746176778355675,
+          "waypoints": [
+            [
+              21.454397153892792,
+              64.66607199557745
+            ],
+            [
+              78.95676933181178,
+              68.74035224553411
+            ],
+            [
+              92.05759142297836,
+              53.628487352821445
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "4cffba37a3411c0304d9f854ef72eb8537dcfc7efc56c57ba1eff598b66a3725"
+    },
+    {
+      "scenario_id": 9,
+      "scenario_type": "crossing_left",
+      "risk_level": "receding",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        9.664871420113794,
+        56.54400866312724
+      ],
+      "goal_position": [
+        91.54395278892589,
+        49.83123630431748
+      ],
+      "start_heading": -0.08180102817497586,
+      "static_obstacles": [
+        {
+          "position": [
+            37.114929556992905,
+            52.58297624786851
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            62.257384158620674,
+            32.03035028849308
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          5.706280089330033,
+          29.222013538889623
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.7534396418129594,
+          -1.2416399966272922
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 27.607279164977854,
+        "nominal_closest_time": 0.0,
+        "tcpa_constant_speed": -4.632071621089195,
+        "dcpa_constant_speed": 27.607279164977854,
+        "target_speed": 1.452357110038665,
+        "relative_heading_degrees": -116.56294383215159,
+        "witness": {
+          "offset": 16,
+          "steps": 246,
+          "minimum_clearance": 8.724670789779875,
+          "waypoints": [
+            [
+              22.93210265487915,
+              71.50998926458689
+            ],
+            [
+              80.89143615725892,
+              66.75825285810092
+            ],
+            [
+              91.54395278892589,
+              49.83123630431748
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "f539060aecf7c196e1f7a93fb29061afc77d213607c437ca02bc605474e76a77"
+    },
+    {
+      "scenario_id": 10,
+      "scenario_type": "crossing_right",
+      "risk_level": "receding",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        11.890456318265812,
+        57.155557165922204
+      ],
+      "goal_position": [
+        91.09358960923699,
+        53.235987756810005
+      ],
+      "start_heading": -0.049447215546236344,
+      "static_obstacles": [
+        {
+          "position": [
+            39.54085495474642,
+            55.128280069428286
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            65.4102706761714,
+            37.74477373948136
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          11.60780919846049,
+          84.55277437305263
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.05172915481693186,
+          0.8590373703028098
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 27.398675152076564,
+        "nominal_closest_time": 0.0,
+        "tcpa_constant_speed": -5.2417701961426095,
+        "dcpa_constant_speed": 27.398675152076564,
+        "target_speed": 0.8605934632768487,
+        "relative_heading_degrees": 96.27916887357858,
+        "witness": {
+          "offset": 16,
+          "steps": 239,
+          "minimum_clearance": 9.495503394079535,
+          "waypoints": [
+            [
+              24.66662223307855,
+              72.54287611748674
+            ],
+            [
+              79.8990898718826,
+              69.80955634146831
+            ],
+            [
+              91.09358960923699,
+              53.235987756810005
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "9e407937e21f298febef7dfef5d6c641249564b6a3c58a843d60b6b334891c8c"
+    },
+    {
+      "scenario_id": 11,
+      "scenario_type": "overtaking",
+      "risk_level": "time_separated",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        12.779899306522982,
+        54.080962733175106
+      ],
+      "goal_position": [
+        91.8484833326382,
+        58.87684594802179
+      ],
+      "start_heading": 0.060580505870762476,
+      "static_obstacles": [
+        {
+          "position": [
+            28.290128123383965,
+            53.71261677865695
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            70.90244536822513,
+            34.96434051088899
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          30.429232148762146,
+          40.497719638654544
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.8238885045812891,
+          0.08048954543247609
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 14.151293700481103,
+        "nominal_closest_time": 15.8,
+        "tcpa_constant_speed": 14.634765259961473,
+        "dcpa_constant_speed": 14.185872733801098,
+        "target_speed": 0.8278108690426331,
+        "relative_heading_degrees": 2.1087803572541293,
+        "witness": {
+          "offset": 16,
+          "steps": 238,
+          "minimum_clearance": 7.51286666085006,
+          "waypoints": [
+            [
+              23.789190732119643,
+              70.77813322120342
+            ],
+            [
+              78.90180126329807,
+              74.12097345324251
+            ],
+            [
+              91.8484833326382,
+              58.87684594802179
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "b4e184544dd4eeae816e785278d89327f9d2d447318cc1c6ddaa391a64419bf3"
+    },
+    {
+      "scenario_id": 12,
+      "scenario_type": "overtaking",
+      "risk_level": "time_separated",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        10.997179367568878,
+        57.71944047990849
+      ],
+      "goal_position": [
+        90.73512530066958,
+        55.847765379152186
+      ],
+      "start_heading": -0.02346851858994838,
+      "static_obstacles": [
+        {
+          "position": [
+            24.46440675669314,
+            56.21182032325948
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            63.21277969267719,
+            40.489414991013994
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          17.034890260217963,
+          74.1118539563561
+        ],
+        "radius": 3.0,
+        "velocity": [
+          1.4785481022705595,
+          0.023826853648391925
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 17.204429004349233,
+        "nominal_closest_time": 9.8,
+        "tcpa_constant_speed": 7.183523281300977,
+        "dcpa_constant_speed": 17.05593571785169,
+        "target_speed": 1.4787400750918516,
+        "relative_heading_degrees": 2.267890614199171,
+        "witness": {
+          "offset": 25,
+          "steps": 281,
+          "minimum_clearance": 0.612113907892569,
+          "waypoints": [
+            [
+              23.58053399983359,
+              82.430959781616
+            ],
+            [
+              79.32508888596844,
+              81.12247742529021
+            ],
+            [
+              90.73512530066958,
+              55.847765379152186
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "dfa504867f55e92b94ec0bc11d4de1516d1fe767b78466dcb5f657ae230a0947"
+    },
+    {
+      "scenario_id": 13,
+      "scenario_type": "crossing_left",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        9.623120002859883,
+        57.88684206717788
+      ],
+      "goal_position": [
+        90.66372774099621,
+        51.51756688959567
+      ],
+      "start_heading": -0.07843239947102619,
+      "static_obstacles": [
+        {
+          "position": [
+            35.299265986637295,
+            54.170644883899946
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            66.41813938738842,
+            72.28882761091282
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          53.664053559938395,
+          73.22950575179694
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.016388589134294758,
+          -0.8318707804425194
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.06462118649060954,
+        "nominal_closest_time": 22.6,
+        "tcpa_constant_speed": 21.991008961022743,
+        "dcpa_constant_speed": 0.522242232220355,
+        "target_speed": 0.8320321996220212,
+        "relative_heading_degrees": -86.63478599528887,
+        "witness": {
+          "offset": -16,
+          "steps": 244,
+          "minimum_clearance": 6.850837299810495,
+          "waypoints": [
+            [
+              20.332596920012254,
+              40.9958058597399
+            ],
+            [
+              77.44698651865842,
+              36.50697891104676
+            ],
+            [
+              90.66372774099621,
+              51.51756688959567
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "fca43ef24cea69685e33a6462729de76158aff49cfeb7ed82ca6637e6a992042"
+    },
+    {
+      "scenario_id": 14,
+      "scenario_type": "crossing_right",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        7.544983965034303,
+        44.60917989641374
+      ],
+      "goal_position": [
+        91.34894732512586,
+        42.7145096670954
+      ],
+      "start_heading": -0.02260450985486894,
+      "static_obstacles": [
+        {
+          "position": [
+            34.2835001094611,
+            42.73913433234656
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            65.4628536546635,
+            22.664580304555926
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          42.20927789472865,
+          25.773693204550955
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.3183380997743894,
+          0.8358601531874974
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.02332098868287194,
+        "nominal_closest_time": 21.400000000000002,
+        "tcpa_constant_speed": 20.782866681095214,
+        "dcpa_constant_speed": 0.5920796811649388,
+        "target_speed": 0.8944279408955178,
+        "relative_heading_degrees": 70.44576220804083,
+        "witness": {
+          "offset": 16,
+          "steps": 250,
+          "minimum_clearance": 5.973661151686798,
+          "waypoints": [
+            [
+              19.903559670610257,
+              60.333861340867486
+            ],
+            [
+              79.71365433601154,
+              58.98165314889536
+            ],
+            [
+              91.34894732512586,
+              42.7145096670954
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "4657d7e39fc8130e076188ef5d3fb40fce166c3dd116bb97e9072708832789e7"
+    },
+    {
+      "scenario_id": 15,
+      "scenario_type": "crossing_right",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        7.792936708425429,
+        57.87912181114653
+      ],
+      "goal_position": [
+        91.63818774461063,
+        41.461522892330564
+      ],
+      "start_heading": -0.1933618821219733,
+      "static_obstacles": [
+        {
+          "position": [
+            36.19185146250156,
+            52.628734726066114
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            66.74738951850107,
+            30.209337102692505
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          45.753061133577695,
+          35.37158176280863
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.3788432162612768,
+          0.5338488191460439
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.013548647136387421,
+        "nominal_closest_time": 24.8,
+        "tcpa_constant_speed": 24.10407710914437,
+        "dcpa_constant_speed": 0.43456974512335583,
+        "target_speed": 0.6546119035052861,
+        "relative_heading_degrees": 65.71758815703026,
+        "witness": {
+          "offset": 16,
+          "steps": 254,
+          "minimum_clearance": 6.8518185343582205,
+          "waypoints": [
+            [
+              22.64384915858471,
+              71.27503161219043
+            ],
+            [
+              82.9363698216531,
+              59.46925358877577
+            ],
+            [
+              91.63818774461063,
+              41.461522892330564
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "7ec4b4dd68b563bd6b746366df2b8573108c1baa32fae5afda14045f9fd3e662"
+    },
+    {
+      "scenario_id": 16,
+      "scenario_type": "crossing_right",
+      "risk_level": "time_separated",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        11.081550312040346,
+        59.536353803323365
+      ],
+      "goal_position": [
+        90.9159100069186,
+        50.44040405309333
+      ],
+      "start_heading": -0.11344607264531532,
+      "static_obstacles": [
+        {
+          "position": [
+            35.222663936176644,
+            55.099480656608094
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            67.88697419816934,
+            35.30381908211822
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          43.13996955147553,
+          24.871463052726973
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.04113058669751635,
+          0.7835513011746421
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 15.524306228334172,
+        "nominal_closest_time": 20.8,
+        "tcpa_constant_speed": 20.261400127687452,
+        "dcpa_constant_speed": 16.000448533063818,
+        "target_speed": 0.7846300827361622,
+        "relative_heading_degrees": 93.49513888263215,
+        "witness": {
+          "offset": 16,
+          "steps": 241,
+          "minimum_clearance": 9.687468666611082,
+          "waypoints": [
+            [
+              24.8156592210719,
+              74.07506944380756
+            ],
+            [
+              80.8042934865826,
+              67.6959889850992
+            ],
+            [
+              90.9159100069186,
+              50.44040405309333
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "1260c2c461798ca1675946b3f482f32893fe4e70d6706621c103dd413c4ddd4b"
+    },
+    {
+      "scenario_id": 17,
+      "scenario_type": "crossing_left",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        8.466056103745705,
+        56.881084102760894
+      ],
+      "goal_position": [
+        92.44716848833389,
+        51.03033426918765
+      ],
+      "start_heading": -0.06955506417407835,
+      "static_obstacles": [
+        {
+          "position": [
+            38.62080733284605,
+            55.34456636452782
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            68.34437358943022,
+            34.977377228589766
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          42.227453091826774,
+          76.41172833303378
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.28350027344830175,
+          -1.087127257041848
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.19292917617984498,
+        "nominal_closest_time": 20.6,
+        "tcpa_constant_speed": 19.92971478795741,
+        "dcpa_constant_speed": 0.7255660347544237,
+        "target_speed": 1.1234847920860318,
+        "relative_heading_degrees": -71.39875735663588,
+        "witness": {
+          "offset": 16,
+          "steps": 251,
+          "minimum_clearance": 7.5259110250410615,
+          "waypoints": [
+            [
+              21.54902427082912,
+              72.00840851718006
+            ],
+            [
+              81.58816813727485,
+              67.82563454562509
+            ],
+            [
+              92.44716848833389,
+              51.03033426918765
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "7c473aeb6febf9e9cc8bcbc2645fae02021c5e6800f8873b02fc064f3b0cfd05"
+    },
+    {
+      "scenario_id": 18,
+      "scenario_type": "crossing_right",
+      "risk_level": "time_separated",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        11.954460045267593,
+        42.711987355110104
+      ],
+      "goal_position": [
+        92.35712215854392,
+        42.44186907816222
+      ],
+      "start_heading": -0.003359556183923121,
+      "static_obstacles": [
+        {
+          "position": [
+            34.09292476641417,
+            42.57519276168719
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            71.22033553091374,
+            26.49216344160438
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          55.82497147896024,
+          13.146607257606302
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.12162142908484008,
+          0.6540258232576671
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 14.79113560473982,
+        "nominal_closest_time": 23.400000000000002,
+        "tcpa_constant_speed": 22.805903453257862,
+        "dcpa_constant_speed": 15.183251002063814,
+        "target_speed": 0.6652379645664459,
+        "relative_heading_degrees": 100.72677840956351,
+        "witness": {
+          "offset": 16,
+          "steps": 241,
+          "minimum_clearance": 8.534469360143007,
+          "waypoints": [
+            [
+              24.008145123452856,
+              58.67158246388193
+            ],
+            [
+              80.41094267601484,
+              58.48209338367619
+            ],
+            [
+              92.35712215854392,
+              42.44186907816222
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "8232f2da87701948c4deb90398a33313ed888bc05ec2d0b7e1ba507d26dc09c2"
+    },
+    {
+      "scenario_id": 19,
+      "scenario_type": "crossing_right",
+      "risk_level": "time_separated",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        12.22511158698715,
+        42.31800253725288
+      ],
+      "goal_position": [
+        90.65772204288552,
+        56.83713414843523
+      ],
+      "start_heading": 0.1830439312773565,
+      "static_obstacles": [
+        {
+          "position": [
+            37.783857152274116,
+            45.258010680087395
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            66.13727960088147,
+            73.09653231650691
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          68.43547214482932,
+          44.37388222036472
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.8320809242490576,
+          1.077006749288215
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 16.429797903963735,
+        "nominal_closest_time": 19.200000000000003,
+        "tcpa_constant_speed": 18.684934634540163,
+        "dcpa_constant_speed": 15.868622150672111,
+        "target_speed": 1.3609930942188995,
+        "relative_heading_degrees": 117.20154685681895,
+        "witness": {
+          "offset": -16,
+          "steps": 240,
+          "minimum_clearance": 8.569387965695427,
+          "waypoints": [
+            [
+              26.93701764287325,
+              28.769577529054253
+            ],
+            [
+              81.77056773066296,
+              38.92014533248896
+            ],
+            [
+              90.65772204288552,
+              56.83713414843523
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "4d8e1018bba80a214ab4c24ce1510de613e167734da91ccdce260c9941b74980"
+    },
+    {
+      "scenario_id": 20,
+      "scenario_type": "crossing_left",
+      "risk_level": "receding",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        10.221521837143813,
+        52.81392117690562
+      ],
+      "goal_position": [
+        91.44829155065611,
+        55.23707570880714
+      ],
+      "start_heading": 0.029823124791678937,
+      "static_obstacles": [
+        {
+          "position": [
+            35.82923101273535,
+            52.29596575297663
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            64.68274840189486,
+            35.96515299881773
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          8.523053369334704,
+          24.68601982121236
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.5609157349799538,
+          -1.27084427316265
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 28.179134653352165,
+        "nominal_closest_time": 0.0,
+        "tcpa_constant_speed": -10.38569542461411,
+        "dcpa_constant_speed": 28.179134653352165,
+        "target_speed": 1.3891262103849333,
+        "relative_heading_degrees": -67.89339381595101,
+        "witness": {
+          "offset": 16,
+          "steps": 244,
+          "minimum_clearance": 9.281495156558249,
+          "waypoints": [
+            [
+              21.739086454210625,
+              69.16463080345366
+            ],
+            [
+              78.9765284019487,
+              70.87213643662473
+            ],
+            [
+              91.44829155065611,
+              55.23707570880714
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "608a3fd433a759fc33e57656bd1ac4c578475c0d3722690076591afc23405be9"
+    },
+    {
+      "scenario_id": 21,
+      "scenario_type": "overtaking",
+      "risk_level": "receding",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        9.46278215530544,
+        55.30782097179269
+      ],
+      "goal_position": [
+        87.47879514838398,
+        46.93574396875282
+      ],
+      "start_heading": -0.10690317945264236,
+      "static_obstacles": [
+        {
+          "position": [
+            20.35224877865271,
+            53.60999504829371
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            62.659293680517315,
+            72.08407536382629
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          5.366412226181751,
+          29.29098608758764
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.6008891815726143,
+          -0.09934995549992218
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 26.33734884129793,
+        "nominal_closest_time": 0.0,
+        "tcpa_constant_speed": -1.401609781243756,
+        "dcpa_constant_speed": 26.33734884129793,
+        "target_speed": 0.6090469786386291,
+        "relative_heading_degrees": -3.2631487753807162,
+        "witness": {
+          "offset": 16,
+          "steps": 237,
+          "minimum_clearance": 1.6053075525606513,
+          "waypoints": [
+            [
+              23.101472505666553,
+              69.93608558270832
+            ],
+            [
+              77.25449442000608,
+              64.12480079615587
+            ],
+            [
+              87.47879514838398,
+              46.93574396875282
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "7a5ae1e5cc5df86492d1e520803f26a6416d38c3f819359c83a170aeb47c5953"
+    },
+    {
+      "scenario_id": 22,
+      "scenario_type": "crossing_left",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        10.670567252122282,
+        52.18874569973241
+      ],
+      "goal_position": [
+        87.66481402989871,
+        54.79061406971627
+      ],
+      "start_heading": 0.03378016851548592,
+      "static_obstacles": [
+        {
+          "position": [
+            37.787834754036744,
+            54.68800934327864
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            65.40960063578811,
+            73.71301254545502
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          39.14736441484164,
+          70.49259120133357
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.5723483687418223,
+          -0.8105277151672293
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.1619876491327289,
+        "nominal_closest_time": 20.8,
+        "tcpa_constant_speed": 20.205147594344698,
+        "dcpa_constant_speed": 0.66017737142128,
+        "target_speed": 0.9922387979995714,
+        "relative_heading_degrees": -56.70790675025608,
+        "witness": {
+          "offset": -16,
+          "steps": 233,
+          "minimum_clearance": 5.166343037735354,
+          "waypoints": [
+            [
+              23.204101215773203,
+              36.60315856347063
+            ],
+            [
+              76.21203988890964,
+              38.39445706645809
+            ],
+            [
+              87.66481402989871,
+              54.79061406971627
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "b3d397e549ffe55463276b330c23d203b9a6a491e38a7488744017e9051ba1f4"
+    },
+    {
+      "scenario_id": 23,
+      "scenario_type": "head_on",
+      "risk_level": "time_separated",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        7.11094704034632,
+        59.25098786635293
+      ],
+      "goal_position": [
+        90.70364746863407,
+        40.017476064374044
+      ],
+      "start_heading": -0.22615008530019798,
+      "static_obstacles": [
+        {
+          "position": [
+            27.925882041217093,
+            33.02726755919065
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            68.79665106986896,
+            44.025202784658674
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          55.10071424037732,
+          62.46088735878582
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.728368631290296,
+          0.3551565478967135
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 16.95734251749524,
+        "nominal_closest_time": 16.6,
+        "tcpa_constant_speed": 16.112420397775555,
+        "dcpa_constant_speed": 16.870125075376173,
+        "target_speed": 0.8103437767772452,
+        "relative_heading_degrees": 166.9633282247648,
+        "witness": {
+          "offset": -16,
+          "steps": 255,
+          "minimum_clearance": 0.573118249795769,
+          "waypoints": [
+            [
+              15.217752522234377,
+              40.967670200271925
+            ],
+            [
+              75.42156804412497,
+              27.115613855258832
+            ],
+            [
+              90.70364746863407,
+              40.017476064374044
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "0c24e3cc9370a8a73b3b66a35ae550a5679bef3bf6a5cc32b76cecce7c656408"
+    },
+    {
+      "scenario_id": 24,
+      "scenario_type": "overtaking",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        8.283017516298253,
+        43.55971967710557
+      ],
+      "goal_position": [
+        87.6277878599774,
+        42.027418218302316
+      ],
+      "start_heading": -0.019309539918564014,
+      "static_obstacles": [
+        {
+          "position": [
+            19.369766181031135,
+            43.51631159688444
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            63.00969973202614,
+            23.870709321082206
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          32.69084397389102,
+          40.289089508114564
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.8386442631858783,
+          0.1100584971430866
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.033177677463728836,
+        "nominal_closest_time": 22.200000000000003,
+        "tcpa_constant_speed": 21.039148773349794,
+        "dcpa_constant_speed": 0.1437957670021319,
+        "target_speed": 0.8458351334438523,
+        "relative_heading_degrees": 8.582774561097294,
+        "witness": {
+          "offset": 16,
+          "steps": 239,
+          "minimum_clearance": 3.0597796121464746,
+          "waypoints": [
+            [
+              20.589713875611896,
+              59.32503682328618
+            ],
+            [
+              75.93895838025183,
+              58.25613552417398
+            ],
+            [
+              87.6277878599774,
+              42.027418218302316
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "c026e24e9fd4fed9d6d96dfa9b90be51e19764bcc4cd34deefbdd28e44d33abe"
+    },
+    {
+      "scenario_id": 25,
+      "scenario_type": "crossing_right",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        11.432118513398464,
+        52.25070139675555
+      ],
+      "goal_position": [
+        91.0481532488957,
+        55.09115467032921
+      ],
+      "start_heading": 0.03566177408776477,
+      "static_obstacles": [
+        {
+          "position": [
+            35.23265040033923,
+            53.73972889886852
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            71.43401681340231,
+            37.14935185838831
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          47.61549574535641,
+          37.43622516249463
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.07784770592130262,
+          0.8886871722429835
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.14776130511748184,
+        "nominal_closest_time": 18.0,
+        "tcpa_constant_speed": 17.518420615022027,
+        "dcpa_constant_speed": 0.5322796647234463,
+        "target_speed": 0.892090329185582,
+        "relative_heading_degrees": 92.96297888764752,
+        "witness": {
+          "offset": 16,
+          "steps": 240,
+          "minimum_clearance": 6.6070004365827835,
+          "waypoints": [
+            [
+              22.854021298289467,
+              68.668378966147
+            ],
+            [
+              78.4853155620494,
+              70.65313106325418
+            ],
+            [
+              91.0481532488957,
+              55.09115467032921
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "ca9e3e0c1286175466704e3eb54f2b5e15114618a10c416febede0ff74820a39"
+    },
+    {
+      "scenario_id": 26,
+      "scenario_type": "overtaking",
+      "risk_level": "time_separated",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        11.966961962078312,
+        47.633548258930425
+      ],
+      "goal_position": [
+        88.99157938731483,
+        43.137451646865976
+      ],
+      "start_heading": -0.05830604083225121,
+      "static_obstacles": [
+        {
+          "position": [
+            23.331497064115336,
+            46.16732153144133
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            65.54320099328686,
+            59.794387899397925
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          21.054731217643347,
+          26.36265277942827
+        ],
+        "radius": 3.0,
+        "velocity": [
+          1.1094502296494224,
+          0.031390450414346203
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 19.344197871024026,
+        "nominal_closest_time": 15.4,
+        "tcpa_constant_speed": 13.856665176779767,
+        "dcpa_constant_speed": 19.4863966627405,
+        "target_speed": 1.109894216782109,
+        "relative_heading_degrees": 4.96136720022206,
+        "witness": {
+          "offset": 25,
+          "steps": 274,
+          "minimum_clearance": 4.546243788419428,
+          "waypoints": [
+            [
+              25.403395431133845,
+              71.89178924280318
+            ],
+            [
+              78.46879643320825,
+              68.79424487791425
+            ],
+            [
+              88.99157938731483,
+              43.137451646865976
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "861e530430ec9b3e7eaf0b2ed14dff4d40883d22f724cd4130224918f6d33f89"
+    },
+    {
+      "scenario_id": 27,
+      "scenario_type": "head_on",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        10.831725138949679,
+        47.676859141463055
+      ],
+      "goal_position": [
+        87.13613606994711,
+        49.033807017074395
+      ],
+      "start_heading": 0.017781473474744885,
+      "static_obstacles": [
+        {
+          "position": [
+            36.69062699642181,
+            65.16818545549464
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            61.91918318711178,
+            49.61845018592281
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          43.36424820039113,
+          48.49465489619619
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.8028875240539665,
+          -0.034078012360992345
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.23486186676225287,
+        "nominal_closest_time": 12.0,
+        "tcpa_constant_speed": 11.608181511699117,
+        "dcpa_constant_speed": 0.009415517817346883,
+        "target_speed": 0.8036104076030776,
+        "relative_heading_degrees": -178.5883819550943,
+        "witness": {
+          "offset": -16,
+          "steps": 231,
+          "minimum_clearance": 9.891715653775634,
+          "waypoints": [
+            [
+              23.114316687545664,
+              31.892754958762083
+            ],
+            [
+              75.42252168816105,
+              32.822969959265976
+            ],
+            [
+              87.13613606994711,
+              49.033807017074395
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "95d0843a73db5cf9475e64586f8bb1a171cb00a84934e01f2f1fb4594797c263"
+    },
+    {
+      "scenario_id": 28,
+      "scenario_type": "crossing_left",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        9.76881945065466,
+        58.321185375358
+      ],
+      "goal_position": [
+        88.34080067181054,
+        59.35753140970692
+      ],
+      "start_heading": 0.013189001051462312,
+      "static_obstacles": [
+        {
+          "position": [
+            35.928218760488484,
+            57.84369441747976
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            61.78300201202328,
+            79.37819825379829
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          40.168255013255866,
+          70.73024781457912
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.379614082635172,
+          -0.6081049374983253
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.025239473575048372,
+        "nominal_closest_time": 19.6,
+        "tcpa_constant_speed": 18.868354725862883,
+        "dcpa_constant_speed": 0.46977250592483066,
+        "target_speed": 0.7168671193078849,
+        "relative_heading_degrees": -58.780892190228016,
+        "witness": {
+          "offset": -16,
+          "steps": 237,
+          "minimum_clearance": 7.429390390259922,
+          "waypoints": [
+            [
+              21.978793666238907,
+              42.48084037738627
+            ],
+            [
+              76.55286225412127,
+              43.20065956331396
+            ],
+            [
+              88.34080067181054,
+              59.35753140970692
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "e95ef255663f081d87e6ce67218386e768bf308cd5d8205795006c8b4159430d"
+    },
+    {
+      "scenario_id": 29,
+      "scenario_type": "crossing_right",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        11.667720987819099,
+        42.89850145488739
+      ],
+      "goal_position": [
+        87.69102539586648,
+        47.96481695085443
+      ],
+      "start_heading": 0.06654321915178425,
+      "static_obstacles": [
+        {
+          "position": [
+            35.32773264059336,
+            45.38668696386632
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            62.0104178612514,
+            66.56711981735751
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          49.76722397586451,
+          29.40293280143421
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.3172618567601843,
+          0.9193962304641518
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.11796148557172677,
+        "nominal_closest_time": 17.0,
+        "tcpa_constant_speed": 16.54436497295347,
+        "dcpa_constant_speed": 0.5122144551652803,
+        "target_speed": 0.9725967891920122,
+        "relative_heading_degrees": 105.22569573370552,
+        "witness": {
+          "offset": -16,
+          "steps": 231,
+          "minimum_clearance": 10.727588196829371,
+          "waypoints": [
+            [
+              24.705068727912916,
+              27.731841839010507
+            ],
+            [
+              76.78148953185094,
+              31.202298427918834
+            ],
+            [
+              87.69102539586648,
+              47.96481695085443
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "a077a12f8fa6ca6502b5769ead0d17de989054d80bd0f1c2b6f3bef7e750e6fe"
+    },
+    {
+      "scenario_id": 30,
+      "scenario_type": "crossing_left",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        9.133637967248376,
+        49.83166825042668
+      ],
+      "goal_position": [
+        89.16520741859608,
+        52.47250307478375
+      ],
+      "start_heading": 0.032985445560239975,
+      "static_obstacles": [
+        {
+          "position": [
+            37.06672435068664,
+            51.31271714385175
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            68.5094185561935,
+            31.501265562990707
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          38.62332765772395,
+          71.16466837519624
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.4614953518286094,
+          -1.0003248161559837
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.09001156191956673,
+        "nominal_closest_time": 20.0,
+        "tcpa_constant_speed": 19.449453209035333,
+        "dcpa_constant_speed": 0.723324329299802,
+        "target_speed": 1.101647719362644,
+        "relative_heading_degrees": -67.12390130771443,
+        "witness": {
+          "offset": 16,
+          "steps": 241,
+          "minimum_clearance": 8.19360532901928,
+          "waypoints": [
+            [
+              20.59943889251655,
+              66.2187182943522
+            ],
+            [
+              76.64406363550266,
+              68.06804597534034
+            ],
+            [
+              89.16520741859608,
+              52.47250307478375
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "386adb9545569f6f3da820a2dde22fe5556424af33aa97f7d1aa05af6a8c4afd"
+    },
+    {
+      "scenario_id": 31,
+      "scenario_type": "crossing_left",
+      "risk_level": "receding",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        8.680302717078238,
+        50.40186114549208
+      ],
+      "goal_position": [
+        91.98605071080165,
+        55.68093409468773
+      ],
+      "start_heading": 0.06328523055648018,
+      "static_obstacles": [
+        {
+          "position": [
+            36.52385116192352,
+            53.057691390492295
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            71.6842870400589,
+            33.87930668775294
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          7.645431367613075,
+          20.613228405832267
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.04627194123444787,
+          -0.7890664838183972
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 29.80660328196214,
+        "nominal_closest_time": 0.0,
+        "tcpa_constant_speed": -5.866635722454524,
+        "dcpa_constant_speed": 29.80660328196214,
+        "target_speed": 0.7904220444997299,
+        "relative_heading_degrees": -96.98203630886451,
+        "witness": {
+          "offset": 16,
+          "steps": 249,
+          "minimum_clearance": 7.740182606561158,
+          "waypoints": [
+            [
+              19.644392679130124,
+              67.12874762517004
+            ],
+            [
+              78.99818487968534,
+              70.88998867256737
+            ],
+            [
+              91.98605071080165,
+              55.68093409468773
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "3d971fe01df0bcd4af244d6442026c5dea1e962f1824bdcc44bfaf53fea43f1e"
+    },
+    {
+      "scenario_id": 32,
+      "scenario_type": "crossing_left",
+      "risk_level": "time_separated",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        7.675934773812343,
+        48.227714322895785
+      ],
+      "goal_position": [
+        87.39782578647609,
+        42.55571437243587
+      ],
+      "start_heading": -0.07102764866715991,
+      "static_obstacles": [
+        {
+          "position": [
+            30.553118115819544,
+            45.9084663432452
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            63.078645307196915,
+            25.291456696145175
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          48.375938279216044,
+          36.43758797465635
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.4822915072859133,
+          -0.6092182768407111
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 19.470835322917665,
+        "nominal_closest_time": 15.600000000000001,
+        "tcpa_constant_speed": 14.99811222159431,
+        "dcpa_constant_speed": 19.12999247788544,
+        "target_speed": 0.7770148047732961,
+        "relative_heading_degrees": -124.29753693457117,
+        "witness": {
+          "offset": 16,
+          "steps": 240,
+          "minimum_clearance": 6.735783489623606,
+          "waypoints": [
+            [
+              20.781165010960255,
+              63.33575656639458
+            ],
+            [
+              76.56356969911866,
+              59.36698722827753
+            ],
+            [
+              87.39782578647609,
+              42.55571437243587
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "3e0ad2adde2cb8ab5772c63162119933d8d32e24323feb9ff3c6e3371867734c"
+    },
+    {
+      "scenario_id": 33,
+      "scenario_type": "overtaking",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        9.066442182624922,
+        43.845112597167244
+      ],
+      "goal_position": [
+        91.28579364412636,
+        57.66907522941113
+      ],
+      "start_heading": 0.1665771266342652,
+      "static_obstacles": [
+        {
+          "position": [
+            26.44629103263832,
+            47.5122547160076
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            67.2726168445293,
+            33.41765235313359
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          39.63272275489816,
+          46.38696966440671
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.6287936502878999,
+          0.21518124142318065
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.0950326863929236,
+        "nominal_closest_time": 23.8,
+        "tcpa_constant_speed": 22.743992469554307,
+        "dcpa_constant_speed": 0.10672513608360784,
+        "target_speed": 0.664593425563933,
+        "relative_heading_degrees": 9.347437190027108,
+        "witness": {
+          "offset": 16,
+          "steps": 249,
+          "minimum_clearance": 8.125611667542213,
+          "waypoints": [
+            [
+              18.24741384237746,
+              61.61333590122386
+            ],
+            [
+              76.79897133696271,
+              71.45791054790942
+            ],
+            [
+              91.28579364412636,
+              57.66907522941113
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "a826701a9a9a5f3f74f285a7b9802a9b1e1f0ac4cb615d2177b671817d636d40"
+    },
+    {
+      "scenario_id": 34,
+      "scenario_type": "overtaking",
+      "risk_level": "receding",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        11.287380564376853,
+        55.92230295176818
+      ],
+      "goal_position": [
+        89.435287401096,
+        55.29123400683552
+      ],
+      "start_heading": -0.008075139226742937,
+      "static_obstacles": [
+        {
+          "position": [
+            26.93663297850032,
+            55.037834333558926
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            66.29712234127561,
+            75.49946142740993
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          8.491441299736382,
+          34.55444392822432
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.941013087158125,
+          -0.09341739864137895
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 21.548352324878312,
+        "nominal_closest_time": 0.2,
+        "tcpa_constant_speed": -4.090993640807355,
+        "dcpa_constant_speed": 21.550004074746784,
+        "target_speed": 0.9456386416447815,
+        "relative_heading_degrees": -5.206689610518167,
+        "witness": {
+          "offset": -16,
+          "steps": 236,
+          "minimum_clearance": 4.460765296694655,
+          "waypoints": [
+            [
+              23.157788495796314,
+              39.82592399432269
+            ],
+            [
+              77.30647782274578,
+              39.3886562845881
+            ],
+            [
+              89.435287401096,
+              55.29123400683552
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "e98b259bcf35c61ed823ee36b18f52fc6744f90692ecf51d805384a36b33bb6a"
+    },
+    {
+      "scenario_id": 35,
+      "scenario_type": "crossing_right",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        8.2141712188103,
+        53.700387112942956
+      ],
+      "goal_position": [
+        89.25895476408664,
+        41.263620627417964
+      ],
+      "start_heading": -0.15226766899890026,
+      "static_obstacles": [
+        {
+          "position": [
+            33.121098702074946,
+            49.62959194253173
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            62.831007023728844,
+            25.03791468097513
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          42.84025180253334,
+          29.45629116035667
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.10453857139971137,
+          0.9700486960931993
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.00552869847916618,
+        "nominal_closest_time": 19.200000000000003,
+        "tcpa_constant_speed": 18.666059389662415,
+        "dcpa_constant_speed": 0.573935613453032,
+        "target_speed": 0.9756653041399026,
+        "relative_heading_degrees": 92.57347758443188,
+        "witness": {
+          "offset": 16,
+          "steps": 245,
+          "minimum_clearance": 6.117866444053536,
+          "waypoints": [
+            [
+              22.50220636490575,
+              67.6951022463046
+            ],
+            [
+              79.8246780769662,
+              58.89865460501085
+            ],
+            [
+              89.25895476408664,
+              41.263620627417964
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "8ea7dff7308a8098b482fe1f0aff2723ab6708ec14f950dc006d53ddc3eb873e"
+    },
+    {
+      "scenario_id": 36,
+      "scenario_type": "head_on",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        12.002288863654007,
+        51.549457562375565
+      ],
+      "goal_position": [
+        89.28931579012178,
+        59.146046621793005
+      ],
+      "start_heading": 0.09797590275254028,
+      "static_obstacles": [
+        {
+          "position": [
+            35.73974542128451,
+            33.21912369354881
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            64.52820168198734,
+            55.055343349920214
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          51.95884567497118,
+          52.462962472929924
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -1.1383028946828304,
+          0.11652312890123093
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.015498283593708665,
+        "nominal_closest_time": 13.200000000000001,
+        "tcpa_constant_speed": 12.770148809063116,
+        "dcpa_constant_speed": 0.09684054415702684,
+        "target_speed": 1.1442513358577493,
+        "relative_heading_degrees": 168.5416323911043,
+        "witness": {
+          "offset": 16,
+          "steps": 235,
+          "minimum_clearance": 10.585169231087413,
+          "waypoints": [
+            [
+              22.379631603694246,
+              68.64655549318634
+            ],
+            [
+              75.7817577437547,
+              73.89548307285865
+            ],
+            [
+              89.28931579012178,
+              59.146046621793005
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "81eb4e56048c8dba14b4b49ecd2210eab1f80aada672cff2ff1eb4f66712ccdb"
+    },
+    {
+      "scenario_id": 37,
+      "scenario_type": "crossing_right",
+      "risk_level": "time_separated",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        12.089057830689962,
+        43.28154780773294
+      ],
+      "goal_position": [
+        87.15036140069863,
+        40.144575935507724
+      ],
+      "start_heading": -0.04176782587237924,
+      "static_obstacles": [
+        {
+          "position": [
+            34.42319466613882,
+            40.67407489591085
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            67.16272841659955,
+            61.219984793901034
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          45.9467196015588,
+          8.571035959772384
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.37915020920548426,
+          0.6450420721881767
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 17.26516325709943,
+        "nominal_closest_time": 26.200000000000003,
+        "tcpa_constant_speed": 25.412484268812854,
+        "dcpa_constant_speed": 17.760294231891336,
+        "target_speed": 0.7482206599883349,
+        "relative_heading_degrees": 61.94647228271744,
+        "witness": {
+          "offset": -25,
+          "steps": 269,
+          "minimum_clearance": 8.186224186875545,
+          "waypoints": [
+            [
+              23.034699980179354,
+              17.802283337671778
+            ],
+            [
+              74.1169351222431,
+              15.6674478473503
+            ],
+            [
+              87.15036140069863,
+              40.144575935507724
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "fc87a3c7cb155a09ebe8bd3f7d5e18b8b63393fa5719e3a793044dbfc0ab0629"
+    },
+    {
+      "scenario_id": 38,
+      "scenario_type": "crossing_right",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        11.51157526221242,
+        59.31271421782317
+      ],
+      "goal_position": [
+        87.09110835781011,
+        43.998536209349155
+      ],
+      "start_heading": -0.19991673224775178,
+      "static_obstacles": [
+        {
+          "position": [
+            34.08886628139508,
+            56.229395178256055
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            63.7162977395558,
+            28.06268871078474
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          41.67535928621424,
+          35.2619295549691
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.37686252658634617,
+          0.8261560624158176
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.1530968864778325,
+        "nominal_closest_time": 19.8,
+        "tcpa_constant_speed": 19.278786736586643,
+        "dcpa_constant_speed": 0.5894448174301467,
+        "target_speed": 0.9080524232727165,
+        "relative_heading_degrees": 76.93362802617673,
+        "witness": {
+          "offset": 16,
+          "steps": 233,
+          "minimum_clearance": 6.008838486938897,
+          "waypoints": [
+            [
+              26.449976223165446,
+              72.61099142691299
+            ],
+            [
+              78.50751450615073,
+              62.06291875040921
+            ],
+            [
+              87.09110835781011,
+              43.998536209349155
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "6c326a10c819a2997dd084556c3c087bf11ee5d2b0516a7ebcc837b5fb738a78"
+    },
+    {
+      "scenario_id": 39,
+      "scenario_type": "crossing_left",
+      "risk_level": "time_separated",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        11.235522383895862,
+        58.20006189283323
+      ],
+      "goal_position": [
+        91.29409618804932,
+        46.39763733727537
+      ],
+      "start_heading": -0.14636808818017746,
+      "static_obstacles": [
+        {
+          "position": [
+            34.153563908956535,
+            55.34396359109274
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            68.2118280959226,
+            29.891279872372067
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          39.222972307144055,
+          87.88094886934408
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.1508050520990474,
+          -0.9002575711083278
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 18.719087778900416,
+        "nominal_closest_time": 19.200000000000003,
+        "tcpa_constant_speed": 18.651043160569184,
+        "dcpa_constant_speed": 19.319816510596326,
+        "target_speed": 0.9128011054312228,
+        "relative_heading_degrees": -72.10421708985368,
+        "witness": {
+          "offset": 25,
+          "steps": 284,
+          "minimum_clearance": 6.9855723465811455,
+          "waypoints": [
+            [
+              26.753360637379927,
+              81.18259212644125
+            ],
+            [
+              83.06855920464363,
+              72.88047218052101
+            ],
+            [
+              91.29409618804932,
+              46.39763733727537
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "ab79629a94a1e882bb10d5485c5f23dd909039445ae12c6f1e48a8d0b6f9bf44"
+    },
+    {
+      "scenario_id": 40,
+      "scenario_type": "overtaking",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        7.9317482392241425,
+        53.57455861339194
+      ],
+      "goal_position": [
+        89.80314398109667,
+        47.41048768061158
+      ],
+      "start_heading": -0.07514789806169396,
+      "static_obstacles": [
+        {
+          "position": [
+            22.183971991066272,
+            54.42350282264229
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            61.381473928660185,
+            26.936670101949595
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          38.89212566614718,
+          49.68090628499957
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.7214900540697601,
+          0.00727891717541416
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.0411444861116766,
+        "nominal_closest_time": 25.400000000000002,
+        "tcpa_constant_speed": 24.329529204116547,
+        "dcpa_constant_speed": 0.06385729174782406,
+        "target_speed": 0.7215267706446046,
+        "relative_heading_degrees": 4.883679344034375,
+        "witness": {
+          "offset": 16,
+          "steps": 246,
+          "minimum_clearance": 4.628325884418352,
+          "waypoints": [
+            [
+              21.099115962132156,
+              68.62847595240109
+            ],
+            [
+              79.03824629806213,
+              64.26625754952583
+            ],
+            [
+              89.80314398109667,
+              47.41048768061158
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "81fc336fba92228e68d7814dcadf347df0e5bf88387d70e7105084373a0f354f"
+    },
+    {
+      "scenario_id": 41,
+      "scenario_type": "head_on",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        9.390684293695744,
+        46.63883386550282
+      ],
+      "goal_position": [
+        90.11546147268393,
+        49.28231636283871
+      ],
+      "start_heading": 0.03273515615264134,
+      "static_obstacles": [
+        {
+          "position": [
+            39.36877380921987,
+            29.711825800333816
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            61.960506882154284,
+            49.57606651801905
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          48.285252626704214,
+          51.14928352888356
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.6574385376240165,
+          -0.2352666369147399
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.15054727141072083,
+        "nominal_closest_time": 15.200000000000001,
+        "tcpa_constant_speed": 14.646527770519151,
+        "dcpa_constant_speed": 0.10654510112233989,
+        "target_speed": 0.6982662967653368,
+        "relative_heading_degrees": -162.18566296465738,
+        "witness": {
+          "offset": 16,
+          "steps": 242,
+          "minimum_clearance": 8.450652148852956,
+          "waypoints": [
+            [
+              20.860586364832542,
+              63.023013627655445
+            ],
+            [
+              77.5982214809357,
+              64.88099268453277
+            ],
+            [
+              90.11546147268393,
+              49.28231636283871
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "afd9ba48ffbd39d5d9fcb761767008bcca66b21c83d53c6d03450c3367fd071e"
+    },
+    {
+      "scenario_id": 42,
+      "scenario_type": "crossing_left",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        9.482553959409085,
+        57.89134741430195
+      ],
+      "goal_position": [
+        90.03286669474826,
+        54.513219801606105
+      ],
+      "start_heading": -0.04191354566340516,
+      "static_obstacles": [
+        {
+          "position": [
+            37.464545278592325,
+            55.97266225161789
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            61.73871020776921,
+            35.002391047960685
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          48.394540803727665,
+          69.87563993531644
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.011503532829321825,
+          -0.6726751593392484
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.11681793720416311,
+        "nominal_closest_time": 20.200000000000003,
+        "tcpa_constant_speed": 19.647660635817633,
+        "dcpa_constant_speed": 0.4321401889313023,
+        "target_speed": 0.6727735140889826,
+        "relative_heading_degrees": -86.61880131422951,
+        "witness": {
+          "offset": 16,
+          "steps": 242,
+          "minimum_clearance": 8.542501264764716,
+          "waypoints": [
+            [
+              22.142435427929886,
+              73.37448021109097
+            ],
+            [
+              78.71382602101664,
+              71.001983194487
+            ],
+            [
+              90.03286669474826,
+              54.513219801606105
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "b070969c64157cc9f570de7d331dd42d6d559cf05529cf963f18235ba392dde8"
+    },
+    {
+      "scenario_id": 43,
+      "scenario_type": "crossing_left",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        10.08815512181516,
+        43.42281622328686
+      ],
+      "goal_position": [
+        89.47933791097915,
+        56.698170847747015
+      ],
+      "start_heading": 0.1656816287369496,
+      "static_obstacles": [
+        {
+          "position": [
+            35.424080361293555,
+            48.643758393267895
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            64.55843934396681,
+            36.77159052769078
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          64.01233686030868,
+          80.6063136651472
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.36721962236068023,
+          -1.2544888569262527
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.02321453601955205,
+        "nominal_closest_time": 23.6,
+        "tcpa_constant_speed": 23.1792266111863,
+        "dcpa_constant_speed": 0.555246465750842,
+        "target_speed": 1.307131417723121,
+        "relative_heading_degrees": -115.80890444767863,
+        "witness": {
+          "offset": 16,
+          "steps": 242,
+          "minimum_clearance": 9.147333491840703,
+          "waypoints": [
+            [
+              19.285034504862896,
+              61.182810863310586
+            ],
+            [
+              75.00486928380975,
+              70.49997355467949
+            ],
+            [
+              89.47933791097915,
+              56.698170847747015
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "64a6ea0ae4558fc82a6d6cd0feea8d29d518544a5158435207bb8b7422e72e16"
+    },
+    {
+      "scenario_id": 44,
+      "scenario_type": "crossing_right",
+      "risk_level": "receding",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        7.3843530171915495,
+        44.35586092247331
+      ],
+      "goal_position": [
+        87.71863262513232,
+        43.50820300796816
+      ],
+      "start_heading": -0.010551242410909345,
+      "static_obstacles": [
+        {
+          "position": [
+            33.071568642556564,
+            43.47362103917938
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            60.98861552212211,
+            66.18581110285555
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          6.590570767991372,
+          71.3110340289121
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.4483551369600923,
+          0.8053309251550669
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 26.966858316408057,
+        "nominal_closest_time": 0.0,
+        "tcpa_constant_speed": -3.6274403425496344,
+        "dcpa_constant_speed": 26.966858316408057,
+        "target_speed": 0.9217267642038063,
+        "relative_heading_degrees": 119.71071694618995,
+        "witness": {
+          "offset": 16,
+          "steps": 241,
+          "minimum_clearance": 1.6289615998793288,
+          "waypoints": [
+            [
+              19.55250179726534,
+              60.22835774137325
+            ],
+            [
+              75.88811733740903,
+              59.63392494613098
+            ],
+            [
+              87.71863262513232,
+              43.50820300796816
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "bae6d971e78699a4fb180329f31073ad21f2155a8c4b5e6871f3001947aec2ca"
+    },
+    {
+      "scenario_id": 45,
+      "scenario_type": "head_on",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        7.528813654969312,
+        52.523627375477325
+      ],
+      "goal_position": [
+        91.4725067983564,
+        44.79739324946241
+      ],
+      "start_heading": -0.091782080420994,
+      "static_obstacles": [
+        {
+          "position": [
+            38.07017965494741,
+            72.28066494505325
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            68.4794984200441,
+            48.402405498646544
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          57.71772466553375,
+          47.293347235842106
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.7986016221811559,
+          0.10658845843434618
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.17820852375990687,
+        "nominal_closest_time": 18.400000000000002,
+        "tcpa_constant_speed": 17.988253371805868,
+        "dcpa_constant_speed": 0.015659174959240824,
+        "target_speed": 0.8056833437658892,
+        "relative_heading_degrees": 177.6564524109985,
+        "witness": {
+          "offset": 16,
+          "steps": 251,
+          "minimum_clearance": 2.1151454591862517,
+          "waypoints": [
+            [
+              20.94475779924995,
+              67.3564437876609
+            ],
+            [
+              80.98946740305877,
+              61.82988822338322
+            ],
+            [
+              91.4725067983564,
+              44.79739324946241
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "d453bbac544ff449b6193a3ac0a9cc52945fb4af086e4eb18116a883cbca19c7"
+    },
+    {
+      "scenario_id": 46,
+      "scenario_type": "crossing_right",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        8.645707150517085,
+        50.38195535096692
+      ],
+      "goal_position": [
+        88.01378921206378,
+        48.61621625912169
+      ],
+      "start_heading": -0.022243801475019656,
+      "static_obstacles": [
+        {
+          "position": [
+            32.28194737249558,
+            49.379277745077296
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            63.23394000120193,
+            30.84620162518555
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          47.513298183873076,
+          23.977866063211952
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.405778578011717,
+          1.0034648560491812
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.04629616672151056,
+        "nominal_closest_time": 25.200000000000003,
+        "tcpa_constant_speed": 24.631796506842228,
+        "dcpa_constant_speed": 0.7075906464008542,
+        "target_speed": 1.0824037932763424,
+        "relative_heading_degrees": 69.25717744785777,
+        "witness": {
+          "offset": 16,
+          "steps": 239,
+          "minimum_clearance": 4.576455110910011,
+          "waypoints": [
+            [
+              20.998610027858117,
+              66.11109361417064
+            ],
+            [
+              76.37262928504369,
+              64.87916173506613
+            ],
+            [
+              88.01378921206378,
+              48.61621625912169
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "218647f25af92e27bd16dca443c50cd1923fad006326062c769a9d799e4dd22a"
+    },
+    {
+      "scenario_id": 47,
+      "scenario_type": "crossing_left",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        7.014943576117774,
+        59.81526921433246
+      ],
+      "goal_position": [
+        90.08920302314421,
+        59.958994821415466
+      ],
+      "start_heading": 0.0017300841998502796,
+      "static_obstacles": [
+        {
+          "position": [
+            34.63727078146071,
+            59.32288584321356
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            68.25184198654526,
+            37.609281076599174
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          64.57785158935663,
+          83.27183171962795
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.5056249476746816,
+          -0.9945502080235422
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.2545040868950443,
+        "nominal_closest_time": 23.6,
+        "tcpa_constant_speed": 23.04604772789588,
+        "dcpa_constant_speed": 0.4912369578045831,
+        "target_speed": 1.115700095899743,
+        "relative_heading_degrees": -117.0477098216048,
+        "witness": {
+          "offset": 16,
+          "steps": 248,
+          "minimum_clearance": 6.074943486322056,
+          "waypoints": [
+            [
+              18.987244283585877,
+              75.83600626884899
+            ],
+            [
+              78.06153964889941,
+              75.93820987584947
+            ],
+            [
+              90.08920302314421,
+              59.958994821415466
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "36569c6512000ba82316393cac8733df1235512b40930b51765048e601391046"
+    },
+    {
+      "scenario_id": 48,
+      "scenario_type": "crossing_right",
+      "risk_level": "time_separated",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        8.559859229549387,
+        46.57456035430317
+      ],
+      "goal_position": [
+        89.60497817501602,
+        59.52897840334377
+      ],
+      "start_heading": 0.1585012521169065,
+      "static_obstacles": [
+        {
+          "position": [
+            33.57753447085279,
+            52.42757917579538
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            60.97346016983869,
+            70.57748401242827
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          50.38860751032736,
+          38.255579925317704
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.05685608041175235,
+          1.3073398661889397
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 11.638784134071035,
+        "nominal_closest_time": 18.8,
+        "tcpa_constant_speed": 18.240395344912027,
+        "dcpa_constant_speed": 10.870857182051607,
+        "target_speed": 1.3085756147837626,
+        "relative_heading_degrees": 83.4087657585996,
+        "witness": {
+          "offset": -16,
+          "steps": 246,
+          "minimum_clearance": 7.61910712668943,
+          "waypoints": [
+            [
+              22.934853432489874,
+              32.66918219815699
+            ],
+            [
+              80.28081352193902,
+              41.83547808479997
+            ],
+            [
+              89.60497817501602,
+              59.52897840334377
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "cf605702214dccc0c9d336b0a07a27b92edca77c5b5089286f36af0c74da48d3"
+    },
+    {
+      "scenario_id": 49,
+      "scenario_type": "crossing_right",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        12.160717727412893,
+        59.14289630044715
+      ],
+      "goal_position": [
+        89.75050280275784,
+        40.43101406445017
+      ],
+      "start_heading": -0.2366455299484489,
+      "static_obstacles": [
+        {
+          "position": [
+            32.890833474376116,
+            52.8597446295902
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            71.73750825511205,
+            63.39079837924774
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          48.71141084182644,
+          28.49466527425835
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.13916729369514055,
+          1.235472158152373
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.09238424881145516,
+        "nominal_closest_time": 18.2,
+        "tcpa_constant_speed": 17.7194367022396,
+        "dcpa_constant_speed": 0.5787628478007708,
+        "target_speed": 1.2432855622117196,
+        "relative_heading_degrees": 109.98566775938771,
+        "witness": {
+          "offset": -16,
+          "steps": 240,
+          "minimum_clearance": 9.018814591237433,
+          "waypoints": [
+            [
+              20.075188687799727,
+              40.77550265253963
+            ],
+            [
+              74.33385676967492,
+              27.690251721064698
+            ],
+            [
+              89.75050280275784,
+              40.43101406445017
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "fade8c495ddef351b329ca959c7118a14e4e28d5364eed9cf3772fda4bc571e7"
+    },
+    {
+      "scenario_id": 50,
+      "scenario_type": "crossing_left",
+      "risk_level": "time_separated",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        11.115924285826114,
+        40.73453015410773
+      ],
+      "goal_position": [
+        90.69704524107232,
+        55.550986899658426
+      ],
+      "start_heading": 0.18407300599118864,
+      "static_obstacles": [
+        {
+          "position": [
+            33.447883610637426,
+            43.87840150814694
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            72.8093252445773,
+            29.505629341368614
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          57.321432435672136,
+          53.73606157892243
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.42686728700864685,
+          -1.381184675594146
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 17.321788516575445,
+        "nominal_closest_time": 15.600000000000001,
+        "tcpa_constant_speed": 15.181609265217295,
+        "dcpa_constant_speed": 16.745893962420766,
+        "target_speed": 1.445644074042511,
+        "relative_heading_degrees": -117.72083100987683,
+        "witness": {
+          "offset": 16,
+          "steps": 243,
+          "minimum_clearance": 10.174910666562894,
+          "waypoints": [
+            [
+              19.984635975439918,
+              58.660655027222596
+            ],
+            [
+              75.97120463597392,
+              69.08426508615985
+            ],
+            [
+              90.69704524107232,
+              55.550986899658426
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "cce1ee75a46ac90d97d97c715a4369f41ef9cde4ce91323f69122e8e51b7309b"
+    },
+    {
+      "scenario_id": 51,
+      "scenario_type": "overtaking",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        12.281523701051746,
+        42.85213494157248
+      ],
+      "goal_position": [
+        91.78249173364398,
+        53.79633839617599
+      ],
+      "start_heading": 0.13680142709247237,
+      "static_obstacles": [
+        {
+          "position": [
+            24.681314226120463,
+            46.2597708125697
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            67.94240131038244,
+            33.475349500205056
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          39.01686374201184,
+          49.38921115243708
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.8572560491850844,
+          0.00356044855390545
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.04652517008904102,
+        "nominal_closest_time": 25.0,
+        "tcpa_constant_speed": 23.8117510165097,
+        "dcpa_constant_speed": 0.13079206694152887,
+        "target_speed": 0.8572634429732349,
+        "relative_heading_degrees": -7.600178742831161,
+        "witness": {
+          "offset": 16,
+          "steps": 241,
+          "minimum_clearance": 3.594815417773985,
+          "waypoints": [
+            [
+              21.987408877194255,
+              60.339152781888686
+            ],
+            [
+              77.71260245626033,
+              68.01035316056134
+            ],
+            [
+              91.78249173364398,
+              53.79633839617599
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "0f5ffd6e67fac6feedfb9c5f28ee72b64321c58d6dc4a59e4e4005c6144de332"
+    },
+    {
+      "scenario_id": 52,
+      "scenario_type": "head_on",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        11.873240238210395,
+        53.67429506901688
+      ],
+      "goal_position": [
+        87.63078803622119,
+        42.9749124586808
+      ],
+      "start_heading": -0.14030395799728626,
+      "static_obstacles": [
+        {
+          "position": [
+            41.76828074489595,
+            67.18499256673304
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            66.27764445920315,
+            44.196118274279485
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          54.704922167740335,
+          48.264065363358
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.6004175282373261,
+          0.04744906629195509
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.23913616663673973,
+        "nominal_closest_time": 17.2,
+        "tcpa_constant_speed": 16.595585011989964,
+        "dcpa_constant_speed": 0.01895482352538775,
+        "target_speed": 0.6022894836427071,
+        "relative_heading_degrees": -176.47968577884936,
+        "witness": {
+          "offset": -16,
+          "steps": 232,
+          "minimum_clearance": 9.065712402899239,
+          "waypoints": [
+            [
+              21.517817184671404,
+              36.153389398253374
+            ],
+            [
+              73.51120013729731,
+              28.81026500226445
+            ],
+            [
+              87.63078803622119,
+              42.9749124586808
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "da12d17fd65e90bd82997984bc2a69488e295cc27040bd595464cc1b6bc4a49a"
+    },
+    {
+      "scenario_id": 53,
+      "scenario_type": "overtaking",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        9.706727191205374,
+        52.84728883283453
+      ],
+      "goal_position": [
+        89.13601866922592,
+        45.8087767137138
+      ],
+      "start_heading": -0.08838270264991753,
+      "static_obstacles": [
+        {
+          "position": [
+            21.032003407681344,
+            52.998409148488705
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            64.01156244479787,
+            27.35094096034329
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          36.027522561403444,
+          54.72722127218837
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.9203181444507208,
+          -0.24485281542982557
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.005472934312870341,
+        "nominal_closest_time": 25.8,
+        "tcpa_constant_speed": 24.567817046429155,
+        "dcpa_constant_speed": 0.20193063322132174,
+        "target_speed": 0.9523331288100452,
+        "relative_heading_degrees": -9.834595941125984,
+        "witness": {
+          "offset": 16,
+          "steps": 240,
+          "minimum_clearance": 2.6633059879695464,
+          "waypoints": [
+            [
+              23.072171570500792,
+              67.72562531726587
+            ],
+            [
+              78.59514007037455,
+              62.80553753347817
+            ],
+            [
+              89.13601866922592,
+              45.8087767137138
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "4778bcda829f701c4c96476fd98deba1123be5749071bd6f470fa4b32c37aec6"
+    },
+    {
+      "scenario_id": 54,
+      "scenario_type": "overtaking",
+      "risk_level": "receding",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        12.726802693849304,
+        55.244594404653
+      ],
+      "goal_position": [
+        91.73475407739724,
+        52.56831336013525
+      ],
+      "start_heading": -0.03386061905204449,
+      "static_obstacles": [
+        {
+          "position": [
+            24.62681948221179,
+            52.936904900193746
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            65.84119486210498,
+            30.83531266303795
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          11.884358994839804,
+          83.19651523697326
+        ],
+        "radius": 3.0,
+        "velocity": [
+          1.3183483169672792,
+          0.1307595602973513
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 27.964613167399612,
+        "nominal_closest_time": 0.0,
+        "tcpa_constant_speed": -12.181346795606075,
+        "dcpa_constant_speed": 27.964613167399612,
+        "target_speed": 1.3248170996253084,
+        "relative_heading_degrees": 7.604391073237717,
+        "witness": {
+          "offset": 16,
+          "steps": 238,
+          "minimum_clearance": 4.956800952811589,
+          "waypoints": [
+            [
+              25.26159048578624,
+              70.82917316094631
+            ],
+            [
+              80.283299053098,
+              68.96539169215684
+            ],
+            [
+              91.73475407739724,
+              52.56831336013525
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "76f3518fc1906d424524e7df0a058ec9cf3149d0ab6b6f38d5f39e84b153ce43"
+    },
+    {
+      "scenario_id": 55,
+      "scenario_type": "crossing_left",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        8.169102638806995,
+        46.52865842446353
+      ],
+      "goal_position": [
+        91.93679700158359,
+        48.451923286267665
+      ],
+      "start_heading": 0.022955472759510466,
+      "static_obstacles": [
+        {
+          "position": [
+            31.393786141906503,
+            48.27731282104059
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            69.8918989212038,
+            25.10420700616791
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          46.24708581757577,
+          67.04036664363575
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.29832558112236945,
+          -0.8407880373327904
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.06276327124364321,
+        "nominal_closest_time": 23.200000000000003,
+        "tcpa_constant_speed": 22.54373554394168,
+        "dcpa_constant_speed": 0.5889830703295171,
+        "target_speed": 0.8921449860162445,
+        "relative_heading_degrees": -71.77972018293364,
+        "witness": {
+          "offset": 16,
+          "steps": 250,
+          "minimum_clearance": 7.229086830889296,
+          "waypoints": [
+            [
+              19.798685747523567,
+              62.799884460551105
+            ],
+            [
+              79.57270327738014,
+              64.1722663607401
+            ],
+            [
+              91.93679700158359,
+              48.451923286267665
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "3a8be9bf87d6fa5206f6afdfdc732c77d5b6ba98933c64067abf69214f539078"
+    },
+    {
+      "scenario_id": 56,
+      "scenario_type": "crossing_right",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        9.067582605215252,
+        58.72570352214741
+      ],
+      "goal_position": [
+        91.43347648087749,
+        51.97630772898788
+      ],
+      "start_heading": -0.08176138250291877,
+      "static_obstacles": [
+        {
+          "position": [
+            33.103744448953684,
+            57.35662494012273
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            66.31253756000564,
+            69.12773922809707
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          48.321078860709896,
+          32.82503504592741
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.1335889901816372,
+          1.1998112220842114
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.20325755081504118,
+        "nominal_closest_time": 19.0,
+        "tcpa_constant_speed": 18.614322376128943,
+        "dcpa_constant_speed": 0.6253773623866382,
+        "target_speed": 1.207225325669139,
+        "relative_heading_degrees": 101.03782275039737,
+        "witness": {
+          "offset": -16,
+          "steps": 247,
+          "minimum_clearance": 8.127382169200807,
+          "waypoints": [
+            [
+              19.72077031145754,
+              41.79910930784759
+            ],
+            [
+              78.16683859289749,
+              37.009801150991336
+            ],
+            [
+              91.43347648087749,
+              51.97630772898788
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "7da5e901d3874af0f58bb431bae59efe9628bf90e32d91ba12e61848e0788f4e"
+    },
+    {
+      "scenario_id": 57,
+      "scenario_type": "crossing_right",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        7.803696944823614,
+        51.58526879152191
+      ],
+      "goal_position": [
+        89.65881943129541,
+        41.24790207757938
+      ],
+      "start_heading": -0.12562354271395568,
+      "static_obstacles": [
+        {
+          "position": [
+            36.70140959614984,
+            48.033147629772095
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            60.439288269827514,
+            24.23124948058943
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          39.18589290425582,
+          20.48649213110869
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.6532848525003704,
+          1.0217990522385871
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.05044226457903697,
+        "nominal_closest_time": 24.6,
+        "tcpa_constant_speed": 23.99061471763763,
+        "dcpa_constant_speed": 0.7933496361529783,
+        "target_speed": 1.2127878634213427,
+        "relative_heading_degrees": 64.60497836978247,
+        "witness": {
+          "offset": 16,
+          "steps": 247,
+          "minimum_clearance": 3.264488333608483,
+          "waypoints": [
+            [
+              21.713827944492817,
+              65.95566389993984
+            ],
+            [
+              79.75807680712158,
+              58.62533846761884
+            ],
+            [
+              89.65881943129541,
+              41.24790207757938
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "826bc0be77a5d46eff546e7a80c34799656bac2d63e85083b95f493dc8cdaaed"
+    },
+    {
+      "scenario_id": 58,
+      "scenario_type": "crossing_right",
+      "risk_level": "time_separated",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        9.916680516410505,
+        52.43966315817631
+      ],
+      "goal_position": [
+        89.27203076701447,
+        44.79220694774172
+      ],
+      "start_heading": -0.09607308049327841,
+      "static_obstacles": [
+        {
+          "position": [
+            36.21307925506244,
+            51.84568475044845
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            67.83793907019088,
+            69.72431210554736
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          46.1033564812453,
+          57.893980103276085
+        ],
+        "radius": 3.0,
+        "velocity": [
+          -0.2136325044937564,
+          0.6707787026703809
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 18.631241090615294,
+        "nominal_closest_time": 14.0,
+        "tcpa_constant_speed": 13.396005480785599,
+        "dcpa_constant_speed": 18.266123148089026,
+        "target_speed": 0.7039765016905281,
+        "relative_heading_degrees": 113.1704440049264,
+        "witness": {
+          "offset": 16,
+          "steps": 240,
+          "minimum_clearance": 1.9482729562901113,
+          "waypoints": [
+            [
+              23.396148570103065,
+              67.21477537397628
+            ],
+            [
+              78.86217409488042,
+              61.869527699710574
+            ],
+            [
+              89.27203076701447,
+              44.79220694774172
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "057f0abf2ada043a9afb04068987212cd866237f894b17006f9c49388801d34c"
+    },
+    {
+      "scenario_id": 59,
+      "scenario_type": "crossing_left",
+      "risk_level": "conflict",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "C",
+      "start_position": [
+        10.24195724656147,
+        43.52654709660401
+      ],
+      "goal_position": [
+        88.80647251695666,
+        57.49750156961386
+      ],
+      "start_heading": 0.1759881093680687,
+      "static_obstacles": [
+        {
+          "position": [
+            31.864547479506157,
+            49.389733310666315
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            61.8033262437002,
+            69.02761964167301
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          48.706681038268,
+          70.62402878350937
+        ],
+        "radius": 3.0,
+        "velocity": [
+          0.42615384659756045,
+          -0.7099950398162974
+        ]
+      },
+      "generation": {
+        "nominal_min_center_distance": 0.037315962153699755,
+        "nominal_closest_time": 25.8,
+        "tcpa_constant_speed": 25.131504027861304,
+        "dcpa_constant_speed": 0.5510054044244133,
+        "target_speed": 0.828070080086005,
+        "relative_heading_degrees": -69.1103148364554,
+        "witness": {
+          "offset": -16,
+          "steps": 240,
+          "minimum_clearance": 6.641883771013786,
+          "waypoints": [
+            [
+              24.85790260980455,
+              29.87465561085402
+            ],
+            [
+              79.79312139234473,
+              39.64366440489051
+            ],
+            [
+              88.80647251695666,
+              57.49750156961386
+            ]
+          ]
+        },
+        "version": "encounters-v1"
+      },
+      "scenario_hash": "a439d3d5b71aa4ae2debc477a2d9217231efe5de3c220038efb3cc31623a5c9d"
+    }
+  ]
+}

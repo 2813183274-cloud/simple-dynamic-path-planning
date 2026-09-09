@@ -1,0 +1,268 @@
+{
+  "date": "2026-09-08",
+  "archive": "archives/legacy-pre-round0-20260908.zip",
+  "archive_sha256": "01e93429381894f7142fb19933dd761d94511236c592bff6918e52e10607a849",
+  "file_count": 49,
+  "original_bytes": 6043632.0,
+  "archive_bytes": 4249781,
+  "removed_roots": [
+    "models\\checkpoints",
+    "logs",
+    "results\\diagnostics",
+    "results\\evaluations",
+    "results\\report_assets",
+    "results\\trajectory_sheets",
+    "results\\episode_results.csv",
+    "results\\metrics_by_scenario_type.csv",
+    "results\\summary_metrics.json",
+    "results\\training_reward_curve.png",
+    "results\\USV_RL_汇报素材包.md"
+  ],
+  "files": [
+    {
+      "path": "models/checkpoints/ppo_dynamic_path_100000_steps.zip",
+      "bytes": 160619,
+      "sha256": "a279d1a5bc0daafbd90db7fb972946ffe71c8c6208c63a3ca80b0be0005d2489"
+    },
+    {
+      "path": "models/checkpoints/ppo_dynamic_path_150000_steps.zip",
+      "bytes": 160629,
+      "sha256": "a44fd4eb6e8bcdf5a35436969e524740d27104fb266d2163ce4df112096c553f"
+    },
+    {
+      "path": "models/checkpoints/ppo_dynamic_path_200000_steps.zip",
+      "bytes": 160619,
+      "sha256": "f1fca193ea4dddee3991ce5dc152b6d2fea0e79ba041753befac4d06797e3e26"
+    },
+    {
+      "path": "models/checkpoints/ppo_dynamic_path_250000_steps.zip",
+      "bytes": 160630,
+      "sha256": "f3ec201b97fdbf5696bb03a97927d9855af44472c8e226aef086d04527b6218d"
+    },
+    {
+      "path": "models/checkpoints/ppo_dynamic_path_300000_steps.zip",
+      "bytes": 160620,
+      "sha256": "fb94ab1c5c5e594e37b4743ab5e901c1b618525ca561de4f950e7bd5efdbdecd"
+    },
+    {
+      "path": "models/checkpoints/ppo_dynamic_path_350000_steps.zip",
+      "bytes": 160631,
+      "sha256": "1892fc715bf03d9b3405501a260ba8d22f7d23f17f5df4ed7b76a9ceea615ed6"
+    },
+    {
+      "path": "models/checkpoints/ppo_dynamic_path_400000_steps.zip",
+      "bytes": 160631,
+      "sha256": "2aba52df9667da0ae91609e8d497c46f1b564e8acd8674eb908eb823cfb59696"
+    },
+    {
+      "path": "models/checkpoints/ppo_dynamic_path_450000_steps.zip",
+      "bytes": 160631,
+      "sha256": "248270e9cc1a2da56bf46c92ae2e92bbb402f34cc33f4044842f566f1d745f77"
+    },
+    {
+      "path": "models/checkpoints/ppo_dynamic_path_50000_steps.zip",
+      "bytes": 160618,
+      "sha256": "d548ec0d5b3850b11743538354825bf443a66b5ecdbf4fa248419b4328a03561"
+    },
+    {
+      "path": "models/checkpoints/ppo_dynamic_path_500000_steps.zip",
+      "bytes": 160633,
+      "sha256": "7738341fa46630a8f740a92999678a5fa5526476d91a5769a68cb8f4aa3d21a0"
+    },
+    {
+      "path": "logs/eval_monitor.csv",
+      "bytes": 13244,
+      "sha256": "c6cb1e4daa4a80a894bbb66cb762ae1839585167869ef25960255e5fabcaa1e4"
+    },
+    {
+      "path": "logs/train_monitor.csv",
+      "bytes": 108649,
+      "sha256": "09e1594d388e748050df7b11f73361d313220d7948320a8844bbbdd93277708c"
+    },
+    {
+      "path": "logs/eval/evaluations.npz",
+      "bytes": 7720,
+      "sha256": "ba0e84046cb35d3795e4ad11bd812b19310bcc98d324b681facecd3e0019156c"
+    },
+    {
+      "path": "logs/fixed_eval/evaluations.json",
+      "bytes": 18262,
+      "sha256": "6b5d1fe6ad87e819ba6fc9fe223e2337a41b2eda376072d713d1d6624900eeee"
+    },
+    {
+      "path": "logs/PPO_1/events.out.tfevents.1784188576.SC-202406061757.16856.0",
+      "bytes": 203535,
+      "sha256": "f7f54ab5a7ac1580d2aa730fb7450329c1dc68f95be3793501324114a1a91fa2"
+    },
+    {
+      "path": "logs/PPO_10/events.out.tfevents.1784196488.SC-202406061757.11240.0",
+      "bytes": 77632,
+      "sha256": "0335b03b912ec9dfaaf63c83e4c2d0efb1da36b2fdfe6c1c160075b4bfebb2be"
+    },
+    {
+      "path": "logs/PPO_11/events.out.tfevents.1784196693.SC-202406061757.3176.0",
+      "bytes": 155836,
+      "sha256": "218f188b9175a7869c1371caccf3ba5d0b68f4f9c1f3c63e3e2e4382386c77f0"
+    },
+    {
+      "path": "logs/PPO_12/events.out.tfevents.1784201050.SC-202406061757.21600.0",
+      "bytes": 194938,
+      "sha256": "b9f7c94d0a394e143478765c6e3c63ef94c3725ea86d380cf702cb3fa03ca685"
+    },
+    {
+      "path": "logs/PPO_2/events.out.tfevents.1784190263.SC-202406061757.23460.0",
+      "bytes": 194938,
+      "sha256": "bb9e9456659b9cd6bd86254d83689a932a3636efec0280583f91f35fd52abbe6"
+    },
+    {
+      "path": "logs/PPO_3/events.out.tfevents.1784192165.SC-202406061757.4952.0",
+      "bytes": 194938,
+      "sha256": "fca87b35e7b8469f8ccda9da3f80affccc83783e97eff9ad88a84306468e2566"
+    },
+    {
+      "path": "logs/PPO_4/events.out.tfevents.1784193638.SC-202406061757.15164.0",
+      "bytes": 38530,
+      "sha256": "188a74eccee18b8bbf0e189365e762afceacfc8f675ef8a655ae7f9063b00ee5"
+    },
+    {
+      "path": "logs/PPO_5/events.out.tfevents.1784193821.SC-202406061757.3136.0",
+      "bytes": 116734,
+      "sha256": "15d1e0a38f5dd9e00767260ab135a282e94af566e7e627a24861365eb512512e"
+    },
+    {
+      "path": "logs/PPO_6/events.out.tfevents.1784194361.SC-202406061757.16512.0",
+      "bytes": 77632,
+      "sha256": "51d5ae1e69e1741a1d71d30c1b7dbf018d09992d3610f1de2fb3137807ce0afc"
+    },
+    {
+      "path": "logs/PPO_7/events.out.tfevents.1784195070.SC-202406061757.13688.0",
+      "bytes": 77632,
+      "sha256": "56df1c77a99218286b59d618ada4f550b4e7c4e069aa9d49e92133b7b2b89c57"
+    },
+    {
+      "path": "logs/PPO_8/events.out.tfevents.1784195471.SC-202406061757.12296.0",
+      "bytes": 77632,
+      "sha256": "71018fb85ba33beaf01be6dfe8478831206f988058eeb59e0aaab61b90472593"
+    },
+    {
+      "path": "logs/PPO_9/events.out.tfevents.1784195956.SC-202406061757.14240.0",
+      "bytes": 77632,
+      "sha256": "65d22c5614ca03e9ae819041059cba79722be03b3fa58f61783bba81d41d08a2"
+    },
+    {
+      "path": "results/diagnostics/design-fix-counterfactual/counterfactual_results.csv",
+      "bytes": 24359,
+      "sha256": "5d9a602c22b60eba30f0acba351d4b1f989d2cf12a85f87246af19a81c583824"
+    },
+    {
+      "path": "results/diagnostics/design-fix-counterfactual/counterfactual_summary.json",
+      "bytes": 3330,
+      "sha256": "108813f615d01e11bd1c80d8549273d1ee0b6a029495eb008e51f6ba10dd394b"
+    },
+    {
+      "path": "results/evaluations/design-fix-independent-test/episode_results.csv",
+      "bytes": 7512,
+      "sha256": "f93ad8fe8b146afc9927f8cd5b4abb53153c6fe66478ad686e0f7082e74548b0"
+    },
+    {
+      "path": "results/evaluations/design-fix-independent-test/evaluation_metadata.json",
+      "bytes": 780,
+      "sha256": "a5dce1d3412d10d9cea1bcf519bbe4651b6a6ce01ca5c652380e78a5fa1cf73e"
+    },
+    {
+      "path": "results/evaluations/design-fix-independent-test/metrics_by_scenario_type.csv",
+      "bytes": 1254,
+      "sha256": "e7fa246564ad51240aac6984c3bf1e6ed169772b3b1c0b2ea7fbdd4e7a469bf5"
+    },
+    {
+      "path": "results/evaluations/design-fix-independent-test/summary_metrics.json",
+      "bytes": 1828,
+      "sha256": "a2d45a5047f4d232da6492dcee2cc759bb4cb6ecee7fec8826b9ae73c990199f"
+    },
+    {
+      "path": "results/report_assets/fixed_eval_training_curve.png",
+      "bytes": 224489,
+      "sha256": "f3481b66659d501b96174eb1efd8688f9a89f55d9c1bfec4e5aa0e28a9ee0b99"
+    },
+    {
+      "path": "results/trajectory_sheets/.gitkeep",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "results/trajectory_sheets/scenarios_000_002_comparison.png",
+      "bytes": 222327,
+      "sha256": "cc907e06b7fdceaf2b039a9520205d98ffd37a1734ff38d681f16a1c930bc08d"
+    },
+    {
+      "path": "results/trajectory_sheets/scenarios_003_005_comparison.png",
+      "bytes": 231405,
+      "sha256": "ea403bd2a52f302e96577ff637a5acb0552e98be7d3458ca4f6a3ad04b4f7244"
+    },
+    {
+      "path": "results/trajectory_sheets/scenarios_006_008_comparison.png",
+      "bytes": 234059,
+      "sha256": "c24bee813f1fa218786965152676fb318bcec44e2847e1a7552df92c3c8cc0eb"
+    },
+    {
+      "path": "results/trajectory_sheets/scenarios_009_011_comparison.png",
+      "bytes": 223656,
+      "sha256": "9dacc87977a5782388012f4bb828f442367106dd94847076c67c8f93a421d99d"
+    },
+    {
+      "path": "results/trajectory_sheets/scenarios_012_014_comparison.png",
+      "bytes": 220323,
+      "sha256": "21f337ab7168633c89d29083638accb6e92330d7dac91683965aa5bd0233a76a"
+    },
+    {
+      "path": "results/trajectory_sheets/scenarios_015_017_comparison.png",
+      "bytes": 227049,
+      "sha256": "00ca5de4c72200a24736ccf37a9c1b43fb190e6ab8fe61cef88e8823f9207d2d"
+    },
+    {
+      "path": "results/trajectory_sheets/scenarios_018_020_comparison.png",
+      "bytes": 240540,
+      "sha256": "b06ddb717e39696251de4e54d05fc6130fcacd069c3ef75596936bee2d6470c4"
+    },
+    {
+      "path": "results/trajectory_sheets/scenarios_021_023_comparison.png",
+      "bytes": 233670,
+      "sha256": "fb8fdf8237baa776b1ec88cdc29949abf0bc72f9807e21dd0b8a99d9e540de3d"
+    },
+    {
+      "path": "results/trajectory_sheets/scenarios_024_026_comparison.png",
+      "bytes": 244179,
+      "sha256": "a3ed76f53288f992e29efc24694053d9df71c2830795c92b64222c9fb1634db3"
+    },
+    {
+      "path": "results/trajectory_sheets/scenarios_027_029_comparison.png",
+      "bytes": 231160,
+      "sha256": "d9fc1d2171ade53719607da7d603de53c0d0803e5c742577364da4e20f4120d4"
+    },
+    {
+      "path": "results/episode_results.csv",
+      "bytes": 6214,
+      "sha256": "3e10852ccfff2eac2d247ff0670687ef17259c5e70abcaf01c5c2bfab2599a74"
+    },
+    {
+      "path": "results/metrics_by_scenario_type.csv",
+      "bytes": 794,
+      "sha256": "31c4f80e938fcdd05505260e7a29afdc96e54a0e89bf5127f6b0cf5dfaa8cb1b"
+    },
+    {
+      "path": "results/summary_metrics.json",
+      "bytes": 822,
+      "sha256": "943169eacd3646a05e11299dcfafb5b1a92ef1dd862b9ea54b85cd1e021c5df9"
+    },
+    {
+      "path": "results/training_reward_curve.png",
+      "bytes": 192543,
+      "sha256": "6f9f1edf13c14f65a9689240ad32435a2aba3801fc69622d74779126f63371e8"
+    },
+    {
+      "path": "results/USV_RL_汇报素材包.md",
+      "bytes": 29592,
+      "sha256": "aeb22fadeef53c1f46bf6821ed5a91d6dce2d180662ac90e41643b25f09fd212"
+    }
+  ]
+}

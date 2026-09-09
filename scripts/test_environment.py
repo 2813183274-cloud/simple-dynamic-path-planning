@@ -85,6 +85,17 @@ def main():
     timeout_env.reset()
     _, _, terminated, truncated, info = timeout_env.step(np.array([-1.0, 0.0], dtype=np.float32))
     assert not terminated and truncated and info["termination_reason"] == "timeout"
+
+    env.reset(seed=9)
+    goal_distance = env.previous_goal_distance
+    static_distances = np.array([3.5, 7.0])
+    dynamic_distance = 4.0
+    reward, components = env._calculate_reward(
+        goal_distance, static_distances, dynamic_distance, terminal_reward=0.0
+    )
+    assert np.isclose(components["static"], -0.5)
+    assert np.isclose(components["dynamic"], -1.0)
+    assert np.isclose(reward, -1.55)
     env.close()
     timeout_env.close()
     print("All environment checks passed.")

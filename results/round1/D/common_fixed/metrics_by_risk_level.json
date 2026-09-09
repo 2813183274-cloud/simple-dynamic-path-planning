@@ -1,0 +1,35 @@
+[
+  {
+    "risk_level": "legacy_corridor",
+    "total_scenarios": 60,
+    "success_count": 28,
+    "success_rate": 0.4666666666666667,
+    "success_rate_wilson_95": [
+      0.34627906041438494,
+      0.5910657297284211
+    ],
+    "collision_count": 32,
+    "collision_rate": 0.5333333333333333,
+    "collision_rate_wilson_95": [
+      0.4089342702715789,
+      0.6537209395856151
+    ],
+    "static_collision_count": 26,
+    "static_collision_rate": 0.43333333333333335,
+    "dynamic_collision_count": 6,
+    "dynamic_collision_rate": 0.1,
+    "out_of_bounds_count": 0,
+    "out_of_bounds_rate": 0.0,
+    "timeout_count": 0,
+    "timeout_rate": 0.0,
+    "average_reward": 607.3353122912463,
+    "average_steps": 109.06666666666666,
+    "average_navigation_time": 21.81333333333334,
+    "average_path_length": 62.740000000000016,
+    "successful_average_path_length": 83.14285714285718,
+    "successful_average_path_efficiency": 0.9383899693008744,
+    "average_final_goal_distance": 21.389206391792854,
+    "average_min_static_clearance": 2.142421807605037,
+    "average_min_dynamic_clearance": 8.891972705384232
+  }
+]

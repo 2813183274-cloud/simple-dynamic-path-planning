@@ -1,3 +1,8 @@
 # P3-05 seals hash exact file bytes; preserve line endings across Git checkout.
-/results/round3/final_experiment/** -text
-/scripts/round_three_experiment.py -text
+# Source snapshots, datasets and result manifests also use exact SHA-256 identity.
+/configs/** -text
+/envs/** -text
+/scripts/** -text
+/results/** -text
+/experiment_utils.py -text
+/round_three_utils.py -text

@@ -1,0 +1,41 @@
+{
+  "total_scenarios": 60,
+  "success_count": 60,
+  "success_rate": 1.0,
+  "success_rate_wilson_95": [
+    0.93982814785791,
+    0.9999999999999998
+  ],
+  "collision_count": 0,
+  "collision_rate": 0.0,
+  "collision_rate_wilson_95": [
+    0.0,
+    0.06017185214208986
+  ],
+  "static_collision_count": 0,
+  "static_collision_rate": 0.0,
+  "dynamic_collision_count": 0,
+  "dynamic_collision_rate": 0.0,
+  "out_of_bounds_count": 0,
+  "out_of_bounds_rate": 0.0,
+  "timeout_count": 0,
+  "timeout_rate": 0.0,
+  "average_reward": 963.0666678861204,
+  "average_steps": 157.73333333333332,
+  "average_navigation_time": 31.54666666666667,
+  "average_path_length": 78.59794790565225,
+  "successful_average_path_length": 78.59794790565225,
+  "successful_average_path_efficiency": 0.9849427017412729,
+  "average_final_goal_distance": 2.943619245513374,
+  "average_min_static_clearance": 4.845684150751814,
+  "average_min_dynamic_clearance": 8.12743975067147,
+  "mean_inference_ms": 0.7711249472085203,
+  "p95_inference_ms": 0.9192800003802406,
+  "worst_static_clearance": 0.5000349118722625,
+  "worst_dynamic_clearance": 0.5026016914904847,
+  "dataset_hash": "2affddf628c8c527fcbc8e731fd3dde10b77b383338ab16bdd88c59d581e44ee",
+  "dataset_split": "validation",
+  "observation_stage": "D",
+  "environment_stage": "D",
+  "timing_note": "CPU sequential per-policy evaluation; wall-clock timing is hardware/load dependent"
+}

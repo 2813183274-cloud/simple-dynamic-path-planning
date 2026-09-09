@@ -1,0 +1,158 @@
+{
+  "total_scenarios": 12,
+  "success_count": 12,
+  "success_rate": 1.0,
+  "success_rate_wilson_95": [
+    0.7575059933447592,
+    1.0
+  ],
+  "collision_count": 0,
+  "collision_rate": 0.0,
+  "collision_rate_wilson_95": [
+    2.7755575615628914e-17,
+    0.24249400665524085
+  ],
+  "static_collision_count": 0,
+  "static_collision_rate": 0.0,
+  "dynamic_collision_count": 0,
+  "dynamic_collision_rate": 0.0,
+  "out_of_bounds_count": 0,
+  "out_of_bounds_rate": 0.0,
+  "timeout_count": 0,
+  "timeout_rate": 0.0,
+  "average_reward": 962.0872882459504,
+  "average_steps": 137.0,
+  "average_navigation_time": 27.400000000000002,
+  "average_path_length": 79.49999999999999,
+  "successful_average_path_length": 79.49999999999999,
+  "successful_average_path_efficiency": 0.9654553103290372,
+  "average_final_goal_distance": 2.7282841892963527,
+  "average_min_static_clearance": 11.253132485445533,
+  "average_min_dynamic_clearance": 13.210671065675804,
+  "_provenance": {
+    "evaluated_at": "2026-09-07T01:53:50+00:00",
+    "model_path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round1-D-seed1\\models\\best\\best_model.zip",
+    "model_sha256": "328a204212a7780cd9a5c6a724e6a4ac79d44fb39f54d39ecfe3fa2162a9c1ca",
+    "run_dir": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round1-D-seed1",
+    "run_id": "round1-D-seed1",
+    "scenario_file": "D:\\PycharmProjects\\simple-dynamic-path-planning\\configs\\round1\\typical_cases.json",
+    "dataset_name": "round1-D-diagnostic-3301",
+    "dataset_split": "diagnostic",
+    "dataset_seed": 3301,
+    "dataset_hash": "a26d8d22abefa53f134e61c74356844cb10f86d3ceac583890cc95f4a8252d97",
+    "observation_schema_version": "body-fixedscale-center16-v2",
+    "reward_schema_version": "linear-center-distance-v1",
+    "model_schema_verified_from_run_metadata": true,
+    "deterministic_policy": true,
+    "source_manifest": {
+      "experiment_utils.py": "6da1707d290aa6110e6100ee363af728c64f1341705a7599a5a986766f11760c",
+      "envs/__init__.py": "296e3bc1307a752a43eef5fc30d6a778c99942a466d4ac6a63f311c1882a3555",
+      "envs/dynamic_path_env.py": "9f7c021128662d44cf7f1570b217f5bdd7ac7e6b0619753e09ea549e88181f0f",
+      "envs/scenario_dataset.py": "f370f2517d3db192613933b202ced6182c6c9ec18a72a94c87729f334ea109eb",
+      "envs/encounters.py": "67fc0cc04a97594fe025c3abbe7f4bbb7a2bba5ac25bb2068fe622bc7c734ee1",
+      "envs/round_one_dataset.py": "9b043eff7db92d653af997a6a2efb2dad67a6fb4d608ca4ac425479ad422d148",
+      "scripts/train.py": "4a66cdc56190b45c895e1c5e81e4db697b4c75351985a4ccb609e795eb17faad",
+      "scripts/evaluate.py": "d8807de85f4971c6bc95f327486cae27ba4b851139b58ce4752613a7a75c3e8c",
+      "scripts/evaluate_counterfactual.py": "9e0eabdbe9f20e09d8b584db77a6444f3f6be0adbd919449810e035b45c230ff"
+    },
+    "dependencies": {
+      "python": "3.11.7",
+      "numpy": "1.26.4",
+      "gymnasium": "1.2.3",
+      "stable-baselines3": "2.8.0",
+      "torch": "2.5.1",
+      "matplotlib": "3.8.4",
+      "pandas": "2.3.3"
+    },
+    "environment": {
+      "map_size": [
+        100.0,
+        100.0
+      ],
+      "dt": 0.2,
+      "v_max": 3.0,
+      "omega_max": 0.7853981633974483,
+      "linear_acceleration_max": 1.5,
+      "angular_acceleration_max": 0.7853981633974483,
+      "agent_radius": 1.0,
+      "goal_threshold": 3.0,
+      "static_safe_distance": 7.0,
+      "dynamic_safe_distance": 8.0,
+      "max_steps": 600,
+      "observation_shape": [
+        16
+      ],
+      "action_shape": [
+        2
+      ],
+      "observation_schema_version": "body-fixedscale-center16-v2",
+      "reward_schema_version": "linear-center-distance-v1",
+      "stage": "D",
+      "encounter_config": {
+        "version": "encounters-v1",
+        "static_radius": 4.0,
+        "dynamic_radius": 3.0,
+        "velocity_scale": 4.8,
+        "target_max_speed": 1.8,
+        "types": [
+          "head_on",
+          "crossing_left",
+          "crossing_right",
+          "overtaking"
+        ],
+        "type_probabilities": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "risks": [
+          "conflict",
+          "time_separated",
+          "receding"
+        ],
+        "risk_probabilities": [
+          0.6,
+          0.25,
+          0.15
+        ],
+        "layouts": [
+          "clear",
+          "blocking",
+          "mixed",
+          "two_sides"
+        ],
+        "layout_probabilities": [
+          0.3,
+          0.2,
+          0.3,
+          0.2
+        ],
+        "layout_risk_rule": "D blocking: time_separated/receding 0.625/0.375; mixed: conflict; others: risk_probabilities",
+        "target_speed_range": [
+          0.6,
+          1.5
+        ],
+        "meeting_time_range": [
+          12.0,
+          26.0
+        ],
+        "crossing_angle_degrees": [
+          55.0,
+          125.0
+        ],
+        "nominal_speed": 2.0,
+        "nominal_acceleration": 1.5,
+        "time_horizon": 120.0,
+        "max_attempts": 1500,
+        "exit_behavior": "continue_straight_outside_map",
+        "feasibility": "executed waypoint-controller witness, dt=0.2, same speed/acceleration limits"
+      }
+    },
+    "model_num_timesteps": 90000,
+    "legacy_training_identity_unverified": false,
+    "cross_stage_diagnostic": false,
+    "model_stage": "D",
+    "dataset_stage": "D"
+  }
+}

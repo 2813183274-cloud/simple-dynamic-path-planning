@@ -1,0 +1,107 @@
+{
+  "version": "round1-v1",
+  "config": {
+    "version": "encounters-v1",
+    "static_radius": 4.0,
+    "dynamic_radius": 3.0,
+    "velocity_scale": 4.8,
+    "target_max_speed": 1.8,
+    "types": [
+      "head_on",
+      "crossing_left",
+      "crossing_right",
+      "overtaking"
+    ],
+    "type_probabilities": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "risks": [
+      "conflict",
+      "time_separated",
+      "receding"
+    ],
+    "risk_probabilities": [
+      0.6,
+      0.25,
+      0.15
+    ],
+    "layouts": [
+      "clear",
+      "blocking",
+      "mixed",
+      "two_sides"
+    ],
+    "layout_probabilities": [
+      0.3,
+      0.2,
+      0.3,
+      0.2
+    ],
+    "layout_risk_rule": "D blocking: time_separated/receding 0.625/0.375; mixed: conflict; others: risk_probabilities",
+    "target_speed_range": [
+      0.6,
+      1.5
+    ],
+    "meeting_time_range": [
+      12.0,
+      26.0
+    ],
+    "crossing_angle_degrees": [
+      55.0,
+      125.0
+    ],
+    "nominal_speed": 2.0,
+    "nominal_acceleration": 1.5,
+    "time_horizon": 120.0,
+    "max_attempts": 1500,
+    "exit_behavior": "continue_straight_outside_map",
+    "feasibility": "executed waypoint-controller witness, dt=0.2, same speed/acceleration limits"
+  },
+  "datasets": {
+    "validation_A": "4c61206441cac07cd8cf9a520d82baf3f6327c659825ce725c4d92de7b652703",
+    "validation_B": "8c39bb8358a98a56bbce87a0e507d217da003996b1e0c93b348c66eb4c675a54",
+    "validation_C": "e58aec98733b241335f1dcc5f6fee128183b24080d3ed5abc44630718be28dd1",
+    "validation_D": "2affddf628c8c527fcbc8e731fd3dde10b77b383338ab16bdd88c59d581e44ee",
+    "common_fixed": "363d8bb7d256dd0a8f6b15fd138b421eeb12b666793a400a5fbac0293c11a07e",
+    "common_encounters": "ba71b3a50330896b4fb65c5504922190936f4e39a790e4e14f329d23012b4511",
+    "challenge_development": "4be44b3a5875d3af9ab1b7d180d98d027042006b28dfd8ca7211799a764b4a51",
+    "typical_cases": "a26d8d22abefa53f134e61c74356844cb10f86d3ceac583890cc95f4a8252d97"
+  },
+  "final_test": {
+    "status": "reserved_not_generated_or_evaluated",
+    "seed": 3901,
+    "count": 240,
+    "stage": "D",
+    "same_distribution": true,
+    "seal_before_final_evaluation": true
+  },
+  "final_challenge": {
+    "status": "reserved_not_generated_or_evaluated",
+    "seed": 3902,
+    "count": 120,
+    "target_speed_range": [
+      1.55,
+      1.8
+    ],
+    "overtaking_target_speed_range": [
+      0.3,
+      0.55
+    ],
+    "meeting_time_range": [
+      9,
+      12
+    ],
+    "overtaking_meeting_time_range": [
+      20,
+      26
+    ],
+    "crossing_angle_degrees": [
+      35,
+      50
+    ]
+  },
+  "split_rules": "Independent seeds AND geometry-overlap checks. A/B are deliberately paired ablations, not independent splits."
+}

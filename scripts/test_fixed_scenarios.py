@@ -34,7 +34,7 @@ def assert_same(left, right):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--scenario-file", type=Path,
-                        default=ROOT / "configs" / "test_scenarios_30.json")
+                        default=ROOT / "configs" / "validation_scenarios_30.json")
     args = parser.parse_args()
     raw = json.loads(args.scenario_file.read_text(encoding="utf-8"))
     dataset = load_dataset(args.scenario_file)

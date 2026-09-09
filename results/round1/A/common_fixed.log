@@ -1,0 +1,219 @@
+[01/30] scenario 00: success
+[02/30] scenario 01: success
+[03/30] scenario 02: static_collision_2
+[04/30] scenario 03: success
+[05/30] scenario 04: success
+[06/30] scenario 05: success
+[07/30] scenario 06: success
+[08/30] scenario 07: static_collision_1
+[09/30] scenario 08: static_collision_1
+[10/30] scenario 09: static_collision_2
+[11/30] scenario 10: static_collision_2
+[12/30] scenario 11: success
+[13/30] scenario 12: static_collision_1
+[14/30] scenario 13: success
+[15/30] scenario 14: success
+[16/30] scenario 15: success
+[17/30] scenario 16: static_collision_2
+[18/30] scenario 17: static_collision_1
+[19/30] scenario 18: success
+[20/30] scenario 19: success
+[21/30] scenario 20: dynamic_collision
+[22/30] scenario 21: success
+[23/30] scenario 22: dynamic_collision
+[24/30] scenario 23: success
+[25/30] scenario 24: dynamic_collision
+[26/30] scenario 25: success
+[27/30] scenario 26: success
+[28/30] scenario 27: success
+[29/30] scenario 28: static_collision_2
+[30/30] scenario 29: success
+[31/30] scenario 30: success
+[32/30] scenario 31: static_collision_2
+[33/30] scenario 32: success
+[34/30] scenario 33: success
+[35/30] scenario 34: success
+[36/30] scenario 35: success
+[37/30] scenario 36: success
+[38/30] scenario 37: success
+[39/30] scenario 38: success
+[40/30] scenario 39: static_collision_1
+[41/30] scenario 40: success
+[42/30] scenario 41: success
+[43/30] scenario 42: success
+[44/30] scenario 43: static_collision_1
+[45/30] scenario 44: success
+[46/30] scenario 45: success
+[47/30] scenario 46: dynamic_collision
+[48/30] scenario 47: success
+[49/30] scenario 48: success
+[50/30] scenario 49: success
+[51/30] scenario 50: success
+[52/30] scenario 51: dynamic_collision
+[53/30] scenario 52: success
+[54/30] scenario 53: static_collision_1
+[55/30] scenario 54: success
+[56/30] scenario 55: success
+[57/30] scenario 56: dynamic_collision
+[58/30] scenario 57: success
+[59/30] scenario 58: success
+[60/30] scenario 59: success
+Evaluation outputs saved to D:\PycharmProjects\simple-dynamic-path-planning\results\round1\A\common_fixed
+{
+  "total_scenarios": 60,
+  "success_count": 41,
+  "success_rate": 0.6833333333333333,
+  "success_rate_wilson_95": [
+    0.5576623297382323,
+    0.7869413244763347
+  ],
+  "collision_count": 19,
+  "collision_rate": 0.31666666666666665,
+  "collision_rate_wilson_95": [
+    0.21305867552366523,
+    0.44233767026176773
+  ],
+  "static_collision_count": 13,
+  "static_collision_rate": 0.21666666666666667,
+  "dynamic_collision_count": 6,
+  "dynamic_collision_rate": 0.1,
+  "out_of_bounds_count": 0,
+  "out_of_bounds_rate": 0.0,
+  "timeout_count": 0,
+  "timeout_rate": 0.0,
+  "average_reward": 738.1728578698242,
+  "average_steps": 123.81666666666666,
+  "average_navigation_time": 24.763333333333335,
+  "average_path_length": 71.59,
+  "successful_average_path_length": 86.70000000000002,
+  "successful_average_path_efficiency": 0.9028205178280285,
+  "average_final_goal_distance": 15.19021467800798,
+  "average_min_static_clearance": 4.3747959742217155,
+  "average_min_dynamic_clearance": 10.811646458547267,
+  "_provenance": {
+    "evaluated_at": "2026-09-07T01:52:48+00:00",
+    "model_path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round1-A-seed1\\models\\best\\best_model.zip",
+    "model_sha256": "08d802c820865bde1bd254a424efc27993e74277548a8425ad4cbd0fb5c6f15e",
+    "run_dir": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round1-A-seed1",
+    "run_id": "round1-A-seed1",
+    "scenario_file": "D:\\PycharmProjects\\simple-dynamic-path-planning\\configs\\round1\\common_fixed.json",
+    "dataset_name": "round1-A-diagnostic-3201",
+    "dataset_split": "diagnostic",
+    "dataset_seed": 3201,
+    "dataset_hash": "363d8bb7d256dd0a8f6b15fd138b421eeb12b666793a400a5fbac0293c11a07e",
+    "observation_schema_version": "center-distance-16-v1",
+    "reward_schema_version": "linear-center-distance-v1",
+    "model_schema_verified_from_run_metadata": true,
+    "deterministic_policy": true,
+    "source_manifest": {
+      "experiment_utils.py": "6da1707d290aa6110e6100ee363af728c64f1341705a7599a5a986766f11760c",
+      "envs/__init__.py": "296e3bc1307a752a43eef5fc30d6a778c99942a466d4ac6a63f311c1882a3555",
+      "envs/dynamic_path_env.py": "9f7c021128662d44cf7f1570b217f5bdd7ac7e6b0619753e09ea549e88181f0f",
+      "envs/scenario_dataset.py": "f370f2517d3db192613933b202ced6182c6c9ec18a72a94c87729f334ea109eb",
+      "envs/encounters.py": "67fc0cc04a97594fe025c3abbe7f4bbb7a2bba5ac25bb2068fe622bc7c734ee1",
+      "envs/round_one_dataset.py": "9b043eff7db92d653af997a6a2efb2dad67a6fb4d608ca4ac425479ad422d148",
+      "scripts/train.py": "4a66cdc56190b45c895e1c5e81e4db697b4c75351985a4ccb609e795eb17faad",
+      "scripts/evaluate.py": "d8807de85f4971c6bc95f327486cae27ba4b851139b58ce4752613a7a75c3e8c",
+      "scripts/evaluate_counterfactual.py": "9e0eabdbe9f20e09d8b584db77a6444f3f6be0adbd919449810e035b45c230ff"
+    },
+    "dependencies": {
+      "python": "3.11.7",
+      "numpy": "1.26.4",
+      "gymnasium": "1.2.3",
+      "stable-baselines3": "2.8.0",
+      "torch": "2.5.1",
+      "matplotlib": "3.8.4",
+      "pandas": "2.3.3"
+    },
+    "environment": {
+      "map_size": [
+        100.0,
+        100.0
+      ],
+      "dt": 0.2,
+      "v_max": 3.0,
+      "omega_max": 0.7853981633974483,
+      "linear_acceleration_max": 1.5,
+      "angular_acceleration_max": 0.7853981633974483,
+      "agent_radius": 1.0,
+      "goal_threshold": 3.0,
+      "static_safe_distance": 7.0,
+      "dynamic_safe_distance": 8.0,
+      "max_steps": 600,
+      "observation_shape": [
+        16
+      ],
+      "action_shape": [
+        2
+      ],
+      "observation_schema_version": "center-distance-16-v1",
+      "reward_schema_version": "linear-center-distance-v1",
+      "stage": "A",
+      "encounter_config": {
+        "version": "encounters-v1",
+        "static_radius": 4.0,
+        "dynamic_radius": 3.0,
+        "velocity_scale": 4.8,
+        "target_max_speed": 1.8,
+        "types": [
+          "head_on",
+          "crossing_left",
+          "crossing_right",
+          "overtaking"
+        ],
+        "type_probabilities": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "risks": [
+          "conflict",
+          "time_separated",
+          "receding"
+        ],
+        "risk_probabilities": [
+          0.6,
+          0.25,
+          0.15
+        ],
+        "layouts": [
+          "clear",
+          "blocking",
+          "mixed",
+          "two_sides"
+        ],
+        "layout_probabilities": [
+          0.3,
+          0.2,
+          0.3,
+          0.2
+        ],
+        "layout_risk_rule": "D blocking: time_separated/receding 0.625/0.375; mixed: conflict; others: risk_probabilities",
+        "target_speed_range": [
+          0.6,
+          1.5
+        ],
+        "meeting_time_range": [
+          12.0,
+          26.0
+        ],
+        "crossing_angle_degrees": [
+          55.0,
+          125.0
+        ],
+        "nominal_speed": 2.0,
+        "nominal_acceleration": 1.5,
+        "time_horizon": 120.0,
+        "max_attempts": 1500,
+        "exit_behavior": "continue_straight_outside_map",
+        "feasibility": "executed waypoint-controller witness, dt=0.2, same speed/acceleration limits"
+      }
+    },
+    "model_num_timesteps": 200704,
+    "legacy_training_identity_unverified": false,
+    "cross_stage_diagnostic": true,
+    "model_stage": "A",
+    "dataset_stage": "A"
+  }
+}

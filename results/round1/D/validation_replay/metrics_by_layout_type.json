@@ -1,0 +1,134 @@
+[
+  {
+    "layout_type": "blocking",
+    "total_scenarios": 12,
+    "success_count": 5,
+    "success_rate": 0.4166666666666667,
+    "success_rate_wilson_95": [
+      0.19326031365875665,
+      0.6804886874504503
+    ],
+    "collision_count": 7,
+    "collision_rate": 0.5833333333333334,
+    "collision_rate_wilson_95": [
+      0.31951131254954973,
+      0.8067396863412435
+    ],
+    "static_collision_count": 5,
+    "static_collision_rate": 0.4166666666666667,
+    "dynamic_collision_count": 2,
+    "dynamic_collision_rate": 0.16666666666666666,
+    "out_of_bounds_count": 0,
+    "out_of_bounds_rate": 0.0,
+    "timeout_count": 0,
+    "timeout_rate": 0.0,
+    "average_reward": 434.540403600221,
+    "average_steps": 80.08333333333333,
+    "average_navigation_time": 16.01666666666667,
+    "average_path_length": 45.35000000000003,
+    "successful_average_path_length": 80.46000000000006,
+    "successful_average_path_efficiency": 0.9565259448379209,
+    "average_final_goal_distance": 36.447612759552804,
+    "average_min_static_clearance": 3.158783082174254,
+    "average_min_dynamic_clearance": 16.028195480281145
+  },
+  {
+    "layout_type": "clear",
+    "total_scenarios": 18,
+    "success_count": 17,
+    "success_rate": 0.9444444444444444,
+    "success_rate_wilson_95": [
+      0.7424269921812741,
+      0.990124809021697
+    ],
+    "collision_count": 1,
+    "collision_rate": 0.05555555555555555,
+    "collision_rate_wilson_95": [
+      0.009875190978303097,
+      0.25757300781872594
+    ],
+    "static_collision_count": 0,
+    "static_collision_rate": 0.0,
+    "dynamic_collision_count": 1,
+    "dynamic_collision_rate": 0.05555555555555555,
+    "out_of_bounds_count": 0,
+    "out_of_bounds_rate": 0.0,
+    "timeout_count": 0,
+    "timeout_rate": 0.0,
+    "average_reward": 932.7967601296122,
+    "average_steps": 136.72222222222223,
+    "average_navigation_time": 27.34444444444445,
+    "average_path_length": 79.33333333333333,
+    "successful_average_path_length": 81.37058823529412,
+    "successful_average_path_efficiency": 0.957031894396636,
+    "average_final_goal_distance": 4.722887713188396,
+    "average_min_static_clearance": 8.571128008894597,
+    "average_min_dynamic_clearance": 10.40307766459277
+  },
+  {
+    "layout_type": "mixed",
+    "total_scenarios": 21,
+    "success_count": 14,
+    "success_rate": 0.6666666666666666,
+    "success_rate_wilson_95": [
+      0.4537345197425524,
+      0.8280524739491653
+    ],
+    "collision_count": 7,
+    "collision_rate": 0.3333333333333333,
+    "collision_rate_wilson_95": [
+      0.17194752605083477,
+      0.5462654802574476
+    ],
+    "static_collision_count": 7,
+    "static_collision_rate": 0.3333333333333333,
+    "dynamic_collision_count": 0,
+    "dynamic_collision_rate": 0.0,
+    "out_of_bounds_count": 0,
+    "out_of_bounds_rate": 0.0,
+    "timeout_count": 0,
+    "timeout_rate": 0.0,
+    "average_reward": 684.4884845868888,
+    "average_steps": 109.47619047619048,
+    "average_navigation_time": 21.895238095238096,
+    "average_path_length": 62.9857142857143,
+    "successful_average_path_length": 81.25714285714287,
+    "successful_average_path_efficiency": 0.9498200802871714,
+    "average_final_goal_distance": 20.73279947380061,
+    "average_min_static_clearance": 1.9147729578710309,
+    "average_min_dynamic_clearance": 8.205302038938179
+  },
+  {
+    "layout_type": "two_sides",
+    "total_scenarios": 9,
+    "success_count": 7,
+    "success_rate": 0.7777777777777778,
+    "success_rate_wilson_95": [
+      0.45258896910698887,
+      0.9367748928821533
+    ],
+    "collision_count": 2,
+    "collision_rate": 0.2222222222222222,
+    "collision_rate_wilson_95": [
+      0.06322510711784671,
+      0.5474110308930111
+    ],
+    "static_collision_count": 2,
+    "static_collision_rate": 0.2222222222222222,
+    "dynamic_collision_count": 0,
+    "dynamic_collision_rate": 0.0,
+    "out_of_bounds_count": 0,
+    "out_of_bounds_rate": 0.0,
+    "timeout_count": 0,
+    "timeout_rate": 0.0,
+    "average_reward": 842.4333924330659,
+    "average_steps": 129.88888888888889,
+    "average_navigation_time": 25.977777777777778,
+    "average_path_length": 75.23333333333336,
+    "successful_average_path_length": 80.87142857142858,
+    "successful_average_path_efficiency": 0.9608554030685276,
+    "average_final_goal_distance": 8.161843774064328,
+    "average_min_static_clearance": 1.2898486887142573,
+    "average_min_dynamic_clearance": 9.825134652780305
+  }
+]

@@ -1,0 +1,2773 @@
+{
+  "schema_version": 3,
+  "dataset_name": "round1-A-validation-3101",
+  "dataset_split": "validation",
+  "dataset_seed": 3101,
+  "num_scenarios": 60,
+  "environment_stage": "A",
+  "observation_schema": "center-distance-16-v1",
+  "generation_config": {
+    "version": "encounters-v1",
+    "static_radius": 4.0,
+    "dynamic_radius": 3.0,
+    "velocity_scale": 4.8,
+    "target_max_speed": 1.8,
+    "types": [
+      "head_on",
+      "crossing_left",
+      "crossing_right",
+      "overtaking"
+    ],
+    "type_probabilities": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "risks": [
+      "conflict",
+      "time_separated",
+      "receding"
+    ],
+    "risk_probabilities": [
+      0.6,
+      0.25,
+      0.15
+    ],
+    "layouts": [
+      "clear",
+      "blocking",
+      "mixed",
+      "two_sides"
+    ],
+    "layout_probabilities": [
+      0.3,
+      0.2,
+      0.3,
+      0.2
+    ],
+    "layout_risk_rule": "D blocking: time_separated/receding 0.625/0.375; mixed: conflict; others: risk_probabilities",
+    "target_speed_range": [
+      0.6,
+      1.5
+    ],
+    "meeting_time_range": [
+      12.0,
+      26.0
+    ],
+    "crossing_angle_degrees": [
+      55.0,
+      125.0
+    ],
+    "nominal_speed": 2.0,
+    "nominal_acceleration": 1.5,
+    "time_horizon": 120.0,
+    "max_attempts": 1500,
+    "exit_behavior": "continue_straight_outside_map",
+    "feasibility": "executed waypoint-controller witness, dt=0.2, same speed/acceleration limits"
+  },
+  "challenge": false,
+  "sampling_report": {},
+  "scenarios": [
+    {
+      "start_position": [
+        7.9607301273781585,
+        53.794921004910904
+      ],
+      "goal_position": [
+        94.35713466583555,
+        40.10538549704214
+      ],
+      "start_heading": -0.20946910973712152,
+      "static_obstacles": [
+        {
+          "position": [
+            31.596824833946492,
+            55.07994739867995
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            58.879544223612086,
+            65.80311852367007
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          45.015220505169786,
+          62.85922391139083
+        ],
+        "velocity": [
+          0.0,
+          -1.0562532996988838
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 0,
+      "scenario_hash": "daa768da94de503aaa037312bba4b0d9160c3b77baf476cab97015052256b437"
+    },
+    {
+      "start_position": [
+        13.098397621735282,
+        55.114204901334894
+      ],
+      "goal_position": [
+        94.11671424691687,
+        51.47000459991686
+      ],
+      "start_heading": -0.11519137742068608,
+      "static_obstacles": [
+        {
+          "position": [
+            39.592407676246665,
+            59.48939487031388
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            71.22960700591013,
+            51.625868751161946
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          53.788089400243045,
+          30.32784097928904
+        ],
+        "velocity": [
+          0.0,
+          0.8221301082487472
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 1,
+      "scenario_hash": "fb660f0fc3f89edc84605e5d3f0545b95ea61ac26ca679c60d66bfc5729acfef"
+    },
+    {
+      "start_position": [
+        9.360839926757922,
+        56.17939201744004
+      ],
+      "goal_position": [
+        94.14234347663557,
+        52.62748048221122
+      ],
+      "start_heading": -0.07037133580864285,
+      "static_obstacles": [
+        {
+          "position": [
+            41.27053363557036,
+            51.666109566143064
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            74.83050770529654,
+            31.749283288995493
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          48.66933067817324,
+          71.22172842504739
+        ],
+        "velocity": [
+          0.0,
+          -0.9714344284596623
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 2,
+      "scenario_hash": "49f5fd1f9dc60c984790aa2eedf7c2fe3a912f06feeeda4ccd0f7a5fb7b24a93"
+    },
+    {
+      "start_position": [
+        10.216826179139623,
+        54.93819264344057
+      ],
+      "goal_position": [
+        91.87774710304566,
+        37.54164110225622
+      ],
+      "start_heading": -0.03474211123632198,
+      "static_obstacles": [
+        {
+          "position": [
+            28.967513088850875,
+            56.55802924357558
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            70.27597226037764,
+            41.501217260007294
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          43.64310843560657,
+          61.091329500309975
+        ],
+        "velocity": [
+          0.0,
+          -0.9742023490001419
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 3,
+      "scenario_hash": "dcd4ba8772c7513020f5dc78ca734766fce3fae36c7122c46313a72e5d0424cf"
+    },
+    {
+      "start_position": [
+        14.54847889470376,
+        55.61295405622596
+      ],
+      "goal_position": [
+        89.43708339605911,
+        40.91264624890747
+      ],
+      "start_heading": -0.1015968806840517,
+      "static_obstacles": [
+        {
+          "position": [
+            30.706947611214176,
+            49.027235591823036
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            64.64137269557588,
+            41.069297655406075
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          47.811982309438775,
+          70.0111490772969
+        ],
+        "velocity": [
+          0.0,
+          -1.1110631511427436
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 4,
+      "scenario_hash": "c0f07019a4f9c946984d974d4d138402e0c7ec644a7507cf0adab76b540714be"
+    },
+    {
+      "start_position": [
+        11.417954130304544,
+        38.42002045220694
+      ],
+      "goal_position": [
+        91.2995477067186,
+        62.19897787331391
+      ],
+      "start_heading": 0.44686277742095726,
+      "static_obstacles": [
+        {
+          "position": [
+            42.58222359103387,
+            58.01965713440454
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            69.25058959328851,
+            53.94690614910654
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          47.45526038596041,
+          31.30362136137364
+        ],
+        "velocity": [
+          0.0,
+          0.967734863401404
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 5,
+      "scenario_hash": "67f3974a0ecdd581e8469abb9c6f1b9d5e48fafa45774ca2b9cd5b96e0c3c186"
+    },
+    {
+      "start_position": [
+        7.469724336550745,
+        51.03123490735439
+      ],
+      "goal_position": [
+        86.28447256190984,
+        54.45541280476033
+      ],
+      "start_heading": -0.11992054256077056,
+      "static_obstacles": [
+        {
+          "position": [
+            39.05206948023471,
+            70.05120202382244
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            74.15104948151273,
+            57.74845265627934
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          52.32675185766072,
+          69.33781325167396
+        ],
+        "velocity": [
+          0.0,
+          -0.9038058655211954
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 6,
+      "scenario_hash": "a0b780c6e0140cc634eebf3b4dc09622cd803f058b8d9529738ed183d5ed4ff7"
+    },
+    {
+      "start_position": [
+        12.867829119434589,
+        40.72551774078493
+      ],
+      "goal_position": [
+        91.51979664395668,
+        43.4067577464599
+      ],
+      "start_heading": -0.12460613781869734,
+      "static_obstacles": [
+        {
+          "position": [
+            33.37106981706974,
+            61.93065323125591
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            59.223998793531955,
+            40.293388221049824
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          55.51538526780257,
+          61.096142169247926
+        ],
+        "velocity": [
+          0.0,
+          -1.2234457988783554
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 7,
+      "scenario_hash": "fe73d5e847f3ab6a5eec37e5b46446ed02f051b303654c4237ad3a1293e0d781"
+    },
+    {
+      "start_position": [
+        5.5526213437277985,
+        56.471542087278806
+      ],
+      "goal_position": [
+        94.96110800412194,
+        64.52723857105255
+      ],
+      "start_heading": 0.24544549968503393,
+      "static_obstacles": [
+        {
+          "position": [
+            29.578706386503583,
+            60.97882750235767
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            64.71410607357627,
+            31.00224756227885
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          46.314497248246035,
+          74.65226535249252
+        ],
+        "velocity": [
+          0.0,
+          -0.9736741660901167
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 8,
+      "scenario_hash": "d9e52edaca8d6a3549f353e3eca83547aec4203573ad4e62be1d1df4a195f8c8"
+    },
+    {
+      "start_position": [
+        13.45547882465444,
+        55.8498155801014
+      ],
+      "goal_position": [
+        90.76407310028715,
+        51.977990035994516
+      ],
+      "start_heading": -0.23270113757035915,
+      "static_obstacles": [
+        {
+          "position": [
+            29.01405332873096,
+            50.78137145681016
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            72.3561730017397,
+            57.98087498989399
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          56.84474309621522,
+          71.12072887664026
+        ],
+        "velocity": [
+          0.0,
+          -0.9190731072798215
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 9,
+      "scenario_hash": "7a34ecd86c19ac17266599899259713f3082c59d78f9509be004e6f17eca3e73"
+    },
+    {
+      "start_position": [
+        6.841913402278715,
+        61.304207012831114
+      ],
+      "goal_position": [
+        88.04082463055923,
+        58.04676150181598
+      ],
+      "start_heading": 0.11314200878505876,
+      "static_obstacles": [
+        {
+          "position": [
+            35.849162436912025,
+            35.90554815269315
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            65.60058852179638,
+            54.50129849991633
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          56.24588416783959,
+          31.156955388263597
+        ],
+        "velocity": [
+          0.0,
+          1.1826955242948172
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 10,
+      "scenario_hash": "73ce6d82e054adc80e3a6a919d70d932fe9b97886c10a73c17c235a3758fd38d"
+    },
+    {
+      "start_position": [
+        9.732409142233337,
+        60.5909666811439
+      ],
+      "goal_position": [
+        94.30782777225498,
+        50.987303172987545
+      ],
+      "start_heading": 0.023062890675199288,
+      "static_obstacles": [
+        {
+          "position": [
+            34.103868333214514,
+            54.91749318223006
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            68.36043384477254,
+            32.875302885923844
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          49.10149241332667,
+          38.432448105701916
+        ],
+        "velocity": [
+          0.0,
+          1.208373984754141
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 11,
+      "scenario_hash": "5819e7fc69f35777c932d91a2d29ab0c6df0b28692df37a001019c1b69401b02"
+    },
+    {
+      "start_position": [
+        13.628046503788461,
+        55.333247761214025
+      ],
+      "goal_position": [
+        85.35280626883703,
+        51.479108517812755
+      ],
+      "start_heading": -0.27038177437859723,
+      "static_obstacles": [
+        {
+          "position": [
+            40.80644518797075,
+            40.39449842907338
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            72.12655086689531,
+            47.645376434396496
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          47.88811024553937,
+          31.809778497954497
+        ],
+        "velocity": [
+          0.0,
+          0.8853591048018615
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 12,
+      "scenario_hash": "2fb65861d3299ddf15ff1347b61710d4416ce1e2fa063873547710d938d71728"
+    },
+    {
+      "start_position": [
+        8.384776339554648,
+        58.96243136950077
+      ],
+      "goal_position": [
+        87.27842826843302,
+        50.29584917443974
+      ],
+      "start_heading": -0.03188535582032603,
+      "static_obstacles": [
+        {
+          "position": [
+            36.81438394964437,
+            54.31043946539995
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            69.6758920936704,
+            56.20730328424053
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          47.35992768363124,
+          33.58907265303385
+        ],
+        "velocity": [
+          0.0,
+          1.0409879585619435
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 13,
+      "scenario_hash": "874a0738d6d5642727daf13df1709eba74ff2766fcbf34e715fbbb9ed74c9591"
+    },
+    {
+      "start_position": [
+        6.369319064227691,
+        43.150797890622506
+      ],
+      "goal_position": [
+        93.18226312720314,
+        41.41508758149127
+      ],
+      "start_heading": -0.18099802555823707,
+      "static_obstacles": [
+        {
+          "position": [
+            29.778732269935986,
+            32.460320080265106
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            72.57946531411059,
+            40.018606523921676
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          50.59733353620538,
+          66.80373464569838
+        ],
+        "velocity": [
+          0.0,
+          -1.0784408366276983
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 14,
+      "scenario_hash": "15cf950531a3dda4ec451b8255ad220d4a3d91c9400c4a38df405011da920baa"
+    },
+    {
+      "start_position": [
+        14.657867958950648,
+        60.705209109109376
+      ],
+      "goal_position": [
+        94.00240961727101,
+        48.32297214987363
+      ],
+      "start_heading": -0.0307667035679855,
+      "static_obstacles": [
+        {
+          "position": [
+            41.66432818618562,
+            60.50220243158874
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            68.41309618724222,
+            57.68645715856849
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          47.54362734288683,
+          35.08425530764842
+        ],
+        "velocity": [
+          0.0,
+          1.1299364325899774
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 15,
+      "scenario_hash": "b251320aa886e35502e20f262ddb6f82735decad0159c6d57ce1764c336add04"
+    },
+    {
+      "start_position": [
+        8.18136174334958,
+        42.4159048449015
+      ],
+      "goal_position": [
+        91.39980119422688,
+        52.695149764803645
+      ],
+      "start_heading": -0.03490670813034713,
+      "static_obstacles": [
+        {
+          "position": [
+            41.56912461748627,
+            31.855233023385985
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            74.9818322049253,
+            51.65191110473815
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          55.69545981756665,
+          28.834143673147114
+        ],
+        "velocity": [
+          0.0,
+          1.0307349542212219
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 16,
+      "scenario_hash": "43747fb222d0ea9fa3982e60984bf72d93fa5a91eccb097fe464e80b2ad31359"
+    },
+    {
+      "start_position": [
+        12.779534979698498,
+        39.34775218233108
+      ],
+      "goal_position": [
+        86.15170899311079,
+        46.94722542628165
+      ],
+      "start_heading": 0.21196128887275512,
+      "static_obstacles": [
+        {
+          "position": [
+            35.037939351404674,
+            43.86604782731723
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            68.71306210539763,
+            70.74188218155935
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          52.22029848434724,
+          30.550607351347324
+        ],
+        "velocity": [
+          0.0,
+          0.9145092493044079
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 17,
+      "scenario_hash": "469ed4ce9b2bfb3c124ee1e8d974cab4229f8f58f86ed55b9020cdb858b8f032"
+    },
+    {
+      "start_position": [
+        6.2808369732744715,
+        52.03465569129726
+      ],
+      "goal_position": [
+        87.78968720143844,
+        56.003975481758616
+      ],
+      "start_heading": -0.18952615552189966,
+      "static_obstacles": [
+        {
+          "position": [
+            37.35734936212465,
+            38.38794502779459
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            69.94317692933998,
+            53.20614948758288
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          56.56990186878302,
+          27.187550957275477
+        ],
+        "velocity": [
+          0.0,
+          1.2527090266778995
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 18,
+      "scenario_hash": "4bd142c1e208723a75830d5367ca28bb5243262f0b958d868e3147d3f3c01c6c"
+    },
+    {
+      "start_position": [
+        8.556063278747292,
+        49.747502375640025
+      ],
+      "goal_position": [
+        88.60867903099347,
+        53.708754612175625
+      ],
+      "start_heading": -0.11395792539285132,
+      "static_obstacles": [
+        {
+          "position": [
+            37.4755680324055,
+            53.29405686824674
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            60.39271379304271,
+            51.438276052470094
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          52.237572620557316,
+          38.48939285188317
+        ],
+        "velocity": [
+          0.0,
+          0.9400252264231865
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 19,
+      "scenario_hash": "286ece643ef5dda01f66c4cb0c428705e0536e40665c29d1a5ac98996329f27f"
+    },
+    {
+      "start_position": [
+        8.959403217820693,
+        50.65408071912732
+      ],
+      "goal_position": [
+        92.92569542176997,
+        64.7023982137657
+      ],
+      "start_heading": 0.07954189862304695,
+      "static_obstacles": [
+        {
+          "position": [
+            30.993278715250312,
+            61.08307961320938
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            66.38654564824397,
+            55.19403425516532
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          47.82169842612482,
+          70.71448411031588
+        ],
+        "velocity": [
+          0.0,
+          -0.8582731192647219
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 20,
+      "scenario_hash": "50cb6b67b06f60a1a1748fb5e0d087cd0c9df57bbc4557a56ed20353c2e55420"
+    },
+    {
+      "start_position": [
+        8.840429351608684,
+        62.505555725660386
+      ],
+      "goal_position": [
+        93.11650772581483,
+        39.16921911339376
+      ],
+      "start_heading": -0.27366681775435664,
+      "static_obstacles": [
+        {
+          "position": [
+            33.278197134165005,
+            58.73841346899145
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            66.0289707503819,
+            55.613996754769104
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          44.684297914500775,
+          69.84826245778183
+        ],
+        "velocity": [
+          0.0,
+          -1.0448194331722034
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 21,
+      "scenario_hash": "390dc73ce4f29eb7d60fbd4fc2ff619e716bd29a7d4bae21ae06b8b690c9555a"
+    },
+    {
+      "start_position": [
+        11.986513059945365,
+        59.87344588756494
+      ],
+      "goal_position": [
+        87.84784040657566,
+        62.66741021894568
+      ],
+      "start_heading": 0.19263000422372833,
+      "static_obstacles": [
+        {
+          "position": [
+            28.330145973450456,
+            65.86920402860697
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            66.67416655695092,
+            61.039577938428835
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          48.86896444796372,
+          73.00772730877839
+        ],
+        "velocity": [
+          0.0,
+          -1.016331938055076
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 22,
+      "scenario_hash": "0406d6e1c0df239c8ac34ec01e3d4a368b6424cebc6254bbbdc0f0c38e294dcf"
+    },
+    {
+      "start_position": [
+        13.816132181363542,
+        47.55160907259187
+      ],
+      "goal_position": [
+        85.8775699991591,
+        43.45747134188308
+      ],
+      "start_heading": -0.03259817794146169,
+      "static_obstacles": [
+        {
+          "position": [
+            38.63192522440222,
+            43.81427952849437
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            59.6469307280328,
+            59.915955130550905
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          49.12148947617277,
+          32.82914521145884
+        ],
+        "velocity": [
+          0.0,
+          0.8114750838969249
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 23,
+      "scenario_hash": "781046456548f417fe2693be82f818e42454175cff75e9b76e305c44ddece09a"
+    },
+    {
+      "start_position": [
+        6.892835626992903,
+        38.02224106183195
+      ],
+      "goal_position": [
+        94.29931646886432,
+        51.70020574284071
+      ],
+      "start_heading": 0.28119254213032185,
+      "static_obstacles": [
+        {
+          "position": [
+            44.415807085149694,
+            28.668127957274198
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            61.39875577794678,
+            41.78685190216822
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          43.087953185279346,
+          63.868111474267394
+        ],
+        "velocity": [
+          0.0,
+          -1.13578006993044
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 24,
+      "scenario_hash": "1316a91aee636fb892c7f7176dd1204d1a7e97d32744680eac577a2ff28be893"
+    },
+    {
+      "start_position": [
+        9.070514987498669,
+        39.21851676944047
+      ],
+      "goal_position": [
+        93.9575050504081,
+        59.87078747612519
+      ],
+      "start_heading": 0.46138483251869156,
+      "static_obstacles": [
+        {
+          "position": [
+            39.99195384935787,
+            56.47020210511333
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            67.28122746498771,
+            50.4345845783277
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          47.13479480688274,
+          73.25322903786206
+        ],
+        "velocity": [
+          0.0,
+          -1.2375793247061897
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 25,
+      "scenario_hash": "d22393aee3c256f0e1726ff45f7f254a00493ebca7f18f0a0e7359bf16e849db"
+    },
+    {
+      "start_position": [
+        12.384096199208795,
+        49.9931999995923
+      ],
+      "goal_position": [
+        93.5200400684576,
+        61.659154344665964
+      ],
+      "start_heading": 0.04007927113264609,
+      "static_obstacles": [
+        {
+          "position": [
+            37.08957900090413,
+            28.326745152151695
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            73.81657685644839,
+            57.48728568215603
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          53.70752339672277,
+          27.140124009132137
+        ],
+        "velocity": [
+          0.0,
+          1.1933284560554593
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 26,
+      "scenario_hash": "bd02f26145995db9f1b2bcab9e6ef9c93bd8fdfb600e91d4fb6e5df15eaf16a4"
+    },
+    {
+      "start_position": [
+        8.2344174913943,
+        46.46719149858283
+      ],
+      "goal_position": [
+        94.42683295373705,
+        55.52940581538812
+      ],
+      "start_heading": 0.2673986409458484,
+      "static_obstacles": [
+        {
+          "position": [
+            32.14191484580871,
+            52.62220229808053
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            69.68073439617989,
+            51.06192028311834
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          51.12601441885209,
+          70.0018334608947
+        ],
+        "velocity": [
+          0.0,
+          -0.8041338151382194
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 27,
+      "scenario_hash": "b9e5107d773866952bb14150bfb1ed424e25167ea017a2f3ee7e0cad14ebd209"
+    },
+    {
+      "start_position": [
+        14.452805042716461,
+        61.87236769543002
+      ],
+      "goal_position": [
+        94.97709863972108,
+        59.11313762503774
+      ],
+      "start_heading": -0.2779925245420478,
+      "static_obstacles": [
+        {
+          "position": [
+            34.77893957725263,
+            32.11111639804296
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            64.30232545735188,
+            63.15015679686573
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          43.88343571768199,
+          36.225361454356815
+        ],
+        "velocity": [
+          0.0,
+          1.152571257607868
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 28,
+      "scenario_hash": "134407d196557cdf1c817eee5b21a394eb8595987ce304053c11369cb881da2b"
+    },
+    {
+      "start_position": [
+        5.642298623343207,
+        49.74477965394159
+      ],
+      "goal_position": [
+        86.23651661159316,
+        41.532918491906834
+      ],
+      "start_heading": 0.14525927195247323,
+      "static_obstacles": [
+        {
+          "position": [
+            32.956632418237234,
+            46.960256396054945
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            72.5100696939445,
+            36.50751669315702
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          50.165350877341936,
+          71.96141241534977
+        ],
+        "velocity": [
+          0.0,
+          -0.9937426126870723
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 29,
+      "scenario_hash": "2e4f65aa31095fcc8d9c9e5a0e14359047e0a7827a47457f98e8b2d310fd4207"
+    },
+    {
+      "start_position": [
+        6.1977210418871955,
+        40.26230451195224
+      ],
+      "goal_position": [
+        94.24438813517,
+        45.72422547346021
+      ],
+      "start_heading": 0.13217321272337035,
+      "static_obstacles": [
+        {
+          "position": [
+            28.664218498433453,
+            58.55930875543709
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            69.44865057600455,
+            43.27719859136201
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          55.94005320136297,
+          65.50239473618232
+        ],
+        "velocity": [
+          0.0,
+          -1.2076564024725553
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 30,
+      "scenario_hash": "ff52be4803c00d2cf26c9c3b1935a0a6f87962b435721589662ab51e3a2291f6"
+    },
+    {
+      "start_position": [
+        14.577251333807949,
+        47.6159544975963
+      ],
+      "goal_position": [
+        85.53645715884336,
+        42.8503774089561
+      ],
+      "start_heading": -0.006062337378779148,
+      "static_obstacles": [
+        {
+          "position": [
+            28.43687683212903,
+            46.7579266567878
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            58.818599065910426,
+            67.55680096764024
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          56.655878272466055,
+          26.128361523845104
+        ],
+        "velocity": [
+          0.0,
+          1.041646520589774
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 31,
+      "scenario_hash": "6045dd056db0d191f523db87c4d84e7e44b1eebab317dea8e5690d398fb05b6c"
+    },
+    {
+      "start_position": [
+        11.313168764032294,
+        43.01576828022964
+      ],
+      "goal_position": [
+        92.57473030585811,
+        57.54712725779962
+      ],
+      "start_heading": 0.1782408647007956,
+      "static_obstacles": [
+        {
+          "position": [
+            34.91499756924344,
+            30.667214798596554
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            70.97153597837183,
+            50.40445579753449
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          51.8904290030849,
+          73.24194728467701
+        ],
+        "velocity": [
+          0.0,
+          -1.0910619102084511
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 32,
+      "scenario_hash": "929049d92a09fb1a93068d3380cbcecc20a43dd56a1279f78203e4044b5e05a2"
+    },
+    {
+      "start_position": [
+        10.722770220739832,
+        49.99132581292806
+      ],
+      "goal_position": [
+        92.2413349685105,
+        44.04165818216603
+      ],
+      "start_heading": -0.31902279606533224,
+      "static_obstacles": [
+        {
+          "position": [
+            28.218444276478227,
+            50.700240186185304
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            65.31276683470732,
+            34.258607453576786
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          48.9350817393991,
+          70.77334847975048
+        ],
+        "velocity": [
+          0.0,
+          -1.0011810571323134
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 33,
+      "scenario_hash": "27fc23933c3960dcaea85bfb8c8ee55ef17792ed80b7d5b46c992821380a1026"
+    },
+    {
+      "start_position": [
+        12.114652159425567,
+        57.52488461574128
+      ],
+      "goal_position": [
+        85.6938749993691,
+        43.012630665236244
+      ],
+      "start_heading": -0.3868708907559144,
+      "static_obstacles": [
+        {
+          "position": [
+            40.18333071362886,
+            52.118953792245236
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            59.024909979770094,
+            71.38944103291072
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          47.68050359190708,
+          26.577840605349405
+        ],
+        "velocity": [
+          0.0,
+          1.2454248107766004
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 34,
+      "scenario_hash": "ff2855999c85bd6d963a8e0d1d32511305786d39a596aa88afb6afb562f21b7a"
+    },
+    {
+      "start_position": [
+        13.773466178579,
+        63.76939151525096
+      ],
+      "goal_position": [
+        89.24277592039036,
+        39.597950169633265
+      ],
+      "start_heading": -0.09456305846898694,
+      "static_obstacles": [
+        {
+          "position": [
+            36.65709936153574,
+            56.94619192386884
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            63.03664518867799,
+            34.32400850902624
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          44.51171309648909,
+          68.39430962782116
+        ],
+        "velocity": [
+          0.0,
+          -0.8998526428541946
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 35,
+      "scenario_hash": "335dc6d67088334ca2873f0df83fdd26cd80f2fffaa799ccf0c24616bbd62948"
+    },
+    {
+      "start_position": [
+        8.861923571983809,
+        51.03728130651359
+      ],
+      "goal_position": [
+        94.07025408328096,
+        40.35909565960811
+      ],
+      "start_heading": -0.19486135401370408,
+      "static_obstacles": [
+        {
+          "position": [
+            40.92830868340887,
+            49.180228783034465
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            67.59924299935827,
+            53.398115030933184
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          51.98068894368424,
+          25.982266393980378
+        ],
+        "velocity": [
+          0.0,
+          1.2401269750876456
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 36,
+      "scenario_hash": "fa0149e6c106c1ea63d85c8de2a54fe2ee2307807739a1dee1abc87d400f0afd"
+    },
+    {
+      "start_position": [
+        7.108227962892001,
+        39.84638133222396
+      ],
+      "goal_position": [
+        90.40062623012179,
+        43.95015154387954
+      ],
+      "start_heading": 0.09464911596867687,
+      "static_obstacles": [
+        {
+          "position": [
+            29.282047909710123,
+            45.68876991163065
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            69.97517062028442,
+            66.56693190595263
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          53.56670282818371,
+          63.21442616262228
+        ],
+        "velocity": [
+          0.0,
+          -1.001320488538178
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 37,
+      "scenario_hash": "6e9b09b068b0b56cf40db74ed19117a9efe6d4a096600f7ebd7df38220e982c7"
+    },
+    {
+      "start_position": [
+        13.122067063683991,
+        55.511442603525325
+      ],
+      "goal_position": [
+        86.05131339370199,
+        39.46236868802119
+      ],
+      "start_heading": -0.17260705887937444,
+      "static_obstacles": [
+        {
+          "position": [
+            28.043245802140024,
+            44.053948779962084
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            72.07306105757763,
+            42.07218949140139
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          43.78083144701462,
+          39.81874783246243
+        ],
+        "velocity": [
+          0.0,
+          1.0894922234285178
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 38,
+      "scenario_hash": "a22a64a3ac8d02ce65d5d4d272ba468934a360c722b5224b4030a21398986c2f"
+    },
+    {
+      "start_position": [
+        7.752226578297401,
+        60.19282669942348
+      ],
+      "goal_position": [
+        88.80997595210243,
+        61.02353947920711
+      ],
+      "start_heading": 0.13353423562101652,
+      "static_obstacles": [
+        {
+          "position": [
+            43.61283019437495,
+            38.96454640010948
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            73.41757325422046,
+            61.52669158032525
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          53.683412274550726,
+          35.8990721602115
+        ],
+        "velocity": [
+          0.0,
+          0.9668968666763127
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 39,
+      "scenario_hash": "5ed5bd0e7e288e0998147faf7fcd69ba0ba0438489e3edef3dc6dbe946e0d415"
+    },
+    {
+      "start_position": [
+        8.560031115376542,
+        43.713165070570696
+      ],
+      "goal_position": [
+        85.9022516911975,
+        46.7444376270015
+      ],
+      "start_heading": 0.28184809337367867,
+      "static_obstacles": [
+        {
+          "position": [
+            29.45764945308766,
+            46.01683663414299
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            71.38829188407261,
+            33.02939727797953
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          55.05242756015447,
+          74.31700673462326
+        ],
+        "velocity": [
+          0.0,
+          -0.9188851398836752
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 40,
+      "scenario_hash": "389a7b30ac14b0955c224ee34a8287aa628a1a014d1b4e771d327e2248d7f5f9"
+    },
+    {
+      "start_position": [
+        14.496434256381548,
+        44.64880784137712
+      ],
+      "goal_position": [
+        88.39144212908361,
+        36.81888110960181
+      ],
+      "start_heading": -0.14335546361410456,
+      "static_obstacles": [
+        {
+          "position": [
+            30.61590261942961,
+            45.274973138663725
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            74.17230011410027,
+            32.61144107074171
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          47.44045557312744,
+          32.899357520326895
+        ],
+        "velocity": [
+          0.0,
+          0.8263387465304539
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 41,
+      "scenario_hash": "9d322dcfa76ba350d254749ebcd5c018b345f3297fb6371a4652a5689bb3ce4d"
+    },
+    {
+      "start_position": [
+        12.211640263061234,
+        47.51200037962346
+      ],
+      "goal_position": [
+        86.37658758398597,
+        59.60000929178963
+      ],
+      "start_heading": 0.013777444081091161,
+      "static_obstacles": [
+        {
+          "position": [
+            33.85815071477655,
+            69.1965477487243
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            70.56151669581953,
+            54.34787700377333
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          50.0804583309626,
+          69.7445098042626
+        ],
+        "velocity": [
+          0.0,
+          -1.198609370610007
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 42,
+      "scenario_hash": "9bd5feef75571a35e32b5dbc591f617fc11acd3c5f45c80e18a5a97a163cb113"
+    },
+    {
+      "start_position": [
+        5.05312543535476,
+        43.83052820668027
+      ],
+      "goal_position": [
+        91.95618934006032,
+        51.2681640892814
+      ],
+      "start_heading": -0.09764788064438923,
+      "static_obstacles": [
+        {
+          "position": [
+            37.847478472793625,
+            47.49800916283298
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            59.06071676594247,
+            34.03741497529184
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          48.38947921212251,
+          67.86211043874549
+        ],
+        "velocity": [
+          0.0,
+          -0.8804152031556475
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 43,
+      "scenario_hash": "2f406e1dc3fb3c9652739437aa812e76a33565a67bdcf4dc16a4f1593e38c7a9"
+    },
+    {
+      "start_position": [
+        10.963161436005706,
+        51.316512767864594
+      ],
+      "goal_position": [
+        90.38715580942082,
+        58.0155998125294
+      ],
+      "start_heading": -0.07264050920416709,
+      "static_obstacles": [
+        {
+          "position": [
+            38.81040233939513,
+            51.774353141450774
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            60.99756503211341,
+            41.24746512434882
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          46.547756801337854,
+          37.443152017252565
+        ],
+        "velocity": [
+          0.0,
+          1.2983646657190033
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 44,
+      "scenario_hash": "b72f499bf1d96234ef610f43a9f946a9a68389dcabbd0ab37802b88ab1896e14"
+    },
+    {
+      "start_position": [
+        8.315228690200975,
+        47.1932608942318
+      ],
+      "goal_position": [
+        87.4440276335063,
+        36.93313467068311
+      ],
+      "start_heading": 0.054439737031351854,
+      "static_obstacles": [
+        {
+          "position": [
+            29.53158310963839,
+            43.60876057269209
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            61.615032271924655,
+            47.43007367974319
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          50.65052909996359,
+          25.50296847830039
+        ],
+        "velocity": [
+          0.0,
+          1.131674835405948
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 45,
+      "scenario_hash": "6c7f9c1e00450824a56647719f7cc0c956322f4547d5ab9507d7f1b57e6ad556"
+    },
+    {
+      "start_position": [
+        11.929504334963013,
+        42.55791301260093
+      ],
+      "goal_position": [
+        85.77355530581677,
+        60.29323676871421
+      ],
+      "start_heading": 0.21234377195735954,
+      "static_obstacles": [
+        {
+          "position": [
+            36.390486931169406,
+            53.03457801092238
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            74.74397141084397,
+            63.62560835683986
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          55.59149976520861,
+          39.425857700702124
+        ],
+        "velocity": [
+          0.0,
+          0.8016639240052676
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 46,
+      "scenario_hash": "54b8de76b3710d2b3f506cb4ec7643ef8033242f794a15e5e4d6dad9c88bbec2"
+    },
+    {
+      "start_position": [
+        8.121715267621191,
+        52.65226964595584
+      ],
+      "goal_position": [
+        89.33023354050192,
+        62.433458633857285
+      ],
+      "start_heading": 0.030461527665067045,
+      "static_obstacles": [
+        {
+          "position": [
+            38.79803298125981,
+            56.77743285530141
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            65.96396953942352,
+            54.71145651281178
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          56.24317243074447,
+          37.50402374849216
+        ],
+        "velocity": [
+          0.0,
+          0.8272707790420335
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 47,
+      "scenario_hash": "aaf053bc089e1c58261826b767785f09b1c92be3e9de30786ea509cc4767f347"
+    },
+    {
+      "start_position": [
+        8.206675752026078,
+        43.687951399454825
+      ],
+      "goal_position": [
+        88.36720929740956,
+        62.56172324410426
+      ],
+      "start_heading": 0.23932406033069187,
+      "static_obstacles": [
+        {
+          "position": [
+            37.87199379125971,
+            65.67173278522529
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            69.32614234410163,
+            62.74915334371597
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          54.24705957637293,
+          25.582589838250552
+        ],
+        "velocity": [
+          0.0,
+          0.918914334523556
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 48,
+      "scenario_hash": "2f3d9a3e916b13005f6b3a516e59bbb190c73c2e1069d64ad2ad8824e13e9806"
+    },
+    {
+      "start_position": [
+        11.63850850055086,
+        48.43956508994725
+      ],
+      "goal_position": [
+        86.7209912688425,
+        48.4973200815128
+      ],
+      "start_heading": 0.24830432014464776,
+      "static_obstacles": [
+        {
+          "position": [
+            37.571670284131514,
+            50.70937894881767
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            68.24900723239674,
+            41.406769314180906
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          49.43562477845544,
+          66.73600531791443
+        ],
+        "velocity": [
+          0.0,
+          -1.0090585119363362
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 49,
+      "scenario_hash": "f461c8016a2b5679a8027166e4fd81341fac2e0aae2930d43ef055534e40296f"
+    },
+    {
+      "start_position": [
+        5.515772464889888,
+        47.99422222881754
+      ],
+      "goal_position": [
+        94.46530792834845,
+        64.3724127548227
+      ],
+      "start_heading": -0.043404082322700877,
+      "static_obstacles": [
+        {
+          "position": [
+            32.35796294125876,
+            52.73311357983604
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            60.500020610986375,
+            32.85852829734202
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          53.24963498430598,
+          72.93453098576728
+        ],
+        "velocity": [
+          0.0,
+          -0.8452865726185836
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 50,
+      "scenario_hash": "220d89f144aa4e4526420a483a5055edd6c3a7fe926bac02e4aa330dcc05f910"
+    },
+    {
+      "start_position": [
+        9.774517021083895,
+        51.75458370114098
+      ],
+      "goal_position": [
+        90.27666729261001,
+        44.5289052194169
+      ],
+      "start_heading": -0.1684739950270533,
+      "static_obstacles": [
+        {
+          "position": [
+            31.53744458831646,
+            35.273113548239934
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            70.16749018300189,
+            48.97349673791527
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          46.345951714015705,
+          67.47791502284382
+        ],
+        "velocity": [
+          0.0,
+          -0.9662339704787312
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 51,
+      "scenario_hash": "b71eeaf5103c6cfc921c95bcfd3e8b35f8d85ff62fa5f64c954728f249a5eaa3"
+    },
+    {
+      "start_position": [
+        5.448671005084523,
+        47.03864957155025
+      ],
+      "goal_position": [
+        86.13491665484757,
+        44.17203853517965
+      ],
+      "start_heading": -0.12172983247653102,
+      "static_obstacles": [
+        {
+          "position": [
+            32.57384202356791,
+            34.511401588429536
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            65.0954373244327,
+            47.39638537795917
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          46.99765307376236,
+          61.58494479780268
+        ],
+        "velocity": [
+          0.0,
+          -0.8593910786498367
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 52,
+      "scenario_hash": "65f414352712d4076b3acd1defc416ea4a21ebda32c3aecfcde279c5da203e51"
+    },
+    {
+      "start_position": [
+        11.414954776239867,
+        40.12560743442994
+      ],
+      "goal_position": [
+        89.18628418847578,
+        56.321807857410626
+      ],
+      "start_heading": -0.010230812082666407,
+      "static_obstacles": [
+        {
+          "position": [
+            30.507537066261634,
+            29.982977321859774
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            58.09561759944996,
+            45.684595916007616
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          44.51675297839418,
+          30.104494226551733
+        ],
+        "velocity": [
+          0.0,
+          1.0983022689752255
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 53,
+      "scenario_hash": "622c31df7a63c97f4696641baa831d4aecd5885fb11cf14a359742a96cec2c31"
+    },
+    {
+      "start_position": [
+        11.059171477951391,
+        43.64921312723308
+      ],
+      "goal_position": [
+        89.61522761256312,
+        64.47259237850842
+      ],
+      "start_heading": 0.26566694790933454,
+      "static_obstacles": [
+        {
+          "position": [
+            42.56577638007674,
+            33.787193697540125
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            59.065987907990184,
+            57.847907232138986
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          54.11643988939544,
+          72.14920383961706
+        ],
+        "velocity": [
+          0.0,
+          -0.8488277047886141
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 54,
+      "scenario_hash": "86e41aaf7608ac16842c3b6f012e55c5b2f3430bec5c3aa8562baea24c2ccf42"
+    },
+    {
+      "start_position": [
+        12.349999403247661,
+        53.66635366017263
+      ],
+      "goal_position": [
+        94.08474484560944,
+        49.235381308569444
+      ],
+      "start_heading": 0.1681042295202131,
+      "static_obstacles": [
+        {
+          "position": [
+            40.871272849022105,
+            29.638834738782275
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            63.55574737938669,
+            50.900715787544264
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          46.154984665748344,
+          61.94528591638577
+        ],
+        "velocity": [
+          0.0,
+          -0.972611549567372
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 55,
+      "scenario_hash": "ad19c72f3668b07fbe18e7cafd04719a24cdbf9e083bbc765cfb8a15e7ed9480"
+    },
+    {
+      "start_position": [
+        8.603968435033083,
+        63.459976385513485
+      ],
+      "goal_position": [
+        94.03267797674363,
+        40.882299546869774
+      ],
+      "start_heading": -0.3244384228663977,
+      "static_obstacles": [
+        {
+          "position": [
+            32.79727729387269,
+            61.260488876509505
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            63.33476822411813,
+            36.740437302161915
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          48.5260236337741,
+          74.03063373760372
+        ],
+        "velocity": [
+          0.0,
+          -0.8209912568443577
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 56,
+      "scenario_hash": "1b7af1409474bf1675951cdf33b431a6c1ca67d6313460ce5ea3246b781ca8be"
+    },
+    {
+      "start_position": [
+        14.810261970240951,
+        56.75131388718989
+      ],
+      "goal_position": [
+        87.35203876212387,
+        54.123086547518206
+      ],
+      "start_heading": -0.09196467305543621,
+      "static_obstacles": [
+        {
+          "position": [
+            28.48016531644862,
+            56.447809971426565
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            71.24039820262614,
+            60.8378577175859
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          54.712823796316044,
+          71.10444865054586
+        ],
+        "velocity": [
+          0.0,
+          -0.8635437281391336
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 57,
+      "scenario_hash": "615048415c1daa47eb73d8d8bdfb089b1e4874a168bdfa74b4cd57c7c626b8d8"
+    },
+    {
+      "start_position": [
+        8.088822529312477,
+        63.986496277343264
+      ],
+      "goal_position": [
+        92.12379676538637,
+        55.10614447963437
+      ],
+      "start_heading": 0.026685004717894145,
+      "static_obstacles": [
+        {
+          "position": [
+            32.40211343903256,
+            62.69485485766078
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            72.4985254205332,
+            48.45178565745049
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          43.39327292788389,
+          71.68063525663423
+        ],
+        "velocity": [
+          0.0,
+          -1.0534270466526297
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_down",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 58,
+      "scenario_hash": "01c23d1843bf3841c102fd0fa054fe55387878c419ee8b716cb3f7fadc862f0e"
+    },
+    {
+      "start_position": [
+        10.136109236861314,
+        56.62140359212354
+      ],
+      "goal_position": [
+        93.75366369107248,
+        61.71125095498567
+      ],
+      "start_heading": 0.2686027851183761,
+      "static_obstacles": [
+        {
+          "position": [
+            34.00290925184312,
+            54.69057487669424
+          ],
+          "radius": 4.0
+        },
+        {
+          "position": [
+            68.92440962670264,
+            62.3948493176261
+          ],
+          "radius": 4.0
+        }
+      ],
+      "dynamic_obstacle": {
+        "position": [
+          53.75679447133892,
+          31.554410633980588
+        ],
+        "velocity": [
+          0.0,
+          1.1618943445738013
+        ],
+        "radius": 3.0
+      },
+      "scenario_type": "crossing_up",
+      "risk_level": "legacy_corridor",
+      "layout_type": "blocking",
+      "difficulty": "standard",
+      "environment_stage": "A",
+      "scenario_id": 59,
+      "scenario_hash": "9182df61d53a847f2de99269cc76a8e6c13d56cffd655ed70d00296c8b5416f0"
+    }
+  ]
+}

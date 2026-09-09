@@ -1,0 +1,114 @@
+{
+  "_provenance": {
+    "evaluated_at": "2026-09-07T01:54:00+00:00",
+    "model_path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round1-D-seed1\\models\\best\\best_model.zip",
+    "model_sha256": "328a204212a7780cd9a5c6a724e6a4ac79d44fb39f54d39ecfe3fa2162a9c1ca",
+    "run_id": "round1-D-seed1",
+    "scenario_file": "D:\\PycharmProjects\\simple-dynamic-path-planning\\configs\\round1\\typical_cases.json",
+    "dataset_hash": "a26d8d22abefa53f134e61c74356844cb10f86d3ceac583890cc95f4a8252d97",
+    "dataset_split": "diagnostic",
+    "model_schema_verified_from_run_metadata": true,
+    "variants": [
+      "baseline",
+      "mirror_y",
+      "freeze_dynamic",
+      "reverse_dynamic",
+      "slow_dynamic"
+    ],
+    "source_manifest": {
+      "experiment_utils.py": "6da1707d290aa6110e6100ee363af728c64f1341705a7599a5a986766f11760c",
+      "envs/__init__.py": "296e3bc1307a752a43eef5fc30d6a778c99942a466d4ac6a63f311c1882a3555",
+      "envs/dynamic_path_env.py": "9f7c021128662d44cf7f1570b217f5bdd7ac7e6b0619753e09ea549e88181f0f",
+      "envs/scenario_dataset.py": "f370f2517d3db192613933b202ced6182c6c9ec18a72a94c87729f334ea109eb",
+      "envs/encounters.py": "67fc0cc04a97594fe025c3abbe7f4bbb7a2bba5ac25bb2068fe622bc7c734ee1",
+      "envs/round_one_dataset.py": "9b043eff7db92d653af997a6a2efb2dad67a6fb4d608ca4ac425479ad422d148",
+      "scripts/train.py": "4a66cdc56190b45c895e1c5e81e4db697b4c75351985a4ccb609e795eb17faad",
+      "scripts/evaluate.py": "d8807de85f4971c6bc95f327486cae27ba4b851139b58ce4752613a7a75c3e8c",
+      "scripts/evaluate_counterfactual.py": "9e0eabdbe9f20e09d8b584db77a6444f3f6be0adbd919449810e035b45c230ff"
+    },
+    "normalization": "paired baseline speed scale held constant",
+    "legacy_training_identity_unverified": false,
+    "intervention_note": "Reverse/freeze/slow interventions may violate target-static geometry; flagged per row. Compare trajectories on common time support, not unequal terminal path lengths alone.",
+    "distant_dynamic_note": "The fixed-size observation has no absent-obstacle encoding; this variant uses a stationary zero-radius object at the far vertical boundary as a removal proxy."
+  },
+  "variants": {
+    "baseline": {
+      "scenario_count": 12,
+      "invalid_intervention_geometry_count": 0,
+      "success_count": 12,
+      "success_rate": 1.0,
+      "collision_count": 0,
+      "average_path_length": 79.49999999999999,
+      "average_path_efficiency_successful": 0.9654553103290372,
+      "route_side_counts": {
+        "below": 12
+      },
+      "route_changed_from_baseline_count": 0,
+      "success_changed_from_baseline_count": 0,
+      "mean_absolute_path_length_change": 0.0
+    },
+    "mirror_y": {
+      "scenario_count": 12,
+      "invalid_intervention_geometry_count": 0,
+      "success_count": 11,
+      "success_rate": 0.9166666666666666,
+      "collision_count": 1,
+      "average_path_length": 74.9,
+      "average_path_efficiency_successful": 0.9658881642334574,
+      "route_side_counts": {
+        "below": 12
+      },
+      "route_changed_from_baseline_count": 0,
+      "success_changed_from_baseline_count": 1,
+      "mean_absolute_path_length_change": 5.4000000000000234,
+      "expected_side_match_count": 0
+    },
+    "freeze_dynamic": {
+      "scenario_count": 12,
+      "invalid_intervention_geometry_count": 0,
+      "success_count": 10,
+      "success_rate": 0.8333333333333334,
+      "collision_count": 2,
+      "average_path_length": 71.7,
+      "average_path_efficiency_successful": 0.9633607169990247,
+      "route_side_counts": {
+        "below": 12
+      },
+      "route_changed_from_baseline_count": 0,
+      "success_changed_from_baseline_count": 2,
+      "mean_absolute_path_length_change": 8.500000000000037
+    },
+    "reverse_dynamic": {
+      "scenario_count": 12,
+      "invalid_intervention_geometry_count": 2,
+      "success_count": 10,
+      "success_rate": 0.8333333333333334,
+      "collision_count": 2,
+      "average_path_length": 70.39999999999999,
+      "average_path_efficiency_successful": 0.9641889403504973,
+      "route_side_counts": {
+        "below": 11,
+        "center": 1
+      },
+      "route_changed_from_baseline_count": 1,
+      "success_changed_from_baseline_count": 2,
+      "mean_absolute_path_length_change": 9.700000000000037
+    },
+    "slow_dynamic": {
+      "scenario_count": 12,
+      "invalid_intervention_geometry_count": 0,
+      "success_count": 11,
+      "success_rate": 0.9166666666666666,
+      "collision_count": 1,
+      "average_path_length": 76.75000000000001,
+      "average_path_efficiency_successful": 0.9660631041396144,
+      "route_side_counts": {
+        "below": 12
+      },
+      "route_changed_from_baseline_count": 0,
+      "success_changed_from_baseline_count": 1,
+      "mean_absolute_path_length_change": 3.050000000000052
+    }
+  }
+}
+Counterfactual diagnostics saved to D:\PycharmProjects\simple-dynamic-path-planning\results\round1\D\paired

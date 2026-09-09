@@ -1,0 +1,3 @@
+scenario_type,scenario_count,success_count,success_rate,success_rate_wilson_95_low,success_rate_wilson_95_high,static_collision_count,dynamic_collision_count,average_path_length,successful_average_path_efficiency,average_navigation_time,average_min_static_clearance,average_min_dynamic_clearance
+crossing_down,30,19,0.6333333333333333,0.4551356365479487,0.7812607919389929,11,0,69.44000000000003,0.9451460744766161,24.04666666666667,2.1127856676843697,13.79503779797851
+crossing_up,30,22,0.7333333333333333,0.555520383048111,0.8581733668040368,8,0,71.86,0.9062247269304518,24.853333333333335,3.713146303618372,8.261256198511823

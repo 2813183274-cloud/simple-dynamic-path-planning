@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import math
+from collections import Counter
 from pathlib import Path
 from typing import Any
 
@@ -23,6 +24,7 @@ class DynamicPathPlanningEnv(gym.Env):
         angular_acceleration_max: float = math.pi / 4.0,
         randomize_scenario: bool = True,
         scenario_file: str | Path | None = None,
+        stage: str = "legacy",
     ):
         super().__init__()
         if render_mode not in (None, "human", "rgb_array"):
@@ -32,10 +34,17 @@ class DynamicPathPlanningEnv(gym.Env):
         self.scenario_file = Path(scenario_file).resolve() if scenario_file is not None else None
         self.fixed_scenarios: list[dict[str, Any]] | None = None
         self.current_scenario: dict[str, Any] | None = None
+        from .encounters import STAGES
+        if stage not in STAGES:
+            raise ValueError(f"Unknown stage: {stage}")
+        self.stage = stage
+        self.generation_stats = Counter()
         self.scenario_mode = "random_train" if self.randomize_scenario else "default_fixed"
         if self.scenario_file is not None:
             from .scenario_dataset import load_dataset
-            self.fixed_scenarios = load_dataset(self.scenario_file)["scenarios"]
+            dataset = load_dataset(self.scenario_file)
+            self.fixed_scenarios = dataset["scenarios"]
+            self.stage = dataset.get("environment_stage", stage)
             self.randomize_scenario = False
             self.scenario_mode = "fixed_test"
         self.map_width = 100.0
@@ -151,6 +160,8 @@ class DynamicPathPlanningEnv(gym.Env):
         self.dynamic_obstacle_max_speed = float(np.linalg.norm(self.dynamic_initial_velocity))
         self.current_scenario = scenario
         self.scenario_mode = scenario_mode
+        if "environment_stage" in scenario:
+            self.stage = scenario["environment_stage"]
 
     @staticmethod
     def _point_to_segment_distance(point: np.ndarray, start: np.ndarray, end: np.ndarray) -> float:
@@ -164,6 +175,10 @@ class DynamicPathPlanningEnv(gym.Env):
 
     def _sample_scenario(self) -> None:
         """Sample a valid encounter; all randomness comes from Gymnasium's seeded RNG."""
+        if self.stage in ("C", "D"):
+            from .encounters import sample
+            self.set_scenario(sample(self.np_random, self.stage, self.generation_stats), "random_train")
+            return
         clearance = 2.0
         for _ in range(2_000):
             start = self.np_random.uniform([5.0, 35.0], [15.0, 65.0]).astype(np.float64)
@@ -178,6 +193,8 @@ class DynamicPathPlanningEnv(gym.Env):
                 self.np_random.uniform([58.0, 28.0], [75.0, 72.0]),
             ], dtype=np.float64)
             static_radii = self.np_random.uniform(3.5, 5.0, size=2).astype(np.float64)
+            if self.stage in ("A", "B"):
+                static_radii[:] = 4.0
             if any(self._distance(position, start) <= radius + self.agent_radius + clearance
                    or self._distance(position, goal) <= radius + self.goal_threshold + clearance
                    for position, radius in zip(static_positions, static_radii)):
@@ -192,6 +209,8 @@ class DynamicPathPlanningEnv(gym.Env):
 
             dynamic_x = float(self.np_random.uniform(43.0, 57.0))
             dynamic_radius = float(self.np_random.uniform(2.5, 4.0))
+            if self.stage in ("A", "B"):
+                dynamic_radius = 3.0
             if bool(self.np_random.integers(0, 2)):
                 dynamic_y = float(self.np_random.uniform(25.0, 40.0))
                 dynamic_vy = float(self.np_random.uniform(0.8, 1.3))
@@ -316,6 +335,12 @@ class DynamicPathPlanningEnv(gym.Env):
         )
         relative_velocity = self.dynamic_velocity - agent_velocity
         velocity_scale = self.v_max + self.dynamic_obstacle_max_speed
+        if getattr(self, "observation_stage", self.stage) in ("B", "C", "D"):
+            from .encounters import CONFIG
+            c, s = math.cos(self.agent_heading), math.sin(self.agent_heading)
+            relative_velocity = np.array([c*relative_velocity[0]+s*relative_velocity[1],
+                                          -s*relative_velocity[0]+c*relative_velocity[1]])
+            velocity_scale = CONFIG["velocity_scale"]
         values = (
             object_features(self.goal_position)
             + object_features(self.static_obstacles[0])
@@ -328,6 +353,8 @@ class DynamicPathPlanningEnv(gym.Env):
 
     def _update_dynamic_obstacle(self) -> None:
         self.dynamic_position += self.dynamic_velocity * self.dt
+        if self.stage in ("C", "D"):
+            return  # Target continues on its ray outside the local map; no bounce or respawn.
         lower, upper = self.dynamic_radius, self.map_height - self.dynamic_radius
         # Reflect any overshoot, preserving continuous motion instead of resetting.
         if self.dynamic_position[1] > upper:

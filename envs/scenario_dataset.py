@@ -10,7 +10,7 @@ from typing import Any
 import numpy as np
 
 
-DATASET_NAME = "fixed_test_set_30_v1"
+DATASET_NAME = "fixed_scenario_set_30_v2"
 DATASET_SEED = 2026
 TYPE_QUOTAS = {
     "low_dynamic_risk": 5,
@@ -41,6 +41,10 @@ def scenario_hash(scenario: dict[str, Any]) -> str:
         "goal_position": scenario["goal_position"],
         "static_obstacles": scenario["static_obstacles"],
         "dynamic_obstacle": scenario["dynamic_obstacle"],
+        **({"environment_stage":scenario["environment_stage"],
+            "scenario_type":scenario.get("scenario_type"),"risk_level":scenario.get("risk_level"),
+            "layout_type":scenario.get("layout_type"),"generation":scenario.get("generation")}
+           if "environment_stage" in scenario else {}),
     }
 
     def rounded(value: Any) -> Any:
@@ -53,6 +57,21 @@ def scenario_hash(scenario: dict[str, Any]) -> str:
         return value
 
     canonical = json.dumps(rounded(payload), sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
+
+
+def dataset_hash(dataset: dict[str, Any]) -> str:
+    """Identify a scenario collection independently of its file path."""
+    payload = {
+        "schema_version": dataset.get("schema_version"),
+        "dataset_name": dataset.get("dataset_name"),
+        "dataset_split": dataset.get("dataset_split", "legacy_unspecified"),
+        "dataset_seed": dataset.get("dataset_seed"),
+        "scenario_hashes": [item["scenario_hash"] for item in dataset["scenarios"]],
+        **({"environment_stage": dataset["environment_stage"],
+            "generation_config": dataset.get("generation_config")} if "environment_stage" in dataset else {}),
+    }
+    canonical = json.dumps(payload, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
 
 
@@ -301,7 +320,14 @@ def _accept(scenario: dict[str, Any], validation: dict[str, Any], desired: str |
     return False
 
 
-def generate_dataset(seed: int = DATASET_SEED, max_attempts_per_scenario: int = 2_000) -> dict[str, Any]:
+def generate_dataset(
+    seed: int = DATASET_SEED,
+    max_attempts_per_scenario: int = 2_000,
+    dataset_split: str = "unspecified",
+    dataset_name: str | None = None,
+) -> dict[str, Any]:
+    if dataset_split not in {"validation", "test", "diagnostic", "unspecified"}:
+        raise ValueError(f"Unsupported dataset split: {dataset_split}")
     rng = np.random.default_rng(seed)
     requests: list[tuple[str, str | None]] = []
     requests.extend([("low_dynamic_risk", None)] * 5)
@@ -341,8 +367,9 @@ def generate_dataset(seed: int = DATASET_SEED, max_attempts_per_scenario: int = 
                 f"after {max_attempts_per_scenario} attempts"
             )
     dataset = {
-        "schema_version": 1,
-        "dataset_name": DATASET_NAME,
+        "schema_version": 2,
+        "dataset_name": dataset_name or f"{dataset_split}_scenario_set_30_seed_{seed}_v2",
+        "dataset_split": dataset_split,
         "dataset_seed": int(seed),
         "num_scenarios": 30,
         "generation_config": {
@@ -363,9 +390,17 @@ def generate_dataset(seed: int = DATASET_SEED, max_attempts_per_scenario: int = 
 
 
 def validate_dataset(dataset: dict[str, Any]) -> None:
+    if dataset.get("schema_version") == 3:
+        from .round_one_dataset import validate
+        validate(dataset)
+        return
     scenarios = dataset.get("scenarios", [])
     if dataset.get("num_scenarios") != 30 or len(scenarios) != 30:
         raise ValueError("Fixed test dataset must contain exactly 30 scenarios")
+    if dataset.get("schema_version", 1) >= 2 and dataset.get("dataset_split") not in {
+        "validation", "test", "diagnostic", "unspecified"
+    }:
+        raise ValueError("Invalid or missing dataset_split")
     if [scenario["scenario_id"] for scenario in scenarios] != list(range(30)):
         raise ValueError("scenario_id must be ordered from 0 to 29")
     counts = Counter(scenario["scenario_type"] for scenario in scenarios)

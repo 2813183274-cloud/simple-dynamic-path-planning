@@ -1,0 +1,131 @@
+{
+  "status": "passed",
+  "episodes_audited": 3600,
+  "unique_final_scenes": 360,
+  "old_artifacts_unchanged": 299,
+  "sealed_models_unchanged": 9,
+  "checks": "source, model, output, split overlap, trajectory kinematics, target motion, clearances, success endpoints",
+  "exploratory_failure_speed": [
+    {
+      "split": "same_distribution",
+      "method": "C-seed1",
+      "episodes": 240,
+      "failed_episode_mean_full_speed_fraction_after_2s": 1.0
+    },
+    {
+      "split": "same_distribution",
+      "method": "C-seed2",
+      "episodes": 240,
+      "failed_episode_mean_full_speed_fraction_after_2s": 1.0
+    },
+    {
+      "split": "same_distribution",
+      "method": "C-seed3",
+      "episodes": 240,
+      "failed_episode_mean_full_speed_fraction_after_2s": 1.0
+    },
+    {
+      "split": "same_distribution",
+      "method": "D-seed1",
+      "episodes": 240,
+      "failed_episode_mean_full_speed_fraction_after_2s": 1.0
+    },
+    {
+      "split": "same_distribution",
+      "method": "D-seed2",
+      "episodes": 240,
+      "failed_episode_mean_full_speed_fraction_after_2s": 1.0
+    },
+    {
+      "split": "same_distribution",
+      "method": "D-seed3",
+      "episodes": 240,
+      "failed_episode_mean_full_speed_fraction_after_2s": 1.0
+    },
+    {
+      "split": "same_distribution",
+      "method": "A-seed1",
+      "episodes": 240,
+      "failed_episode_mean_full_speed_fraction_after_2s": 1.0
+    },
+    {
+      "split": "same_distribution",
+      "method": "B-seed1",
+      "episodes": 240,
+      "failed_episode_mean_full_speed_fraction_after_2s": 1.0
+    },
+    {
+      "split": "same_distribution",
+      "method": "round0-seed1",
+      "episodes": 240,
+      "failed_episode_mean_full_speed_fraction_after_2s": 1.0
+    },
+    {
+      "split": "same_distribution",
+      "method": "DWA",
+      "episodes": 240,
+      "failed_episode_mean_full_speed_fraction_after_2s": null
+    },
+    {
+      "split": "challenge",
+      "method": "C-seed1",
+      "episodes": 120,
+      "failed_episode_mean_full_speed_fraction_after_2s": 1.0
+    },
+    {
+      "split": "challenge",
+      "method": "C-seed2",
+      "episodes": 120,
+      "failed_episode_mean_full_speed_fraction_after_2s": 1.0
+    },
+    {
+      "split": "challenge",
+      "method": "C-seed3",
+      "episodes": 120,
+      "failed_episode_mean_full_speed_fraction_after_2s": 1.0
+    },
+    {
+      "split": "challenge",
+      "method": "D-seed1",
+      "episodes": 120,
+      "failed_episode_mean_full_speed_fraction_after_2s": 1.0
+    },
+    {
+      "split": "challenge",
+      "method": "D-seed2",
+      "episodes": 120,
+      "failed_episode_mean_full_speed_fraction_after_2s": 1.0
+    },
+    {
+      "split": "challenge",
+      "method": "D-seed3",
+      "episodes": 120,
+      "failed_episode_mean_full_speed_fraction_after_2s": 1.0
+    },
+    {
+      "split": "challenge",
+      "method": "A-seed1",
+      "episodes": 120,
+      "failed_episode_mean_full_speed_fraction_after_2s": 1.0
+    },
+    {
+      "split": "challenge",
+      "method": "B-seed1",
+      "episodes": 120,
+      "failed_episode_mean_full_speed_fraction_after_2s": 1.0
+    },
+    {
+      "split": "challenge",
+      "method": "round0-seed1",
+      "episodes": 120,
+      "failed_episode_mean_full_speed_fraction_after_2s": 1.0
+    },
+    {
+      "split": "challenge",
+      "method": "DWA",
+      "episodes": 120,
+      "failed_episode_mean_full_speed_fraction_after_2s": null
+    }
+  ],
+  "audit_source_sha256": "af1d3f0661b45b56616820adff02b9fcaac7266f57b541b78af9b3761fbe9c18"
+}
