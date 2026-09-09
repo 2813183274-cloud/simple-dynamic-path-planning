@@ -1,0 +1,54 @@
+{
+  "protocol_version": "round4-speed-tanh-v1",
+  "date": "2026-09-09",
+  "status": "design_fixed_implementation_pending",
+  "normative_document": "docs/ROUND_FOUR_PROTOCOL.md",
+  "training_started": false,
+  "final_datasets_generated": false,
+  "arms": ["clip", "speed_tanh"],
+  "action": {
+    "schema": "latent-gaussian2-fixed-execution-map-v1",
+    "outer_space": "Box(-inf, inf, shape=(2,))",
+    "rollout_action": "raw Gaussian z, never executable a",
+    "clip_speed": "clip(z[0], -1, 1)",
+    "speed_tanh_speed": "tanh(z[0])",
+    "steering_both": "clip(z[1], -1, 1)",
+    "deterministic": "map Gaussian mean exactly once",
+    "ppo_log_probability": "sum Normal.log_prob(z)",
+    "entropy": "analytic latent Gaussian entropy for both arms",
+    "log_std_init": 0,
+    "use_sde": false,
+    "squash_output": false
+  },
+  "environment": {"stage": "D", "observation_dim": 16, "reward": "unchanged R_base", "extra_risk_weight": 0, "motion_unchanged": true},
+  "training": {
+    "seeds": [1, 2, 3], "from_scratch": true, "device": "cpu",
+    "requested_steps_per_run": 200000, "expected_actual_steps_per_run": 200704,
+    "run_count": 6, "expected_actual_steps_total": 1204224,
+    "run_id_pattern": "round4-{clip,speed_tanh}-seed{1,2,3}",
+    "ppo": {"learning_rate": 0.0001, "n_steps": 2048, "batch_size": 64, "n_epochs": 10, "gamma": 0.99, "gae_lambda": 0.95, "clip_range": 0.2, "ent_coef": 0.01, "policy_network": [64,64], "value_network": [64,64], "activation": "Tanh"},
+    "other_parameters_reference": "configs/round3/experiment_protocol.json; verify and freeze complete runtime parameters before training"
+  },
+  "validation": {
+    "path": "configs/round1/validation_D.json", "count": 60,
+    "dataset_hash": "2affddf628c8c527fcbc8e731fd3dde10b77b383338ab16bdd88c59d581e44ee",
+    "file_sha256": "36e90a0aa8ac68b72b81337dcd216f61548f73ff4c586f88a48a590c5a6bc4e4",
+    "eval_every_steps": 10000, "evaluate_after_last_update": true,
+    "selection_order": ["success_rate desc", "collision_rate asc", "successful_path_efficiency desc (zero if no successes)", "mean_base_reward desc"],
+    "exact_tie": "retain earlier candidate"
+  },
+  "development_datasets": ["configs/round1/common_encounters.json", "configs/round1/typical_cases.json"],
+  "dwa": {"selection": "results/round2/validation_tuning/selection.json", "selection_sha256": "f2c7cbf50a8db2cac25c4778e36215f5e4ccae9851b8dd0113389a44950bf3d1", "candidate": "h3-c1", "retune": false},
+  "final_tests": {
+    "generate_only_after_model_freeze": true,
+    "geometry_deduplication_against_all_available_prior_datasets": true,
+    "require_witness_replay": true,
+    "same_distribution": {"seed": 5901, "count": 240, "per_type_count": 60, "stage": "D"},
+    "challenge": {"seed": 5902, "count": 120, "per_type_count": 30, "parameters": "unchanged round3 challenge distribution"},
+    "models_and_baseline": 7, "expected_episodes": 2520
+  },
+  "statistics": {"primary": "speed_tanh minus clip: same_distribution success", "bootstrap_repetitions": 10000, "bootstrap_seed": 6821, "confidence": 0.95, "interval": "two-sided paired hierarchical percentile bootstrap", "seeds_paired": true, "scene_pairing": "within encounter type", "report_all_seeds": true},
+  "mechanism_metrics": {"state_timing": "pre_action", "warmup_seconds": 2, "risk_threshold": 0.5, "single_step_braking_threshold": 0.1, "near_upper_action_threshold": 0.99, "full_speed_threshold": 2.99, "stagnation_speed_below": 0.1, "stagnation_consecutive_steps": 25, "no_response": "report separately, do not drop"},
+  "implementation_gate": "P4-03 tests and source/dependency seal; no optimizer updates",
+  "revision_policy": "Do not overwrite v1; record timing and preserve prior protocol/results"
+}
