@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "profile": "stage-D PPO public workflow",
+  "notes": [
+    "Values under environment, reward and ppo document the sealed implementation and are not runtime tuning overrides.",
+    "test_scenarios_30.json is the user-designated fixed 30-scene historical benchmark; it is not an unseen final test set."
+  ],
+  "environment": {
+    "stage": "D",
+    "observation_dimensions": 16,
+    "action_dimensions": 2,
+    "map_size": [100.0, 100.0],
+    "dt": 0.2,
+    "max_steps": 600,
+    "agent_radius": 1.0,
+    "static_obstacle_radius": 4.0,
+    "dynamic_obstacle_radius": 3.0,
+    "goal_threshold": 3.0,
+    "linear_velocity_max": 3.0,
+    "angular_velocity_max": 0.7853981633974483,
+    "linear_acceleration_max": 1.5,
+    "angular_acceleration_max": 0.7853981633974483
+  },
+  "reward": {
+    "progress_weight": 10.0,
+    "time_penalty": -0.05,
+    "goal_reward": 200.0,
+    "static_collision_penalty": -120.0,
+    "dynamic_collision_penalty": -150.0,
+    "out_of_bounds_penalty": -100.0,
+    "static_safe_center_distance": 7.0,
+    "dynamic_safe_center_distance": 8.0,
+    "static_safety_shape": "linear",
+    "dynamic_safety_weight": 2.0,
+    "dynamic_safety_shape": "linear"
+  },
+  "ppo": {
+    "learning_rate": 0.0001,
+    "n_steps": 2048,
+    "batch_size": 64,
+    "n_epochs": 10,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "clip_range": 0.2,
+    "ent_coef": 0.01,
+    "policy_network": [64, 64],
+    "value_network": [64, 64],
+    "activation": "Tanh"
+  },
+  "training": {
+    "timesteps": 200000,
+    "seed": 1,
+    "eval_freq": 10000,
+    "reward_smoothing_window": 100,
+    "device": "cpu",
+    "runs_dir": "runs"
+  },
+  "evaluation": {
+    "benchmark": "configs/test_scenarios_30.json",
+    "default_model": "models/best/best_model.zip",
+    "output_dir": "results/benchmark_30",
+    "device": "cpu",
+    "plots": true,
+    "allow_historical_benchmark": true,
+    "benchmark_status": "fixed historical benchmark; previously used in model development"
+  }
+}
