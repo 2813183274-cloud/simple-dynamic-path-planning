@@ -1,0 +1,9 @@
+{
+  "episodes": 1080,
+  "braking_branches": 930,
+  "model_and_source_hashes_unchanged": true,
+  "motion_mapping_checks": "passed for every original and branch step",
+  "analytic_full_speed_stop_distance_m": 2.7,
+  "helper_tests": "passed",
+  "optimizer_updates": 0
+}

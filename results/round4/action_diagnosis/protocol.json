@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-09-09T15:00:15+00:00",
+  "purpose": "exploratory development diagnosis, no optimizer updates",
+  "models": {
+    "base-seed1": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-base-seed1\\models\\best\\best_model.zip",
+      "sha256": "eed14e8a8b4049f3e6f061e6689f890b45e3b92007fd70de498e1030028fb343",
+      "run": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-base-seed1",
+      "training_steps_sha256": "d3545a792491a52deb07fcc37f574a727b584aac2f850babc17fe8f7396156e0"
+    },
+    "base-seed2": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-base-seed2\\models\\best\\best_model.zip",
+      "sha256": "e6eb712bb93c030a7b2497044c5f97d3677b2abe41f131b3df95a024c9dd86e0",
+      "run": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-base-seed2",
+      "training_steps_sha256": "cbf8f86ab03512a96000e0a947cc5e3bbafb8cc2e91ebdd5cdd9d2d9d8b80054"
+    },
+    "base-seed3": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-base-seed3\\models\\best\\best_model.zip",
+      "sha256": "d3012baac75ccf9d4678f9606f22a66a1a492c3d778573d6ce3a40e330c395b1",
+      "run": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-base-seed3",
+      "training_steps_sha256": "dfb2cb88699d2aac4acb4862befc0289d87f4a38dcf38f41f4bfa21385e39f90"
+    },
+    "instant-seed1": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-instant-seed1\\models\\best\\best_model.zip",
+      "sha256": "a7a84f53f79ad93ab4833555f500962eba6687d2a023c0c58a54e6ad26ef3773",
+      "run": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-instant-seed1",
+      "training_steps_sha256": "ce0cd0b6b8dd25b6547dd1ffaff8456221f5f1bd741b6c8c382af4705b4b303c"
+    },
+    "instant-seed2": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-instant-seed2\\models\\best\\best_model.zip",
+      "sha256": "8fd8252c95466b4b1de1d467313670b725aaf48a8b305ae4980bc4db275c7042",
+      "run": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-instant-seed2",
+      "training_steps_sha256": "2e76babe5759ce10bff8b0c81ec5afd32ee615cf56958bb515ccbcfeb4cd2394"
+    },
+    "instant-seed3": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-instant-seed3\\models\\best\\best_model.zip",
+      "sha256": "7e01f9d9d3e4e94731f1e32ea429c38e1804be0903ec0a517cd51220fe9e97d7",
+      "run": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-instant-seed3",
+      "training_steps_sha256": "02480d1dfe7c7790ec582020dab19d9f85dabeecd5543c6e2551321e4464e798"
+    },
+    "predictive-seed1": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-predictive-seed1\\models\\best\\best_model.zip",
+      "sha256": "4c0fcd56494770cf03816125b8e8e8a477172aefdd66054b029e93d4ed7d30e6",
+      "run": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-predictive-seed1",
+      "training_steps_sha256": "a92ee2bc234e79dc2f537a828ca320cef647b98d9eeaf73b81e5e9004ce4d7b6"
+    },
+    "predictive-seed2": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-predictive-seed2\\models\\best\\best_model.zip",
+      "sha256": "cc62a783b125e16efa0c1bcb4010d3471b881d0e9ee32e98d2fa25831a30750b",
+      "run": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-predictive-seed2",
+      "training_steps_sha256": "9e9cf0d9448c0f08958974fe16d2bddb0fd7bb3a86b77fdb3c5de7bee9476edd"
+    },
+    "predictive-seed3": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-predictive-seed3\\models\\best\\best_model.zip",
+      "sha256": "46b47e4970ae9eb2d7c8f9c09344cb0e284c763e14d11176e57a2432219640f5",
+      "run": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-predictive-seed3",
+      "training_steps_sha256": "79613d26f1119f066dc871fb270e124ed922f118a344f95c94719ef16bf1d8ce"
+    }
+  },
+  "sources": {
+    "experiment_utils.py": "6da1707d290aa6110e6100ee363af728c64f1341705a7599a5a986766f11760c",
+    "envs/__init__.py": "296e3bc1307a752a43eef5fc30d6a778c99942a466d4ac6a63f311c1882a3555",
+    "envs/dynamic_path_env.py": "9f7c021128662d44cf7f1570b217f5bdd7ac7e6b0619753e09ea549e88181f0f",
+    "envs/scenario_dataset.py": "f370f2517d3db192613933b202ced6182c6c9ec18a72a94c87729f334ea109eb",
+    "envs/encounters.py": "67fc0cc04a97594fe025c3abbe7f4bbb7a2bba5ac25bb2068fe622bc7c734ee1",
+    "envs/round_one_dataset.py": "9b043eff7db92d653af997a6a2efb2dad67a6fb4d608ca4ac425479ad422d148",
+    "scripts/train.py": "4a66cdc56190b45c895e1c5e81e4db697b4c75351985a4ccb609e795eb17faad",
+    "scripts/evaluate.py": "d8807de85f4971c6bc95f327486cae27ba4b851139b58ce4752613a7a75c3e8c",
+    "scripts/evaluate_counterfactual.py": "9e0eabdbe9f20e09d8b584db77a6444f3f6be0adbd919449810e035b45c230ff",
+    "envs/risk_reward.py": "1c8a00800c47848d2e0d731e84842ea547718e79f023642ff3ff66c30a53fb86",
+    "round_three_utils.py": "b0dda5148d5d893b7643ab4e2e57ce82ae8b96d8e8ca6da451c116a9cbcfa80d",
+    "scripts/train_round_three.py": "c9c84ff8bbd9852fbcc9a67e4eb5827280954f2c51b82bc634b9237240350f86",
+    "scripts/evaluate_round_three.py": "2615bd821abae782344903cced766a9a05cf430d8e194ca65f3368e0c5680600",
+    "scripts/test_round_three.py": "79b730691b5b0c5fbd8d32a973e6c737c46821ae072f27c45b528855be0eb926",
+    "scripts/freeze_round_three.py": "330b2eec2461b33aeb6d18215a91c6983fdec60984734bdc4e7ccf7c7a7b4a8a",
+    "baselines/__init__.py": "0f34d296e21a0b218af3d204def399eee48cf9a06c3158cdeff770c2994e9863",
+    "baselines/dwa.py": "7f8a8dd9507da80d9e72ee50154ab808925d29f1deffaa85f937133df7815cec",
+    "configs/round3/experiment_protocol.json": "e329da30be63757dc987f0e446166c5efedbae72e36561aa26ebe843c07ad521",
+    "docs/ROUND_THREE_PROTOCOL.md": "05df47166ed624ef19783c79ed9c0dcb301f7decfd1b6793dc3f72151996d4dc",
+    "scripts\\diagnose_action_channel.py": "b36952a1bfbfe6a2600b1eca14fb42c4c24e94aaa7ec693f92def3113ffd9373"
+  },
+  "datasets": {
+    "validation_D": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\configs\\round1\\validation_D.json",
+      "sha256": "36e90a0aa8ac68b72b81337dcd216f61548f73ff4c586f88a48a590c5a6bc4e4"
+    },
+    "common_encounters": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\configs\\round1\\common_encounters.json",
+      "sha256": "cf6f7c2ae643c67567a4b0cfc35e3697aa35b02221914c4092201875a35f03e4"
+    }
+  },
+  "sampling_seed": 6401,
+  "samples_per_state": 64,
+  "branch_triggers": "First pre-action q4>=0.5 or static center<7, after 2s, independently",
+  "branch_action": [
+    -1,
+    0
+  ],
+  "branch_end": "stop, original environment termination, or 20 steps",
+  "scope": "Safe stop is only a local braking witness, not successful navigation. Sampling on best-policy states is not training-time exploration."
+}
