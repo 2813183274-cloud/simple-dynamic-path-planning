@@ -1,0 +1,46 @@
+{
+  "run_id": "round3-instant-seed1",
+  "status": "completed",
+  "created_at": "2026-09-09T01:27:35+00:00",
+  "git": {
+    "commit": "ac9af0b2b13f86566345cc73d1ce07b926c53441",
+    "dirty": true
+  },
+  "dependencies": {
+    "python": "3.11.7",
+    "numpy": "1.26.4",
+    "gymnasium": "1.2.3",
+    "stable-baselines3": "2.8.0",
+    "torch": "2.5.1",
+    "matplotlib": "3.8.4",
+    "pandas": "2.3.3"
+  },
+  "config_sha256": "38f9bc4711946fdad770d4eb9c59b5233ec4ce728595d25376ff8853ed1abb60",
+  "updated_at": "2026-09-09T01:31:49+00:00",
+  "final_num_timesteps": 200704,
+  "final_model_sha256": "76ac9cb8435d0a6bf54f50fec936870f8c345f0d580ad30a5bfaa9ad4e2aef4c",
+  "best_model_sha256": "a7a84f53f79ad93ab4833555f500962eba6687d2a023c0c58a54e6ad26ef3773",
+  "selection_metrics_sha256": "be8c2524804f796fedab1430d88653ad533cdd1aa3d841d40a967ae3a16776f6",
+  "validation_history_sha256": "2b31e28630816a8652e61f75477ef64cf912a74f304a64b966eca29676d8fefa",
+  "training_monitor_sha256": "03e25c36604cab0a4ab0e845017f7bb8390c95b0b92e7893bce9e41541996ebd",
+  "training_sampling_report": {
+    "attempts": 4015,
+    "accepted": 1667,
+    "type:crossing_right": 394,
+    "risk:receding": 249,
+    "layout:clear": 516,
+    "type:crossing_left": 424,
+    "risk:conflict": 990,
+    "target_static_sweep": 935,
+    "layout:mixed": 480,
+    "endpoint": 224,
+    "type:overtaking": 409,
+    "overlap": 1116,
+    "layout:two_sides": 333,
+    "type:head_on": 440,
+    "risk:time_separated": 428,
+    "layout:blocking": 338,
+    "outside": 56,
+    "no_witness": 17
+  }
+}

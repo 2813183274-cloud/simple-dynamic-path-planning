@@ -1,0 +1,20 @@
+{
+  "num_scenarios": 60,
+  "success_count": 36,
+  "collision_count": 24,
+  "success_rate": 0.6,
+  "collision_rate": 0.4,
+  "mean_successful_path_efficiency": 0.960016838529408,
+  "mean_base_reward": 647.6060825001979,
+  "mean_risk_penalty": -24.963118276588276,
+  "mean_training_reward": 622.6429642236095,
+  "run_id": "round3-predictive-seed2",
+  "arm": "predictive",
+  "timesteps": 160000,
+  "policy_updates": 780,
+  "evaluated_at": "2026-09-09T01:35:29+00:00",
+  "validation_dataset_hash": "2affddf628c8c527fcbc8e731fd3dde10b77b383338ab16bdd88c59d581e44ee",
+  "selection_reward": "base_reward",
+  "is_best": true,
+  "model_sha256": "cc62a783b125e16efa0c1bcb4010d3471b881d0e9ee32e98d2fa25831a30750b"
+}

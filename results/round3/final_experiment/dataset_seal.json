@@ -1,0 +1,14 @@
+{
+  "same_distribution": {
+    "file_sha256": "8ea6a3d464e4c4b14ec61641cceefbce35431d690966051bb4ad0e7cdd11462c",
+    "dataset_hash": "314778f239da5c345375269fdf9bae3850e769de9b1646f43744d3e12496ad39",
+    "n": 240,
+    "witnesses_passed": 240
+  },
+  "challenge": {
+    "file_sha256": "e0c7e3ef34835a8b31eed8c9f809c1eeaffeba19ea814cd87d7e033293c7c866",
+    "dataset_hash": "9264cb1e89cbedf0412173c13d35bff12112ce5cc0b7d9134d88c8ef9afb9134",
+    "n": 120,
+    "witnesses_passed": 120
+  }
+}

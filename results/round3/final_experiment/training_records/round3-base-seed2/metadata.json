@@ -1,0 +1,47 @@
+{
+  "run_id": "round3-base-seed2",
+  "status": "completed",
+  "created_at": "2026-09-09T01:31:47+00:00",
+  "git": {
+    "commit": "ac9af0b2b13f86566345cc73d1ce07b926c53441",
+    "dirty": true
+  },
+  "dependencies": {
+    "python": "3.11.7",
+    "numpy": "1.26.4",
+    "gymnasium": "1.2.3",
+    "stable-baselines3": "2.8.0",
+    "torch": "2.5.1",
+    "matplotlib": "3.8.4",
+    "pandas": "2.3.3"
+  },
+  "config_sha256": "f419e2702230e53f8b1e16cbfedc7da324b02dac1d3e7ca802114526933f03ae",
+  "updated_at": "2026-09-09T01:35:56+00:00",
+  "final_num_timesteps": 200704,
+  "final_model_sha256": "fb3dc6259aa2c52a886ea1b59ea0bbac5403e33890722ee149a209dae2b174ef",
+  "best_model_sha256": "e6eb712bb93c030a7b2497044c5f97d3677b2abe41f131b3df95a024c9dd86e0",
+  "selection_metrics_sha256": "a2fa92e08ace9cd5abaf9e2c6a665ecfe85d8be5b7a20e304f84a51ec96c974d",
+  "validation_history_sha256": "ff595c2d41c553e9d1aa4ad4610e6759fd96ff60afe25218024028bdd8df3b0a",
+  "training_monitor_sha256": "371e4c13f477bdb673e296314ff4a6b1d6d729975b15a013bd87d55bcf653e2b",
+  "training_sampling_report": {
+    "attempts": 4331,
+    "overlap": 1213,
+    "target_static_sweep": 990,
+    "accepted": 1787,
+    "type:crossing_left": 464,
+    "risk:conflict": 1067,
+    "layout:two_sides": 349,
+    "layout:clear": 541,
+    "type:head_on": 415,
+    "layout:mixed": 538,
+    "endpoint": 265,
+    "type:overtaking": 470,
+    "type:crossing_right": 438,
+    "risk:receding": 267,
+    "no_witness": 19,
+    "layout:blocking": 359,
+    "risk:time_separated": 453,
+    "outside": 56,
+    "risk_mismatch": 1
+  }
+}

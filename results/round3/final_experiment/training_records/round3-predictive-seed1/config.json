@@ -1,0 +1,159 @@
+{
+  "run_id": "round3-predictive-seed1",
+  "arm": "predictive",
+  "seed": 1,
+  "requested_steps": 200000,
+  "environment": {
+    "map_size": [
+      100.0,
+      100.0
+    ],
+    "dt": 0.2,
+    "v_max": 3.0,
+    "omega_max": 0.7853981633974483,
+    "linear_acceleration_max": 1.5,
+    "angular_acceleration_max": 0.7853981633974483,
+    "agent_radius": 1.0,
+    "goal_threshold": 3.0,
+    "static_safe_distance": 7.0,
+    "dynamic_safe_distance": 8.0,
+    "max_steps": 600,
+    "observation_shape": [
+      16
+    ],
+    "action_shape": [
+      2
+    ],
+    "observation_schema_version": "body-fixedscale-center16-v2",
+    "reward_schema_version": "linear-center-distance-v1",
+    "stage": "D",
+    "encounter_config": {
+      "version": "encounters-v1",
+      "static_radius": 4.0,
+      "dynamic_radius": 3.0,
+      "velocity_scale": 4.8,
+      "target_max_speed": 1.8,
+      "types": [
+        "head_on",
+        "crossing_left",
+        "crossing_right",
+        "overtaking"
+      ],
+      "type_probabilities": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "risks": [
+        "conflict",
+        "time_separated",
+        "receding"
+      ],
+      "risk_probabilities": [
+        0.6,
+        0.25,
+        0.15
+      ],
+      "layouts": [
+        "clear",
+        "blocking",
+        "mixed",
+        "two_sides"
+      ],
+      "layout_probabilities": [
+        0.3,
+        0.2,
+        0.3,
+        0.2
+      ],
+      "layout_risk_rule": "D blocking: time_separated/receding 0.625/0.375; mixed: conflict; others: risk_probabilities",
+      "target_speed_range": [
+        0.6,
+        1.5
+      ],
+      "meeting_time_range": [
+        12.0,
+        26.0
+      ],
+      "crossing_angle_degrees": [
+        55.0,
+        125.0
+      ],
+      "nominal_speed": 2.0,
+      "nominal_acceleration": 1.5,
+      "time_horizon": 120.0,
+      "max_attempts": 1500,
+      "exit_behavior": "continue_straight_outside_map",
+      "feasibility": "executed waypoint-controller witness, dt=0.2, same speed/acceleration limits"
+    }
+  },
+  "reward_schema_version": "round3-predictive-reward-v1",
+  "selection_reward": "base_reward",
+  "source_manifest": {
+    "experiment_utils.py": "6da1707d290aa6110e6100ee363af728c64f1341705a7599a5a986766f11760c",
+    "envs/__init__.py": "296e3bc1307a752a43eef5fc30d6a778c99942a466d4ac6a63f311c1882a3555",
+    "envs/dynamic_path_env.py": "9f7c021128662d44cf7f1570b217f5bdd7ac7e6b0619753e09ea549e88181f0f",
+    "envs/scenario_dataset.py": "f370f2517d3db192613933b202ced6182c6c9ec18a72a94c87729f334ea109eb",
+    "envs/encounters.py": "67fc0cc04a97594fe025c3abbe7f4bbb7a2bba5ac25bb2068fe622bc7c734ee1",
+    "envs/round_one_dataset.py": "9b043eff7db92d653af997a6a2efb2dad67a6fb4d608ca4ac425479ad422d148",
+    "scripts/train.py": "4a66cdc56190b45c895e1c5e81e4db697b4c75351985a4ccb609e795eb17faad",
+    "scripts/evaluate.py": "d8807de85f4971c6bc95f327486cae27ba4b851139b58ce4752613a7a75c3e8c",
+    "scripts/evaluate_counterfactual.py": "9e0eabdbe9f20e09d8b584db77a6444f3f6be0adbd919449810e035b45c230ff",
+    "envs/risk_reward.py": "1c8a00800c47848d2e0d731e84842ea547718e79f023642ff3ff66c30a53fb86",
+    "round_three_utils.py": "b0dda5148d5d893b7643ab4e2e57ce82ae8b96d8e8ca6da451c116a9cbcfa80d",
+    "scripts/train_round_three.py": "c9c84ff8bbd9852fbcc9a67e4eb5827280954f2c51b82bc634b9237240350f86",
+    "scripts/evaluate_round_three.py": "2615bd821abae782344903cced766a9a05cf430d8e194ca65f3368e0c5680600",
+    "scripts/test_round_three.py": "79b730691b5b0c5fbd8d32a973e6c737c46821ae072f27c45b528855be0eb926",
+    "scripts/freeze_round_three.py": "330b2eec2461b33aeb6d18215a91c6983fdec60984734bdc4e7ccf7c7a7b4a8a",
+    "baselines/__init__.py": "0f34d296e21a0b218af3d204def399eee48cf9a06c3158cdeff770c2994e9863",
+    "baselines/dwa.py": "7f8a8dd9507da80d9e72ee50154ab808925d29f1deffaa85f937133df7815cec",
+    "configs/round3/experiment_protocol.json": "e329da30be63757dc987f0e446166c5efedbae72e36561aa26ebe843c07ad521",
+    "docs/ROUND_THREE_PROTOCOL.md": "05df47166ed624ef19783c79ed9c0dcb301f7decfd1b6793dc3f72151996d4dc"
+  },
+  "implementation_seal_sha256": "ebe79e4ccb4665a25808887b61ed77748c07c456843e20f2d49aec9122c4289c",
+  "runtime_parameters": {
+    "n_steps": 2048,
+    "batch_size": 64,
+    "n_epochs": 10,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "normalize_advantage": true,
+    "target_kl": null,
+    "use_sde": false,
+    "sde_sample_freq": -1,
+    "learning_rate": 0.0001,
+    "clip_range": 0.2,
+    "clip_range_vf": null,
+    "policy_class": "ActorCriticPolicy",
+    "policy_architecture": "ActorCriticPolicy(\n  (features_extractor): FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (pi_features_extractor): FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (vf_features_extractor): FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (mlp_extractor): MlpExtractor(\n    (policy_net): Sequential(\n      (0): Linear(in_features=16, out_features=64, bias=True)\n      (1): Tanh()\n      (2): Linear(in_features=64, out_features=64, bias=True)\n      (3): Tanh()\n    )\n    (value_net): Sequential(\n      (0): Linear(in_features=16, out_features=64, bias=True)\n      (1): Tanh()\n      (2): Linear(in_features=64, out_features=64, bias=True)\n      (3): Tanh()\n    )\n  )\n  (action_net): Linear(in_features=64, out_features=2, bias=True)\n  (value_net): Linear(in_features=64, out_features=1, bias=True)\n)",
+    "optimizer_class": "Adam",
+    "optimizer_defaults": {
+      "lr": 0.0001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-05,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null
+    },
+    "device": "cpu",
+    "observation_shape": [
+      16
+    ],
+    "action_shape": [
+      2
+    ]
+  },
+  "validation_dataset_hash": "2affddf628c8c527fcbc8e731fd3dde10b77b383338ab16bdd88c59d581e44ee",
+  "from_scratch": true
+}

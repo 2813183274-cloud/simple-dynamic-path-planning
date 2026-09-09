@@ -1,0 +1,318 @@
+{
+  "weighting": "Step distributions are pooled within outcome; episode summaries are episode-weighted.",
+  "all": {
+    "episodes": 240,
+    "steps": 29120,
+    "high_risk_steps": 1985,
+    "episode_metrics": {
+      "n": 240,
+      "success_count": 185,
+      "success_rate": 0.7708333333333334,
+      "success_wilson_95": [
+        0.7136410041976778,
+        0.8194922891673112
+      ],
+      "mean_base_reward": 796.8049766279415,
+      "mean_training_reward": 780.0536601586781,
+      "mean_risk_penalty": -16.75131646926346,
+      "mean_min_static_clearance": 5.264776554286607,
+      "mean_min_dynamic_clearance": 9.379121455049479,
+      "worst_static_clearance": -0.4778944892223276,
+      "worst_dynamic_clearance": -0.3790130343968636,
+      "successful_path_efficiency": 0.9700258852480411,
+      "successful_navigation_time": 27.627027027027026,
+      "full_speed_fraction_after_2s": 1.0,
+      "clipped_mean_fraction": 1.0,
+      "high_risk_mean_speed_episode_average": 2.9548533511402675,
+      "risk_exposed_episodes": 94,
+      "risk_no_response_episodes": 94,
+      "risk_no_response_fraction_exposed": 1.0,
+      "braking_delay_responders_only": null,
+      "static_collision_count": 38,
+      "static_collision_rate": 0.15833333333333333,
+      "dynamic_collision_count": 17,
+      "dynamic_collision_rate": 0.07083333333333333,
+      "timeout_count": 0,
+      "timeout_rate": 0.0,
+      "out_of_bounds_count": 0,
+      "out_of_bounds_rate": 0.0,
+      "collision_count": 55,
+      "collision_rate": 0.22916666666666666
+    },
+    "high_risk_actual_v": {
+      "mean": 2.967959697732997,
+      "quantiles_0_25_50_75_100": [
+        1.5000000000000002,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ]
+    },
+    "high_risk_delta_v": {
+      "mean": 0.01586901763224181,
+      "quantiles_0_25_50_75_100": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.3000000000000002
+      ]
+    },
+    "high_risk_actual_w": {
+      "mean": 0.018679479672968482,
+      "quantiles_0_25_50_75_100": [
+        -0.2040286904310512,
+        0.0078051733910866,
+        0.0246861486428931,
+        0.0394247440045492,
+        0.1222528103545482
+      ]
+    },
+    "reward_progress": {
+      "total": 163317.40976708248,
+      "mean_episode_total": 680.4892073628437,
+      "nonzero_steps": 29120
+    },
+    "reward_static_safety": {
+      "total": -106.35995892105218,
+      "mean_episode_total": -0.4431664955043841,
+      "nonzero_steps": 805
+    },
+    "reward_dynamic_safety": {
+      "total": -411.8554174554267,
+      "mean_episode_total": -1.716064239397611,
+      "nonzero_steps": 1191
+    },
+    "reward_time": {
+      "total": -1456.0000000000002,
+      "mean_episode_total": -6.066666666666667,
+      "nonzero_steps": 29120
+    },
+    "reward_terminal": {
+      "total": 29890.0,
+      "mean_episode_total": 124.54166666666667,
+      "nonzero_steps": 240
+    },
+    "base_reward": {
+      "total": 191233.19439070605,
+      "mean_episode_total": 796.8049766279419,
+      "nonzero_steps": 29120
+    },
+    "risk_penalty": {
+      "total": -4020.3159526232303,
+      "mean_episode_total": -16.75131646926346,
+      "nonzero_steps": 3189
+    }
+  },
+  "success": {
+    "episodes": 185,
+    "steps": 25555,
+    "high_risk_steps": 765,
+    "episode_metrics": {
+      "n": 185,
+      "success_count": 185,
+      "success_rate": 1.0,
+      "success_wilson_95": [
+        0.9796577571223828,
+        1.0
+      ],
+      "mean_base_reward": 971.7399304015729,
+      "mean_training_reward": 962.5744853741924,
+      "mean_risk_penalty": -9.165445027380791,
+      "mean_min_static_clearance": 5.76739646213926,
+      "mean_min_dynamic_clearance": 9.474699769229817,
+      "worst_static_clearance": 0.04885526664881912,
+      "worst_dynamic_clearance": 0.17441746254860746,
+      "successful_path_efficiency": 0.9700258852480411,
+      "successful_navigation_time": 27.627027027027026,
+      "full_speed_fraction_after_2s": 1.0,
+      "clipped_mean_fraction": 1.0,
+      "high_risk_mean_speed_episode_average": 2.9644762483892917,
+      "risk_exposed_episodes": 39,
+      "risk_no_response_episodes": 39,
+      "risk_no_response_fraction_exposed": 1.0,
+      "braking_delay_responders_only": null,
+      "static_collision_count": 0,
+      "static_collision_rate": 0.0,
+      "dynamic_collision_count": 0,
+      "dynamic_collision_rate": 0.0,
+      "timeout_count": 0,
+      "timeout_rate": 0.0,
+      "out_of_bounds_count": 0,
+      "out_of_bounds_rate": 0.0,
+      "collision_count": 0,
+      "collision_rate": 0.0
+    },
+    "high_risk_actual_v": {
+      "mean": 2.971764705882353,
+      "quantiles_0_25_50_75_100": [
+        1.5000000000000002,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ]
+    },
+    "high_risk_delta_v": {
+      "mean": 0.016078431372549017,
+      "quantiles_0_25_50_75_100": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.3000000000000002
+      ]
+    },
+    "high_risk_actual_w": {
+      "mean": 0.023234392617096884,
+      "quantiles_0_25_50_75_100": [
+        -0.1906329953494391,
+        0.0112357952845444,
+        0.0284301071080768,
+        0.0444981556067924,
+        0.1222528103545482
+      ]
+    },
+    "reward_progress": {
+      "total": 144415.90571896342,
+      "mean_episode_total": 780.6265173998023,
+      "nonzero_steps": 25555
+    },
+    "reward_static_safety": {
+      "total": -65.7185405204392,
+      "mean_episode_total": -0.3552353541645362,
+      "nonzero_steps": 570
+    },
+    "reward_dynamic_safety": {
+      "total": -300.55005415194375,
+      "mean_episode_total": -1.624594887307804,
+      "nonzero_steps": 980
+    },
+    "reward_time": {
+      "total": -1277.7500000000002,
+      "mean_episode_total": -6.906756756756758,
+      "nonzero_steps": 25555
+    },
+    "reward_terminal": {
+      "total": 37000.0,
+      "mean_episode_total": 200.0,
+      "nonzero_steps": 185
+    },
+    "base_reward": {
+      "total": 179771.88712429107,
+      "mean_episode_total": 971.7399304015734,
+      "nonzero_steps": 25555
+    },
+    "risk_penalty": {
+      "total": -1695.6073300654464,
+      "mean_episode_total": -9.165445027380791,
+      "nonzero_steps": 1858
+    }
+  },
+  "failure": {
+    "episodes": 55,
+    "steps": 3565,
+    "high_risk_steps": 1220,
+    "episode_metrics": {
+      "n": 55,
+      "success_count": 0,
+      "success_rate": 0.0,
+      "success_wilson_95": [
+        0.0,
+        0.06528490111708637
+      ],
+      "mean_base_reward": 208.3874048439084,
+      "mean_training_reward": 166.11997534285783,
+      "mean_risk_penalty": -42.267429501050614,
+      "mean_min_static_clearance": 3.574145955145865,
+      "mean_min_dynamic_clearance": 9.057630761897434,
+      "worst_static_clearance": -0.4778944892223276,
+      "worst_dynamic_clearance": -0.3790130343968636,
+      "successful_path_efficiency": null,
+      "successful_navigation_time": null,
+      "full_speed_fraction_after_2s": 1.0,
+      "clipped_mean_fraction": 1.0,
+      "high_risk_mean_speed_episode_average": 2.9478548804137037,
+      "risk_exposed_episodes": 55,
+      "risk_no_response_episodes": 55,
+      "risk_no_response_fraction_exposed": 1.0,
+      "braking_delay_responders_only": null,
+      "static_collision_count": 38,
+      "static_collision_rate": 0.6909090909090909,
+      "dynamic_collision_count": 17,
+      "dynamic_collision_rate": 0.3090909090909091,
+      "timeout_count": 0,
+      "timeout_rate": 0.0,
+      "out_of_bounds_count": 0,
+      "out_of_bounds_rate": 0.0,
+      "collision_count": 55,
+      "collision_rate": 1.0
+    },
+    "high_risk_actual_v": {
+      "mean": 2.9655737704918033,
+      "quantiles_0_25_50_75_100": [
+        1.5000000000000002,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ]
+    },
+    "high_risk_delta_v": {
+      "mean": 0.015737704918032783,
+      "quantiles_0_25_50_75_100": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.3000000000000002
+      ]
+    },
+    "high_risk_actual_w": {
+      "mean": 0.01582332524488797,
+      "quantiles_0_25_50_75_100": [
+        -0.2040286904310512,
+        0.006659669036232325,
+        0.02345166229586735,
+        0.03487912837569832,
+        0.0985075784360419
+      ]
+    },
+    "reward_progress": {
+      "total": 18901.504048119066,
+      "mean_episode_total": 343.6637099658012,
+      "nonzero_steps": 3565
+    },
+    "reward_static_safety": {
+      "total": -40.641418400612984,
+      "mean_episode_total": -0.7389348800111452,
+      "nonzero_steps": 235
+    },
+    "reward_dynamic_safety": {
+      "total": -111.30536330348295,
+      "mean_episode_total": -2.0237338782451446,
+      "nonzero_steps": 211
+    },
+    "reward_time": {
+      "total": -178.25,
+      "mean_episode_total": -3.2409090909090907,
+      "nonzero_steps": 3565
+    },
+    "reward_terminal": {
+      "total": -7110.0,
+      "mean_episode_total": -129.27272727272728,
+      "nonzero_steps": 55
+    },
+    "base_reward": {
+      "total": 11461.307266414973,
+      "mean_episode_total": 208.3874048439086,
+      "nonzero_steps": 3565
+    },
+    "risk_penalty": {
+      "total": -2324.708622557784,
+      "mean_episode_total": -42.26742950105062,
+      "nonzero_steps": 1331
+    }
+  }
+}

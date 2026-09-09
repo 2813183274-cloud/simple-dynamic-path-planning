@@ -1,0 +1,12 @@
+{
+  "completed_at": "2026-09-09T01:43:50+00:00",
+  "method_seal_sha256": "0cfe54c23971d160d27610c6bef8775b26fb51efa6f6ee646fad43934901aa57",
+  "files": {
+    "by_type.json": "51840dd646339f9202db3a58cdd442c06e678e168021065850585a343bc582f7",
+    "episodes.csv": "9fcdfba7cd5fa8ee06d0d490246df9c5f112239ca9d8db8c5233372ee0d64c73",
+    "first_failures.png": "919b2b96faac94605c0222be8364ac7cc415ef207f15af8e2795c8e5ea229ac3",
+    "mechanism.json": "e1bc2f040311743bcbe55687f54b5af80738fe88f888fa415b3b6b5fdd296fd6",
+    "steps.csv.gz": "e7a0873f3e952a98d69a5c8ed9297ea7b7d461ba6ae0a4ea3d2cf5840cf08904",
+    "summary.json": "f80692b2bb52bb070b018fa68dd01eb5d81339a3185b12e96b22bd5cf0827193"
+  }
+}

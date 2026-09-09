@@ -1,0 +1,46 @@
+{
+  "run_id": "round3-predictive-seed1",
+  "status": "completed",
+  "created_at": "2026-09-09T01:27:46+00:00",
+  "git": {
+    "commit": "ac9af0b2b13f86566345cc73d1ce07b926c53441",
+    "dirty": true
+  },
+  "dependencies": {
+    "python": "3.11.7",
+    "numpy": "1.26.4",
+    "gymnasium": "1.2.3",
+    "stable-baselines3": "2.8.0",
+    "torch": "2.5.1",
+    "matplotlib": "3.8.4",
+    "pandas": "2.3.3"
+  },
+  "config_sha256": "f6f18ace8a459ef74f0b2e0381bd40fba04cccce328c3c60842e4a016de91b7f",
+  "updated_at": "2026-09-09T01:32:03+00:00",
+  "final_num_timesteps": 200704,
+  "final_model_sha256": "6875662a67e04226f6b511280beccf11e64792c8bcbef8f59658f550939d32fa",
+  "best_model_sha256": "4c0fcd56494770cf03816125b8e8e8a477172aefdd66054b029e93d4ed7d30e6",
+  "selection_metrics_sha256": "f4fa624980a472e088513aa04919ff2b030e122132bb2453787e6486debf2521",
+  "validation_history_sha256": "d4e0df7c36614dc6f841dbcda75e14f15f2b0ce5e80f872bed70315e441d3c38",
+  "training_monitor_sha256": "f15bb2cee8d4ebf66b39bc05e3bae598516d75acaf10cd6c5c957ec6c35c0ff8",
+  "training_sampling_report": {
+    "attempts": 3815,
+    "accepted": 1594,
+    "type:crossing_right": 376,
+    "risk:receding": 243,
+    "layout:clear": 495,
+    "type:crossing_left": 407,
+    "risk:conflict": 937,
+    "target_static_sweep": 880,
+    "layout:mixed": 453,
+    "endpoint": 210,
+    "type:overtaking": 393,
+    "overlap": 1060,
+    "layout:two_sides": 314,
+    "type:head_on": 418,
+    "risk:time_separated": 414,
+    "layout:blocking": 332,
+    "outside": 55,
+    "no_witness": 16
+  }
+}

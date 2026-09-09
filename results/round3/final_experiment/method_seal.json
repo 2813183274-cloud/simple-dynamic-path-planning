@@ -1,0 +1,156 @@
+{
+  "frozen_at": "2026-09-09T01:41:04+00:00",
+  "models": {
+    "base-seed1": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-base-seed1\\models\\best\\best_model.zip",
+      "arm": "base",
+      "seed": 1,
+      "sha256": "eed14e8a8b4049f3e6f061e6689f890b45e3b92007fd70de498e1030028fb343",
+      "best_timesteps": 90000,
+      "best_updates": 430,
+      "training_steps": 200704,
+      "validation_success_rate": 0.7166666666666667
+    },
+    "base-seed2": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-base-seed2\\models\\best\\best_model.zip",
+      "arm": "base",
+      "seed": 2,
+      "sha256": "e6eb712bb93c030a7b2497044c5f97d3677b2abe41f131b3df95a024c9dd86e0",
+      "best_timesteps": 80000,
+      "best_updates": 390,
+      "training_steps": 200704,
+      "validation_success_rate": 0.6
+    },
+    "base-seed3": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-base-seed3\\models\\best\\best_model.zip",
+      "arm": "base",
+      "seed": 3,
+      "sha256": "d3012baac75ccf9d4678f9606f22a66a1a492c3d778573d6ce3a40e330c395b1",
+      "best_timesteps": 150000,
+      "best_updates": 730,
+      "training_steps": 200704,
+      "validation_success_rate": 0.7666666666666667
+    },
+    "instant-seed1": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-instant-seed1\\models\\best\\best_model.zip",
+      "arm": "instant",
+      "seed": 1,
+      "sha256": "a7a84f53f79ad93ab4833555f500962eba6687d2a023c0c58a54e6ad26ef3773",
+      "best_timesteps": 200000,
+      "best_updates": 970,
+      "training_steps": 200704,
+      "validation_success_rate": 0.7666666666666667
+    },
+    "instant-seed2": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-instant-seed2\\models\\best\\best_model.zip",
+      "arm": "instant",
+      "seed": 2,
+      "sha256": "8fd8252c95466b4b1de1d467313670b725aaf48a8b305ae4980bc4db275c7042",
+      "best_timesteps": 150000,
+      "best_updates": 730,
+      "training_steps": 200704,
+      "validation_success_rate": 0.7333333333333333
+    },
+    "instant-seed3": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-instant-seed3\\models\\best\\best_model.zip",
+      "arm": "instant",
+      "seed": 3,
+      "sha256": "7e01f9d9d3e4e94731f1e32ea429c38e1804be0903ec0a517cd51220fe9e97d7",
+      "best_timesteps": 200000,
+      "best_updates": 970,
+      "training_steps": 200704,
+      "validation_success_rate": 0.7333333333333333
+    },
+    "predictive-seed1": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-predictive-seed1\\models\\best\\best_model.zip",
+      "arm": "predictive",
+      "seed": 1,
+      "sha256": "4c0fcd56494770cf03816125b8e8e8a477172aefdd66054b029e93d4ed7d30e6",
+      "best_timesteps": 190000,
+      "best_updates": 920,
+      "training_steps": 200704,
+      "validation_success_rate": 0.7333333333333333
+    },
+    "predictive-seed2": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-predictive-seed2\\models\\best\\best_model.zip",
+      "arm": "predictive",
+      "seed": 2,
+      "sha256": "cc62a783b125e16efa0c1bcb4010d3471b881d0e9ee32e98d2fa25831a30750b",
+      "best_timesteps": 160000,
+      "best_updates": 780,
+      "training_steps": 200704,
+      "validation_success_rate": 0.6
+    },
+    "predictive-seed3": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round3-predictive-seed3\\models\\best\\best_model.zip",
+      "arm": "predictive",
+      "seed": 3,
+      "sha256": "46b47e4970ae9eb2d7c8f9c09344cb0e284c763e14d11176e57a2432219640f5",
+      "best_timesteps": 100000,
+      "best_updates": 480,
+      "training_steps": 200704,
+      "validation_success_rate": 0.75
+    }
+  },
+  "implementation_seal_sha256": "ebe79e4ccb4665a25808887b61ed77748c07c456843e20f2d49aec9122c4289c",
+  "orchestration_sources": {
+    "scripts/round_three_experiment.py": "520fc651f8e1bf884001194fc377bc3bcd0d5dd548e4fbe4d15864067d1dff64",
+    "scripts/round_two_experiment.py": "213ca7498111ea804721668df2cfeda8b3b5bd1f21bbf1de1cede573ec2bbfa5",
+    "scripts/summarize_round_two.py": "bac0eec82d9a97c2d26ec8d70bc6f176178434fc361d95f56d1b8bd735d416c0",
+    "scripts/test_round_one.py": "304fe34dfb01ea2398616ce8e6fad3e4590ca98f0ba087671262f92887b77d5e",
+    "configs/round1/protocol.json": "96561d080803bd7f9c2bf60c684a61ffe317a6340b0cde07ba81e962d715b29c"
+  },
+  "dwa_config": {
+    "horizon": 3,
+    "clearance_weight": 1,
+    "heading_weight": 0.5,
+    "speed_weight": 0.1,
+    "margin": 0.5,
+    "v_samples": 7,
+    "w_samples": 21,
+    "dt": 0.2,
+    "v_max": 3,
+    "w_max": 0.7853981633974483,
+    "acceleration": 1.5,
+    "angular_acceleration": 0.7853981633974483
+  },
+  "statistics": {
+    "primary": "predictive minus instant: same_distribution success",
+    "secondary": [
+      "predictive minus base",
+      "instant minus base",
+      "predictive minus DWA",
+      "challenge and by-type comparisons"
+    ],
+    "unit": "training seed and paired within-type scene",
+    "seeds_paired": true,
+    "bootstrap_repetitions": 10000,
+    "bootstrap_seed": 5821,
+    "confidence": 0.95,
+    "interval": "two-sided paired hierarchical percentile bootstrap",
+    "report_seed_sample_sd": true,
+    "report_seed_t_interval": true,
+    "no_multiplicity_adjusted_claim": true
+  },
+  "final_tests": {
+    "generate_only_after_model_freeze": true,
+    "geometry_deduplication_against_all_available_prior_datasets": true,
+    "require_witness_replay": true,
+    "same_distribution": {
+      "seed": 4901,
+      "count": 240,
+      "stage": "D",
+      "per_type_count": 60
+    },
+    "challenge": {
+      "seed": 4902,
+      "count": 120,
+      "stage": "D",
+      "per_type_count": 30,
+      "parameters": "same as round1 challenge protocol"
+    },
+    "models_and_baseline": 10,
+    "expected_episodes": 3600
+  },
+  "method_changes_after_final_test": false
+}

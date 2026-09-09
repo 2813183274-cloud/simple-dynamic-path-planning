@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-09",
+  "status": "passed",
+  "training_runs_completed": 9,
+  "training_seeds_per_arm": [1, 2, 3],
+  "requested_steps_per_run": 200000,
+  "actual_steps_per_run": 200704,
+  "total_training_steps": 1806336,
+  "formal_training_implementation_changed": false,
+  "hyperparameter_search_or_seed_reselection": false,
+  "models_frozen_before_final_scene_generation": true,
+  "final_scenes": 360,
+  "geometrically_unique_final_scenes": 360,
+  "witness_replays_passed": 360,
+  "completed_method_dataset_pairs": 20,
+  "evaluation_episodes": 3600,
+  "trajectory_audits": [
+    "step counts", "linear/angular speed and acceleration limits",
+    "unicycle position/heading integration", "constant target velocity",
+    "minimum clearances", "reward component sums",
+    "zero terminal risk penalty", "successful terminal geometry"
+  ],
+  "development_orchestration_smoke_passed": true,
+  "model_implementation_dataset_and_completion_hash_recheck": "passed",
+  "final_manifest_files_verified": 205,
+  "historical_artifact_hashes_verified_unchanged": 498,
+  "historical_manifest_roots": [
+    "runs/round0-baseline-seed1/round_zero",
+    "results/round1", "results/round2", "results/round3/development-diagnosis"
+  ],
+  "visual_checks": ["success_comparison.png", "same_distribution/base-seed1/first_failures.png"],
+  "negative_results_retained": true,
+  "p3_06_started": false,
+  "limits": [
+    "Three training seeds only; secondary comparisons not multiplicity adjusted",
+    "Online training initial geometries were not all retained for exhaustive overlap checks",
+    "Success-conditional efficiency uses different surviving subsets",
+    "No formal model weights were substituted into the root default model directory"
+  ]
+}

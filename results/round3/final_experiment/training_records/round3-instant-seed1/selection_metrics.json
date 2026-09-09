@@ -1,0 +1,20 @@
+{
+  "num_scenarios": 60,
+  "success_count": 46,
+  "collision_count": 14,
+  "success_rate": 0.7666666666666667,
+  "collision_rate": 0.23333333333333334,
+  "mean_successful_path_efficiency": 0.9494814135935237,
+  "mean_base_reward": 756.3144069511723,
+  "mean_risk_penalty": -3.3219588565112113,
+  "mean_training_reward": 752.9924480946611,
+  "run_id": "round3-instant-seed1",
+  "arm": "instant",
+  "timesteps": 200000,
+  "policy_updates": 970,
+  "evaluated_at": "2026-09-09T01:31:43+00:00",
+  "validation_dataset_hash": "2affddf628c8c527fcbc8e731fd3dde10b77b383338ab16bdd88c59d581e44ee",
+  "selection_reward": "base_reward",
+  "is_best": true,
+  "model_sha256": "a7a84f53f79ad93ab4833555f500962eba6687d2a023c0c58a54e6ad26ef3773"
+}
