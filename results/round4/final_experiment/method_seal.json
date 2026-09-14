@@ -1,0 +1,123 @@
+{
+  "frozen_at": "2026-09-14T16:12:52+00:00",
+  "models": {
+    "clip-seed1": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round4-clip-seed1\\models\\best\\best_model.zip",
+      "arm": "clip",
+      "seed": 1,
+      "sha256": "9067e6d546e7f4483f16c0443cbc931e2a0062382ba64dca60685441c38aa176",
+      "best_timesteps": 90000,
+      "best_updates": 430,
+      "training_steps": 200704,
+      "validation_success_rate": 0.7166666666666667,
+      "action_schema": "finite-execution-box-latent-rollout-v2"
+    },
+    "clip-seed2": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round4-clip-seed2\\models\\best\\best_model.zip",
+      "arm": "clip",
+      "seed": 2,
+      "sha256": "b6037878acafed5cc07652b3387e700015861e4f6b24700aa760f57328d2d319",
+      "best_timesteps": 80000,
+      "best_updates": 390,
+      "training_steps": 200704,
+      "validation_success_rate": 0.6,
+      "action_schema": "finite-execution-box-latent-rollout-v2"
+    },
+    "clip-seed3": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round4-clip-seed3\\models\\best\\best_model.zip",
+      "arm": "clip",
+      "seed": 3,
+      "sha256": "cad281f820d1836215a35f6cdf0fee60985272871476d5439187e3407e38e515",
+      "best_timesteps": 150000,
+      "best_updates": 730,
+      "training_steps": 200704,
+      "validation_success_rate": 0.7666666666666667,
+      "action_schema": "finite-execution-box-latent-rollout-v2"
+    },
+    "speed_tanh-seed1": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round4-speed_tanh-seed1\\models\\best\\best_model.zip",
+      "arm": "speed_tanh",
+      "seed": 1,
+      "sha256": "a51d9766542e0bbaa027f469594615b6be9df0cbf9e93c069b1e1e01191fc569",
+      "best_timesteps": 190000,
+      "best_updates": 920,
+      "training_steps": 200704,
+      "validation_success_rate": 0.8,
+      "action_schema": "finite-execution-box-latent-rollout-v2"
+    },
+    "speed_tanh-seed2": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round4-speed_tanh-seed2\\models\\best\\best_model.zip",
+      "arm": "speed_tanh",
+      "seed": 2,
+      "sha256": "1bd6da9605c657bd95469af680c4dfcfe3434a8b44464ea230c43297da76ed37",
+      "best_timesteps": 120000,
+      "best_updates": 580,
+      "training_steps": 200704,
+      "validation_success_rate": 0.7833333333333333,
+      "action_schema": "finite-execution-box-latent-rollout-v2"
+    },
+    "speed_tanh-seed3": {
+      "path": "D:\\PycharmProjects\\simple-dynamic-path-planning\\runs\\round4-speed_tanh-seed3\\models\\best\\best_model.zip",
+      "arm": "speed_tanh",
+      "seed": 3,
+      "sha256": "a400d5061229eab0e599d8824fc29275ead7a6cb7554f5fd74ff1c952eeb5609",
+      "best_timesteps": 130000,
+      "best_updates": 630,
+      "training_steps": 200704,
+      "validation_success_rate": 0.6833333333333333,
+      "action_schema": "finite-execution-box-latent-rollout-v2"
+    }
+  },
+  "implementation_seal_sha256": "f0cb0149c8805236d6f92d0d726885c0f5c5ecd2628b8a298c4331febb9ce088",
+  "orchestration_sources": {
+    "scripts/round_four_experiment.py": "caaa361e3e94ce0494863afcc177003d643b60074fcca4ec8b27c21974fc41a5",
+    "scripts/round_two_experiment.py": "213ca7498111ea804721668df2cfeda8b3b5bd1f21bbf1de1cede573ec2bbfa5",
+    "scripts/summarize_round_two.py": "bac0eec82d9a97c2d26ec8d70bc6f176178434fc361d95f56d1b8bd735d416c0",
+    "scripts/test_round_one.py": "304fe34dfb01ea2398616ce8e6fad3e4590ca98f0ba087671262f92887b77d5e",
+    "configs/round1/protocol.json": "96561d080803bd7f9c2bf60c684a61ffe317a6340b0cde07ba81e962d715b29c"
+  },
+  "dwa_config": {
+    "horizon": 3.0,
+    "clearance_weight": 1.0,
+    "heading_weight": 0.5,
+    "speed_weight": 0.1,
+    "margin": 0.5,
+    "v_samples": 7,
+    "w_samples": 21,
+    "dt": 0.2,
+    "v_max": 3.0,
+    "w_max": 0.7853981633974483,
+    "acceleration": 1.5,
+    "angular_acceleration": 0.7853981633974483
+  },
+  "statistics": {
+    "primary": "speed_tanh minus clip: same_distribution success",
+    "bootstrap_repetitions": 10000,
+    "bootstrap_seed": 6821,
+    "confidence": 0.95,
+    "interval": "two-sided paired hierarchical percentile bootstrap",
+    "seeds_paired": true,
+    "scene_pairing": "within encounter type",
+    "report_all_seeds": true
+  },
+  "final_tests": {
+    "generate_only_after_model_freeze": true,
+    "geometry_deduplication_against_all_available_prior_datasets": true,
+    "require_witness_replay": true,
+    "same_distribution": {
+      "seed": 5901,
+      "count": 240,
+      "per_type_count": 60,
+      "stage": "D"
+    },
+    "challenge": {
+      "seed": 5902,
+      "count": 120,
+      "per_type_count": 30,
+      "parameters": "unchanged round3 challenge distribution"
+    },
+    "models_and_baseline": 7,
+    "expected_episodes": 2520
+  },
+  "method_changes_after_final_test": false
+}

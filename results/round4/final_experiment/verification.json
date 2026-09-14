@@ -1,0 +1,21 @@
+{
+  "verified_at": "2026-09-14T16:19:21+00:00",
+  "status": "passed",
+  "protocol": "round4-speed-tanh-v2",
+  "formal_training_runs": 6,
+  "actual_training_steps_per_run": 200704,
+  "actual_training_steps_total": 1204224,
+  "selected_models": 6,
+  "portable_model_hashes_verified": 6,
+  "final_scenes": 360,
+  "witness_replays_passed": 360,
+  "final_evaluation_episodes": 2520,
+  "trajectory_audits": "passed for all 2520 episodes",
+  "implementation_seal": "verified",
+  "post_test_parameter_changes": false,
+  "notes": [
+    "All six seeds retained",
+    "DWA configuration was not retuned",
+    "Final datasets were generated only after model freeze"
+  ]
+}

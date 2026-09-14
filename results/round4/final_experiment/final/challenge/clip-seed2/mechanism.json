@@ -1,0 +1,288 @@
+{
+  "weighting": "Step metrics are pooled within outcome; episode metrics are episode-weighted.",
+  "all": {
+    "episodes": 120,
+    "steps": 11507,
+    "high_risk_steps": 1478,
+    "episode_metrics": {
+      "n": 120,
+      "success_count": 68,
+      "success_rate": 0.5666666666666667,
+      "success_wilson_95": [
+        0.47729920885539046,
+        0.6518982356221157
+      ],
+      "mean_base_reward": 585.2007294897486,
+      "mean_min_static_clearance": 4.916553768316435,
+      "mean_min_dynamic_clearance": 9.606729866532817,
+      "worst_static_clearance": -0.5454605689288732,
+      "worst_dynamic_clearance": -0.2969626127734388,
+      "successful_path_efficiency": 0.9743857444406747,
+      "successful_navigation_time": 27.599999999999998,
+      "full_speed_fraction_after_2s": 0.9907133157787721,
+      "near_upper_action_fraction_after_2s": 0.9915465974043903,
+      "high_risk_mean_speed_episode_average": 3.0,
+      "high_risk_braking_fraction_episode_average": 0.0,
+      "risk_exposed_episodes": 74,
+      "risk_no_response_episodes": 74,
+      "risk_no_response_fraction_exposed": 1.0,
+      "braking_delay_responders_only": null,
+      "timeout_with_stagnation_count": 0,
+      "static_collision_count": 35,
+      "static_collision_rate": 0.2916666666666667,
+      "dynamic_collision_count": 17,
+      "dynamic_collision_rate": 0.14166666666666666,
+      "timeout_count": 0,
+      "timeout_rate": 0.0,
+      "out_of_bounds_count": 0,
+      "out_of_bounds_rate": 0.0,
+      "collision_count": 52,
+      "collision_rate": 0.43333333333333335
+    },
+    "high_risk_actual_v": {
+      "mean": 3.0,
+      "quantiles": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ]
+    },
+    "high_risk_delta_v": {
+      "mean": 0.0,
+      "quantiles": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "high_risk_actual_w": {
+      "mean": -0.017811663497462625,
+      "quantiles": [
+        -0.1821258341348847,
+        -0.0341160000854848,
+        -0.01456219669965805,
+        -0.000876878216926,
+        0.0635748033914588
+      ]
+    },
+    "high_risk_executed_speed_action": {
+      "mean": 1.0,
+      "quantiles": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "high_risk_executed_turn_action": {
+      "mean": -0.02267851432248524,
+      "quantiles": [
+        -0.2318898141384124,
+        -0.04343784041702747,
+        -0.01854116469621655,
+        -0.001116476021707,
+        0.0809459537267685
+      ]
+    },
+    "high_risk_braking_fraction": 0.0,
+    "near_upper_action_fraction_after_2s": 0.9872901911322403,
+    "latent_outside_fraction_after_2s": 0.9833123120209566,
+    "latent_speed_mean_after_2s": 1.3599009558961823,
+    "latent_speed_std_after_2s": 0.16501157940668265
+  },
+  "success": {
+    "episodes": 68,
+    "steps": 9384,
+    "high_risk_steps": 550,
+    "episode_metrics": {
+      "n": 68,
+      "success_count": 68,
+      "success_rate": 1.0,
+      "success_wilson_95": [
+        0.9465286634799296,
+        1.0
+      ],
+      "mean_base_reward": 974.0026294311125,
+      "mean_min_static_clearance": 5.70494821012377,
+      "mean_min_dynamic_clearance": 8.170100310293996,
+      "worst_static_clearance": 0.033996407724283806,
+      "worst_dynamic_clearance": 0.00027293943624506767,
+      "successful_path_efficiency": 0.9743857444406747,
+      "successful_navigation_time": 27.599999999999998,
+      "full_speed_fraction_after_2s": 0.983611733727245,
+      "near_upper_action_fraction_after_2s": 0.98508223071363,
+      "high_risk_mean_speed_episode_average": 3.0,
+      "high_risk_braking_fraction_episode_average": 0.0,
+      "risk_exposed_episodes": 22,
+      "risk_no_response_episodes": 22,
+      "risk_no_response_fraction_exposed": 1.0,
+      "braking_delay_responders_only": null,
+      "timeout_with_stagnation_count": 0,
+      "static_collision_count": 0,
+      "static_collision_rate": 0.0,
+      "dynamic_collision_count": 0,
+      "dynamic_collision_rate": 0.0,
+      "timeout_count": 0,
+      "timeout_rate": 0.0,
+      "out_of_bounds_count": 0,
+      "out_of_bounds_rate": 0.0,
+      "collision_count": 0,
+      "collision_rate": 0.0
+    },
+    "high_risk_actual_v": {
+      "mean": 3.0,
+      "quantiles": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ]
+    },
+    "high_risk_delta_v": {
+      "mean": 0.0,
+      "quantiles": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "high_risk_actual_w": {
+      "mean": -0.023742767091722,
+      "quantiles": [
+        -0.1821258341348847,
+        -0.045806141883956694,
+        -0.01772614910811855,
+        -0.0052430076951725,
+        0.0635748033914588
+      ]
+    },
+    "high_risk_executed_speed_action": {
+      "mean": 1.0,
+      "quantiles": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "high_risk_executed_turn_action": {
+      "mean": -0.030230229962617133,
+      "quantiles": [
+        -0.2318898141384124,
+        -0.05832219123840322,
+        -0.022569634020328452,
+        -0.00667560473084445,
+        0.0809459537267685
+      ]
+    },
+    "high_risk_braking_fraction": 0.0,
+    "near_upper_action_fraction_after_2s": 0.9849494485294118,
+    "latent_outside_fraction_after_2s": 0.9802389705882353,
+    "latent_speed_mean_after_2s": 1.3337812697213582,
+    "latent_speed_std_after_2s": 0.16371310878190642
+  },
+  "failure": {
+    "episodes": 52,
+    "steps": 2123,
+    "high_risk_steps": 928,
+    "episode_metrics": {
+      "n": 52,
+      "success_count": 0,
+      "success_rate": 0.0,
+      "success_wilson_95": [
+        0.0,
+        0.06879223612386234
+      ],
+      "mean_base_reward": 76.7674757202728,
+      "mean_min_static_clearance": 3.8855764213376136,
+      "mean_min_dynamic_clearance": 11.485399286229729,
+      "worst_static_clearance": -0.5454605689288732,
+      "worst_dynamic_clearance": -0.2969626127734388,
+      "successful_path_efficiency": null,
+      "successful_navigation_time": null,
+      "full_speed_fraction_after_2s": 1.0,
+      "near_upper_action_fraction_after_2s": 1.0,
+      "high_risk_mean_speed_episode_average": 3.0,
+      "high_risk_braking_fraction_episode_average": 0.0,
+      "risk_exposed_episodes": 52,
+      "risk_no_response_episodes": 52,
+      "risk_no_response_fraction_exposed": 1.0,
+      "braking_delay_responders_only": null,
+      "timeout_with_stagnation_count": 0,
+      "static_collision_count": 35,
+      "static_collision_rate": 0.6730769230769231,
+      "dynamic_collision_count": 17,
+      "dynamic_collision_rate": 0.3269230769230769,
+      "timeout_count": 0,
+      "timeout_rate": 0.0,
+      "out_of_bounds_count": 0,
+      "out_of_bounds_rate": 0.0,
+      "collision_count": 52,
+      "collision_rate": 1.0
+    },
+    "high_risk_actual_v": {
+      "mean": 3.0,
+      "quantiles": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ]
+    },
+    "high_risk_delta_v": {
+      "mean": 0.0,
+      "quantiles": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "high_risk_actual_w": {
+      "mean": -0.014296462013795976,
+      "quantiles": [
+        -0.0946331452332046,
+        -0.02816468841803725,
+        -0.013557224644252349,
+        -5.3925354778906404e-05,
+        0.0567793733630933
+      ]
+    },
+    "high_risk_executed_speed_action": {
+      "mean": 1.0,
+      "quantiles": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "high_risk_executed_turn_action": {
+      "mean": -0.01820282078576914,
+      "quantiles": [
+        -0.120490662753582,
+        -0.0358603950589895,
+        -0.01726159453392025,
+        -6.865989416837692e-05,
+        0.0722937434911727
+      ]
+    },
+    "high_risk_braking_fraction": 0.0,
+    "near_upper_action_fraction_after_2s": 1.0,
+    "latent_outside_fraction_after_2s": 1.0,
+    "latent_speed_mean_after_2s": 1.501726126492358,
+    "latent_speed_std_after_2s": 0.07570325434805418
+  }
+}

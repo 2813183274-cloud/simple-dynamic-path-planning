@@ -1,0 +1,40 @@
+{
+  "run_id": "round4-speed_tanh-seed1",
+  "status": "completed",
+  "created_at": "2026-09-14T15:49:45+00:00",
+  "git": {
+    "commit": "d88204279334d38396dde84c36360d352750f400",
+    "dirty": false
+  },
+  "config_sha256": "9d5c2d77220f469b49a08a5e4467296093c352e51ad1413da8ed5e569253a2a2",
+  "completed_at": "2026-09-14T15:54:21+00:00",
+  "final_num_timesteps": 200704,
+  "final_model_sha256": "52370798c50d8a5b6c1098e8e432d4438e5f3ef95d853279ad81a057809532c5",
+  "best_model_sha256": "a51d9766542e0bbaa027f469594615b6be9df0cbf9e93c069b1e1e01191fc569",
+  "evidence": {
+    "models/best/selection_metrics.json": "e9853d20573cd52d259211f4113fee2705b14afc54c2ac05426d1e381f551981",
+    "logs/validation/evaluations.json": "5d3fd01f06dad9af20b70d0bf4feae7d00549946808df723e981149f3762b8ce",
+    "logs/train_monitor.csv": "baeb71210a796c462c9ef94cbb916363e56852a1dab399baad563fc4a5cb6541",
+    "logs/training_steps.csv.gz": "6b5421a66d109abd61305ee4cbc98882ac9946c7e408355168bac53ec62cfce8"
+  },
+  "training_sampling_report": {
+    "attempts": 3642,
+    "accepted": 1524,
+    "type:crossing_right": 359,
+    "risk:receding": 230,
+    "layout:clear": 476,
+    "type:crossing_left": 395,
+    "risk:conflict": 895,
+    "target_static_sweep": 833,
+    "layout:mixed": 429,
+    "endpoint": 200,
+    "type:overtaking": 373,
+    "overlap": 1019,
+    "layout:two_sides": 305,
+    "type:head_on": 397,
+    "risk:time_separated": 399,
+    "layout:blocking": 314,
+    "outside": 51,
+    "no_witness": 15
+  }
+}

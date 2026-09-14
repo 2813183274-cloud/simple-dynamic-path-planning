@@ -400,7 +400,18 @@ SB3 只能检查部分 shape 兼容性，无法识别“维度相同但语义已
 
 统计以 3 个训练 seed 为模型随机性单位，给出样本标准差和自由度 2 的 t 区间；配对分层 bootstrap 同时重采样 seed 与各会遇类型内的场景 ID，所有方法保持同场景配对。DWA 是一个确定性控制器，不虚构三份独立基线。单模型 Wilson 区间只是场景二项近似，不替代 seed 波动；固定分层设计的主要差值区间使用分层 bootstrap。仅三个 seed 时区间估计仍很不稳定，不能宣称训练已收敛或有普适显著优势。
 
-## 13. 提交前检查清单
+## 13. 第四轮复现与结果核验
+
+第四轮已完成，协议与结论见 [ROUND_FOUR_PROTOCOL_V2.md](ROUND_FOUR_PROTOCOL_V2.md)和[ROUND_FOUR_ACCEPTANCE.md](ROUND_FOUR_ACCEPTANCE.md)。现有目录不应重新运行训练、封存或最终评价命令；它们拒绝覆盖已存在产物。以下安全命令只执行回归与哈希核验：
+
+```powershell
+.\.venv\Scripts\python.exe -B scripts\test_round_four.py
+.\.venv\Scripts\python.exe -B -c "import json,hashlib,pathlib; r=pathlib.Path('results/round4/final_experiment'); m=json.load(open(r/'artifact_manifest.json')); assert all(hashlib.sha256((r/p).read_bytes()).hexdigest()==h for p,h in m.items()); print(len(m),'P4 artifacts verified')"
+```
+
+历史执行顺序为：`train_round_four.py --execute` 完成六次训练，`round_four_experiment.py seal` 冻结模型并生成新数据，随后执行 `evaluate` 和 `summarize`，最后由 `finalize_round_four.py` 打包。此顺序仅用于审计，不是现目录的重跑指南。六个可移植 best 位于 `results/round4/final_experiment/models/`；加载前必须与 `method_seal.json` 中同名模型 SHA-256 一致，并使用 `LatentActionPPO.load`，不能按普通旧 PPO 模型解释其动作接口。
+
+## 14. 提交前检查清单
 
 - [ ] 环境与固定场景检查通过；
 - [ ] 观测、动作和奖励变更已同步到设计文档；

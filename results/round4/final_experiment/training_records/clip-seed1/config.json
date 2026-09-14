@@ -1,0 +1,83 @@
+{
+  "run_id": "round4-clip-seed1",
+  "arm": "clip",
+  "seed": 1,
+  "action_schema": "finite-execution-box-latent-rollout-v2",
+  "source_manifest": {
+    "experiment_utils.py": "6da1707d290aa6110e6100ee363af728c64f1341705a7599a5a986766f11760c",
+    "envs/__init__.py": "296e3bc1307a752a43eef5fc30d6a778c99942a466d4ac6a63f311c1882a3555",
+    "envs/dynamic_path_env.py": "9f7c021128662d44cf7f1570b217f5bdd7ac7e6b0619753e09ea549e88181f0f",
+    "envs/scenario_dataset.py": "f370f2517d3db192613933b202ced6182c6c9ec18a72a94c87729f334ea109eb",
+    "envs/encounters.py": "67fc0cc04a97594fe025c3abbe7f4bbb7a2bba5ac25bb2068fe622bc7c734ee1",
+    "envs/round_one_dataset.py": "9b043eff7db92d653af997a6a2efb2dad67a6fb4d608ca4ac425479ad422d148",
+    "scripts/train.py": "4a66cdc56190b45c895e1c5e81e4db697b4c75351985a4ccb609e795eb17faad",
+    "scripts/evaluate.py": "d8807de85f4971c6bc95f327486cae27ba4b851139b58ce4752613a7a75c3e8c",
+    "scripts/evaluate_counterfactual.py": "9e0eabdbe9f20e09d8b584db77a6444f3f6be0adbd919449810e035b45c230ff",
+    "envs/risk_reward.py": "1c8a00800c47848d2e0d731e84842ea547718e79f023642ff3ff66c30a53fb86",
+    "round_three_utils.py": "b0dda5148d5d893b7643ab4e2e57ce82ae8b96d8e8ca6da451c116a9cbcfa80d",
+    "scripts/train_round_three.py": "c9c84ff8bbd9852fbcc9a67e4eb5827280954f2c51b82bc634b9237240350f86",
+    "scripts/evaluate_round_three.py": "2615bd821abae782344903cced766a9a05cf430d8e194ca65f3368e0c5680600",
+    "scripts/test_round_three.py": "79b730691b5b0c5fbd8d32a973e6c737c46821ae072f27c45b528855be0eb926",
+    "scripts/freeze_round_three.py": "330b2eec2461b33aeb6d18215a91c6983fdec60984734bdc4e7ccf7c7a7b4a8a",
+    "baselines/__init__.py": "0f34d296e21a0b218af3d204def399eee48cf9a06c3158cdeff770c2994e9863",
+    "baselines/dwa.py": "7f8a8dd9507da80d9e72ee50154ab808925d29f1deffaa85f937133df7815cec",
+    "configs/round3/experiment_protocol.json": "e329da30be63757dc987f0e446166c5efedbae72e36561aa26ebe843c07ad521",
+    "docs/ROUND_THREE_PROTOCOL.md": "05df47166ed624ef19783c79ed9c0dcb301f7decfd1b6793dc3f72151996d4dc",
+    "round_four_policy.py": "3f2784744782a1beb26fa959867986172d5ad5bcb150535ff91db2d62357c7eb",
+    "round_four_utils.py": "3ed3a121e165355fc36bc997203cf2c8c0a032c8ede814746fdb61c6d316a62d",
+    "scripts/train_round_four.py": "ca05102c2fa5da4831e2c4319cccd885f099d80575c34e1cb68625b20f224fa6",
+    "scripts/evaluate_round_four.py": "a935bdad1883d1ca71530147b82ad4ec77b8670dea0863f128b117c595415ddd",
+    "scripts/test_round_four.py": "924a7ec741ac3bc6b709bf66414e913a27c365237948f080dd1bc13092a972a2",
+    "scripts/freeze_round_four.py": "a95edb00ff61ccff88c0455f6c48b1212e7dc09aeea12fb537fc559f2f6a0bd2",
+    "configs/round4/experiment_protocol.json": "0b909ca8424bcaf572b3d305b453d5e3bf9df9a7f96724ad44dac67b4f08881d",
+    "configs/round4/experiment_protocol_v2.json": "6a694043a900f9c385c010e4cbccbef8978ce3052dd9c34563a796c8108300a1",
+    "docs/ROUND_FOUR_PROTOCOL.md": "b503ffead1c46b00608c386b93163049f91cc92dcd899fbc3a98436c4a02ec3d",
+    "docs/ROUND_FOUR_PROTOCOL_V2.md": "9a53bce842819a1e9ba0a28ec5ebee759be767854553e1f8a65b7752cde1312a"
+  },
+  "runtime_parameters": {
+    "n_steps": 2048,
+    "batch_size": 64,
+    "n_epochs": 10,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "normalize_advantage": true,
+    "target_kl": null,
+    "use_sde": false,
+    "sde_sample_freq": -1,
+    "learning_rate": 0.0001,
+    "clip_range": 0.2,
+    "clip_range_vf": null,
+    "policy_class": "ActorCriticPolicy",
+    "policy_architecture": "ActorCriticPolicy(\n  (features_extractor): FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (pi_features_extractor): FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (vf_features_extractor): FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (mlp_extractor): MlpExtractor(\n    (policy_net): Sequential(\n      (0): Linear(in_features=16, out_features=64, bias=True)\n      (1): Tanh()\n      (2): Linear(in_features=64, out_features=64, bias=True)\n      (3): Tanh()\n    )\n    (value_net): Sequential(\n      (0): Linear(in_features=16, out_features=64, bias=True)\n      (1): Tanh()\n      (2): Linear(in_features=64, out_features=64, bias=True)\n      (3): Tanh()\n    )\n  )\n  (action_net): Linear(in_features=64, out_features=2, bias=True)\n  (value_net): Linear(in_features=64, out_features=1, bias=True)\n)",
+    "optimizer_class": "Adam",
+    "optimizer_defaults": {
+      "lr": 0.0001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-05,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null
+    },
+    "device": "cpu",
+    "observation_shape": [
+      16
+    ],
+    "action_shape": [
+      2
+    ]
+  },
+  "implementation_seal_sha256": "f0cb0149c8805236d6f92d0d726885c0f5c5ecd2628b8a298c4331febb9ce088",
+  "validation_dataset_hash": "2affddf628c8c527fcbc8e731fd3dde10b77b383338ab16bdd88c59d581e44ee",
+  "from_scratch": true,
+  "requested_steps": 200000
+}

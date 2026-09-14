@@ -1,0 +1,40 @@
+{
+  "run_id": "round4-clip-seed1",
+  "status": "completed",
+  "created_at": "2026-09-14T15:36:00+00:00",
+  "git": {
+    "commit": "d88204279334d38396dde84c36360d352750f400",
+    "dirty": false
+  },
+  "config_sha256": "dc02defd6ec546cce45a6b38776739da3d4475e0b618b9a42e41561057360af0",
+  "completed_at": "2026-09-14T15:40:31+00:00",
+  "final_num_timesteps": 200704,
+  "final_model_sha256": "e05c84cb8bfd965cff83e31c27bb78ed80a161cf807259fffc82644a07d9ca9e",
+  "best_model_sha256": "9067e6d546e7f4483f16c0443cbc931e2a0062382ba64dca60685441c38aa176",
+  "evidence": {
+    "models/best/selection_metrics.json": "88519baeb8f99d92f4301930a80a29e90b8a865d86e0524b1db4326d41247405",
+    "logs/validation/evaluations.json": "fb588f589b9ea0317326919787826f6cc9cf1a0d6479a1870eeb8e2e9c31bfa1",
+    "logs/train_monitor.csv": "8fca1070092c46adb7ac883570649d6bc5387caa2745735330b1a0a8f753da60",
+    "logs/training_steps.csv.gz": "5f8147afee60c16e278ca59711037115a71c560f497d734c0027a74770aae792"
+  },
+  "training_sampling_report": {
+    "attempts": 3922,
+    "accepted": 1628,
+    "type:crossing_right": 383,
+    "risk:receding": 243,
+    "layout:clear": 503,
+    "type:crossing_left": 415,
+    "risk:conflict": 965,
+    "target_static_sweep": 908,
+    "layout:mixed": 469,
+    "endpoint": 218,
+    "type:overtaking": 399,
+    "overlap": 1096,
+    "layout:two_sides": 321,
+    "type:head_on": 431,
+    "risk:time_separated": 420,
+    "layout:blocking": 335,
+    "outside": 56,
+    "no_witness": 16
+  }
+}

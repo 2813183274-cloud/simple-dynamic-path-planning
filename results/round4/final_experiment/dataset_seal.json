@@ -1,0 +1,34 @@
+{
+  "datasets": {
+    "same_distribution": {
+      "file_sha256": "059244f5f79d593fd568d3b5567b5676826b0c0916c118b2a0fb258dd8a1ca9f",
+      "dataset_hash": "d270bb7db21f5211f17880f16d9d49a8abb661d0598c44ebb5a5264e4a44f8d3",
+      "n": 240,
+      "witnesses_passed": 240
+    },
+    "challenge": {
+      "file_sha256": "5d5c2282e0661122caadc995b287f91bb9a02f7c04abd2ef3345a81f7a5cbdca",
+      "dataset_hash": "64f69e43fabbcc14d72336d5f9292370056f5c02e9072eaed4d6d2f22832c2d8",
+      "n": 120,
+      "witnesses_passed": 120
+    }
+  },
+  "prior_geometry_files_scanned": [
+    "configs\\independent_test_scenarios_30.json",
+    "configs\\round1\\challenge_development.json",
+    "configs\\round1\\common_encounters.json",
+    "configs\\round1\\common_fixed.json",
+    "configs\\round1\\typical_cases.json",
+    "configs\\round1\\validation_A.json",
+    "configs\\round1\\validation_B.json",
+    "configs\\round1\\validation_C.json",
+    "configs\\round1\\validation_D.json",
+    "configs\\test_scenarios_30.json",
+    "configs\\validation_scenarios_30.json",
+    "results\\round2\\sealed_challenge.json",
+    "results\\round2\\sealed_same_distribution.json",
+    "results\\round3\\final_experiment\\sealed_challenge.json",
+    "results\\round3\\final_experiment\\sealed_same_distribution.json"
+  ],
+  "final_sets_mutually_disjoint": true
+}

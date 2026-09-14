@@ -1,0 +1,18 @@
+{
+  "num_scenarios": 60,
+  "success_count": 36,
+  "collision_count": 24,
+  "success_rate": 0.6,
+  "collision_rate": 0.4,
+  "mean_base_reward": 638.0800469651141,
+  "mean_successful_path_efficiency": 0.9603943415430811,
+  "run_id": "round4-clip-seed2",
+  "arm": "clip",
+  "timesteps": 80000,
+  "policy_updates": 390,
+  "evaluated_at": "2026-09-14T15:42:23+00:00",
+  "validation_dataset_hash": "2affddf628c8c527fcbc8e731fd3dde10b77b383338ab16bdd88c59d581e44ee",
+  "selection_reward": "base_reward",
+  "is_best": true,
+  "model_sha256": "b6037878acafed5cc07652b3387e700015861e4f6b24700aa760f57328d2d319"
+}

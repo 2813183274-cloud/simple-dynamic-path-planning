@@ -1,0 +1,18 @@
+{
+  "num_scenarios": 60,
+  "success_count": 48,
+  "collision_count": 12,
+  "success_rate": 0.8,
+  "collision_rate": 0.2,
+  "mean_base_reward": 784.9380755926,
+  "mean_successful_path_efficiency": 0.9626010062617439,
+  "run_id": "round4-speed_tanh-seed1",
+  "arm": "speed_tanh",
+  "timesteps": 190000,
+  "policy_updates": 920,
+  "evaluated_at": "2026-09-14T15:54:03+00:00",
+  "validation_dataset_hash": "2affddf628c8c527fcbc8e731fd3dde10b77b383338ab16bdd88c59d581e44ee",
+  "selection_reward": "base_reward",
+  "is_best": true,
+  "model_sha256": "a51d9766542e0bbaa027f469594615b6be9df0cbf9e93c069b1e1e01191fc569"
+}

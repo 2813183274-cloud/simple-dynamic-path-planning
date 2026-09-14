@@ -1,0 +1,41 @@
+{
+  "run_id": "round4-clip-seed2",
+  "status": "completed",
+  "created_at": "2026-09-14T15:40:38+00:00",
+  "git": {
+    "commit": "d88204279334d38396dde84c36360d352750f400",
+    "dirty": false
+  },
+  "config_sha256": "74c12f31c7d67073e18526fc2b553e6f029c433388316afcdee1e19a303b98b2",
+  "completed_at": "2026-09-14T15:45:01+00:00",
+  "final_num_timesteps": 200704,
+  "final_model_sha256": "cb257504591a5917e8036fc1e3afb542594dfa7592a1479b05b7019f4e5e5082",
+  "best_model_sha256": "b6037878acafed5cc07652b3387e700015861e4f6b24700aa760f57328d2d319",
+  "evidence": {
+    "models/best/selection_metrics.json": "17a3059297a438c593d0d302d94009a2cd9c1ffba9441570150cc2590b5aa814",
+    "logs/validation/evaluations.json": "9093e58ea07ccbc5410d2a007dd9ea10bf49f27d0f552e8638a49042c87435bb",
+    "logs/train_monitor.csv": "adb0580b51b27a4b8e38c43311b31afc8ad08d4841e6a2b665884b79bf78d66a",
+    "logs/training_steps.csv.gz": "d143525f30c4265511252a2c4411e0605164fbfb9a8759d97edfa6df776f8164"
+  },
+  "training_sampling_report": {
+    "attempts": 4331,
+    "overlap": 1213,
+    "target_static_sweep": 990,
+    "accepted": 1787,
+    "type:crossing_left": 464,
+    "risk:conflict": 1067,
+    "layout:two_sides": 349,
+    "layout:clear": 541,
+    "type:head_on": 415,
+    "layout:mixed": 538,
+    "endpoint": 265,
+    "type:overtaking": 470,
+    "type:crossing_right": 438,
+    "risk:receding": 267,
+    "no_witness": 19,
+    "layout:blocking": 359,
+    "risk:time_separated": 453,
+    "outside": 56,
+    "risk_mismatch": 1
+  }
+}
