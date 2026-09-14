@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "checks": [
+    "finite map, zero/extreme speed, unchanged steering, no double tanh",
+    "clip vs stock SB3 exact rollout/initialization/GAE equivalence for termination and timeout",
+    "latent rollout log-prob/ratio, perturbed ratio, Jacobian cancellation, entropy, finite backward, callback stop",
+    "USV base reward/motion unchanged, save/load/vectorized inference, trace and plot replay, legacy rejection",
+    "pre-action risk timing, immediate response, censoring/stagnation, tie retention and final-update scheduling",
+    "implementation seal rejects source mismatch"
+  ],
+  "optimizer_updates": 0,
+  "formal_training_started": false,
+  "final_datasets_generated": false,
+  "old_core_and_round3_seal_unchanged": true
+}

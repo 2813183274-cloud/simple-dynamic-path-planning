@@ -1,0 +1,21 @@
+{
+  "protocol_version": "round4-speed-tanh-v2",
+  "inherits": "configs/round4/experiment_protocol.json",
+  "normative_document": "docs/ROUND_FOUR_PROTOCOL_V2.md",
+  "revision_timing": "before implementation acceptance, training and new final data",
+  "action": {
+    "schema": "finite-execution-box-latent-rollout-v2",
+    "outer_space": "Box(-1, 1, shape=(2,)) executable actions only",
+    "algorithm": "LatentActionPPO",
+    "rollout_action": "raw Gaussian z, never executable a",
+    "clip_speed": "clip(z[0], -1, 1)",
+    "speed_tanh_speed": "tanh(z[0])",
+    "steering_both": "clip(z[1], -1, 1)",
+    "deterministic": "map Gaussian mean exactly once",
+    "ppo_log_probability": "sum Normal.log_prob(z)",
+    "entropy": "analytic latent Gaussian entropy for both arms",
+    "log_std_init": 0,
+    "use_sde": false,
+    "squash_output": false
+  }
+}
